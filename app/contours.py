@@ -25,7 +25,8 @@ def createContoursFolder(input_rembg_folder,output_cont):
 		contour = createContours(image_dir + os.sep + file)
 
 		if cv2.imwrite(image_dest + file, contour):
-			print("Image Contour Create in :",image_dest + file)
+			pass
+			#print("Image Contour Create in :",image_dest + file)
 		else:
 			print("Create Image Error !")
 			return 1

@@ -5,3 +5,4 @@ scikit-image==0.19.3
 rocketry==2.3.0
 fastapi
 uvicorn[standard]
+python-multipart

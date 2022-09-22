@@ -16,20 +16,27 @@ def inputReady(folder):
     if len(input) != 0:
         return True
     else:
-        print("Restart!")
-        raise Exception()
+        raise Exception("Folder is Empity !")
 
 def checkImagesNum(input_folder,check_folder):
     if inputReady(input_folder) == True:
         input = os.listdir(input_folder)
         check = os.listdir(check_folder)
         if len(check) != len(input):
-            print("Restart!")
+            print("Error ")
             raise Exception()
     else:
         print("Restart!")
         raise Exception()
 
+def move(input,output):
+
+    srcPath = input
+    destPath = output
+    files = os.listdir(srcPath)
+
+    for file in files[:len(files)]:
+        shutil.move(srcPath + file, destPath + file)
 
 def cuda_test():
     # setting device on GPU if available, else CPU

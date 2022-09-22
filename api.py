@@ -5,14 +5,16 @@ Modify the routes as you wish.
 
 import datetime
 import time
+import os
 from typing import List, Literal, Optional
 from pydantic import BaseModel, Field, validator
 from redbird.oper import in_, between, greater_equal
-
+from fastapi.encoders import jsonable_encoder
 from fastapi import APIRouter, FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi import File, UploadFile
+from cli import app as app_rocketry
 
-from scheduler import app as app_rocketry
 
 app = FastAPI(
     title="Rocketry with FastAPI",
@@ -24,13 +26,13 @@ session = app_rocketry.session
 # Enable CORS so that the React application 
 # can communicate with FastAPI. Modify these
 # if you put it to production.
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["http://localhost", "http://localhost:3000"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=["http://localhost", "http://localhost:3000"],
+#     allow_credentials=True,
+#     allow_methods=["*"],
+#     allow_headers=["*"],
+# )
 
 # Models (for serializing JSON)
 # -----------------------------
@@ -62,52 +64,69 @@ class Log(BaseModel):
     task_name: str
     action: str
 
-# Session Config
-# --------------
+## Session Config
+## --------------
 
-router_config = APIRouter(tags=["config"])
+# router_config = APIRouter(tags=["config"])
 
-@router_config.get("/session/config")
-async def get_session_config():
-    return session.config
+# @router_config.get("/session/config")
+# async def get_session_config():
+#     return session.config
 
-@router_config.patch("/session/config")
-async def patch_session_config(values:dict):
-    for key, val in values.items():
-        setattr(session.config, key, val)
-
-
-# Session Parameters
-# ------------------
-
-router_params = APIRouter(tags=["session parameters"])
-
-@router_params.get("/session/parameters")
-async def get_session_parameters():
-    return session.parameters
-
-@router_params.get("/session/parameters/{name}")
-async def get_session_parameters(name):
-    return session.parameters[name]
-
-@router_params.put("/session/parameters/{name}")
-async def put_session_parameter(name:str, value):
-    session.parameters[name] = value
-
-@router_params.delete("/session/parameters/{name}")
-async def delete_session_parameter(name:str):
-    del session.parameters[name]
+# @router_config.patch("/session/config")
+# async def patch_session_config(values:dict):
+#     for key, val in values.items():
+#         setattr(session.config, key, val)
 
 
-# Session Actions
-# ---------------
+# # Session Parameters
+# # ------------------
+
+# router_params = APIRouter(tags=["session parameters"])
+
+# @router_params.get("/session/parameters")
+# async def get_session_parameters():
+#     return session.parameters
+
+# @router_params.get("/session/parameters/{name}")
+# async def get_session_parameters(name):
+#     return session.parameters[name]
+
+# @router_params.put("/session/parameters/{name}")
+# async def put_session_parameter(name:str, value):
+#     session.parameters[name] = value
+
+# @router_params.delete("/session/parameters/{name}")
+# async def delete_session_parameter(name:str):
+#     del session.parameters[name]
+## Upload File
+router_upload = APIRouter(tags=["upload"])
+
+@router_upload.post("/upload")
+async def upload(files: List[UploadFile] = File(...)):
+    input_images_folder = os.path.join(os.getcwd(),'input_folder/'+ 'input-images/')
+
+    for file in files:
+        try:
+            with open(f"{input_images_folder}{file.filename}", 'wb') as f:
+                while contents := file.file.read(1024 * 1024):
+                    f.write(contents)
+        except Exception:
+            return {"message": "There was an error uploading the file(s)"}
+        finally:
+            file.file.close()
+            
+    return {"message": f"Successfuly uploaded {[file.filename for file in files]}"}
+
+
+## Session Actions
+## ---------------
 
 router_session = APIRouter(tags=["session"])
 
 @router_session.post("/session/shut_down")
 async def shut_down_session():
     session.shut_down()
-
 
 # Task
 # ----
@@ -208,8 +227,9 @@ async def get_task_logs(task_name:str,
 # Add routers
 # -----------
 
-app.include_router(router_config)
-app.include_router(router_params)
+# app.include_router(router_config)
+# app.include_router(router_params)
+app.include_router(router_upload)
 app.include_router(router_session)
 app.include_router(router_task)
 app.include_router(router_logs)
