@@ -27,7 +27,7 @@ def _upsample_like(src,tar):
 
 
 ### RSU-7 ###
-class RSU7(nn.Module):#UNet07DRES(nn.Module):
+class RSU7(nn.Module):
 
     def __init__(self, in_ch=3, mid_ch=12, out_ch=3):
         super(RSU7,self).__init__()
@@ -104,7 +104,7 @@ class RSU7(nn.Module):#UNet07DRES(nn.Module):
         return hx1d + hxin
 
 ### RSU-6 ###
-class RSU6(nn.Module):#UNet06DRES(nn.Module):
+class RSU6(nn.Module):
 
     def __init__(self, in_ch=3, mid_ch=12, out_ch=3):
         super(RSU6,self).__init__()
@@ -173,7 +173,7 @@ class RSU6(nn.Module):#UNet06DRES(nn.Module):
         return hx1d + hxin
 
 ### RSU-5 ###
-class RSU5(nn.Module):#UNet05DRES(nn.Module):
+class RSU5(nn.Module):
 
     def __init__(self, in_ch=3, mid_ch=12, out_ch=3):
         super(RSU5,self).__init__()
@@ -231,7 +231,7 @@ class RSU5(nn.Module):#UNet05DRES(nn.Module):
         return hx1d + hxin
 
 ### RSU-4 ###
-class RSU4(nn.Module):#UNet04DRES(nn.Module):
+class RSU4(nn.Module):
 
     def __init__(self, in_ch=3, mid_ch=12, out_ch=3):
         super(RSU4,self).__init__()
@@ -279,7 +279,7 @@ class RSU4(nn.Module):#UNet04DRES(nn.Module):
         return hx1d + hxin
 
 ### RSU-4F ###
-class RSU4F(nn.Module):#UNet04FRES(nn.Module):
+class RSU4F(nn.Module):
 
     def __init__(self, in_ch=3, mid_ch=12, out_ch=3):
         super(RSU4F,self).__init__()

@@ -1,0 +1,6 @@
+# general things to ignore
+model/
+.venv/
+__pycache__/
+
+

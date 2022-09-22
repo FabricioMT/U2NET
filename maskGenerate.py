@@ -1,26 +1,19 @@
 import os
-from skimage import io, transform
-import torch
-import torchvision
-from torch.autograd import Variable
-import torch.nn as nn
-import torch.nn.functional as F
-from torch.utils.data import Dataset, DataLoader
-from torchvision import transforms#, utils
-# import torch.optim as optim
-
-import numpy as np
-from PIL import Image
 import glob
+import torch
+import warnings
+from PIL import Image
+from skimage import io
+from torchvision import transforms
+from torch.autograd import Variable
+from torch.utils.data import DataLoader
 
 from data_loader import RescaleT
-from data_loader import ToTensor
 from data_loader import ToTensorLab
 from data_loader import SalObjDataset
 
-from model import U2NET # full size version 173.6 MB
+from model import U2NET
 
-# normalize the predicted SOD probability map
 def normPRED(d):
     ma = torch.max(d)
     mi = torch.min(d)
@@ -38,9 +31,7 @@ def save_output(image_name,pred,d_dir):
     im = Image.fromarray(predict_np*255).convert('RGB')
     img_name = image_name.split(os.sep)[-1]
     image = io.imread(image_name)
-    imo = im.resize((image.shape[1],image.shape[0]),resample=Image.BILINEAR)
-
-    pb_np = np.array(imo)
+    imo = im.resize((image.shape[1],image.shape[0]),resample=Image.Resampling.BILINEAR)
 
     aaa = img_name.split(".")
     bbb = aaa[0:-1]
@@ -49,16 +40,15 @@ def save_output(image_name,pred,d_dir):
         imidx = imidx + "." + bbb[i]
 
     imo.save(d_dir+imidx+'.png')
-
-def main():
-
+    
+def mask():
+    warnings.simplefilter("ignore", UserWarning)
     # --------- 1. get image path and name ---------
-    image_dir = os.path.join(os.getcwd(), 'images' + os.sep) # changed to 'images' directory which is populated while running the script
+    image_dir = os.path.join(os.getcwd(), 'input-images' + os.sep) # changed to 'images' directory which is populated while running the script
     prediction_dir = os.path.join(os.getcwd(), 'results-mask/') # changed to 'results' directory which is populated after the predictions
-    model_dir = os.path.join('model_saved/'+"u2net.pth") # path to u2netp pretrained weights
+    model_dir = os.path.join('model','model_saved/'+"u2net.pth") # path to u2net pretrained weights
 
     img_name_list = glob.glob(image_dir + os.sep + '*')
-    print(img_name_list)
 
     # --------- 2. dataloader ---------
     #1. dataloader
@@ -77,11 +67,10 @@ def main():
     if torch.cuda.is_available():
         net.load_state_dict(torch.load(model_dir))
         net.cuda()
-    else:        
+    else:   
         net.load_state_dict(torch.load(model_dir, map_location=torch.device('cpu')))
 
     net.eval()
-
     # --------- 4. inference for each image ---------
     for i_test, data_test in enumerate(test_salobj_dataloader):
 
@@ -100,7 +89,6 @@ def main():
         # normalization
         pred = d1[:,0,:,:]
         pred = normPRED(pred)
-        
         # save results to test_results folder
         if not os.path.exists(prediction_dir):
             os.makedirs(prediction_dir, exist_ok=True)
@@ -109,4 +97,4 @@ def main():
         del d1,d2,d3,d4,d5,d6,d7
 
 if __name__ == "__main__":
-    main()
+    mask()
