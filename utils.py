@@ -12,17 +12,17 @@ def clear(folder):
         except Exception as e:
             print('Failed to delete %s. Reason: %s' % (file_path, e))
 
-def inputReady():
-    input = os.listdir('input-images')
+def inputReady(folder):
+    input = os.listdir(folder)
     if len(input) != 0:
         return True
     else:
         raise Exception()
 
-def checkImagesNum(folder):
-    if inputReady() == True:
-        input = os.listdir('input-images')
-        check = os.listdir(folder)
+def checkImagesNum(input_folder,check_folder):
+    if inputReady(input_folder) == True:
+        input = os.listdir(input_folder)
+        check = os.listdir(check_folder)
         if len(check) != len(input):
             raise Exception()
     else:

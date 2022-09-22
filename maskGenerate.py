@@ -41,10 +41,10 @@ def save_output(image_name,pred,d_dir):
 
     imo.save(d_dir+imidx+'.png')
     
-def mask():
+def mask(input_images_folder):
     warnings.simplefilter("ignore", UserWarning)
     # --------- 1. get image path and name ---------
-    image_dir = os.path.join(os.getcwd(), 'input-images' + os.sep) # changed to 'images' directory which is populated while running the script
+    image_dir = os.path.join(os.getcwd(), input_images_folder + os.sep) # changed to 'images' directory which is populated while running the script
     prediction_dir = os.path.join(os.getcwd(), 'results-mask/') # changed to 'results' directory which is populated after the predictions
     model_dir = os.path.join('model','model_saved/'+"u2net.pth") # path to u2net pretrained weights
 

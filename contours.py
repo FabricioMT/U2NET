@@ -13,9 +13,9 @@ def createContours(img):
 	cv2.drawContours(image=mask,contours=contours,contourIdx=-1,color=(0,0,0),thickness=1)
 	return mask
 
-def createContoursFolder():
-	image_dir = os.path.join(os.getcwd(), 'output-removeBg')
-	image_dest = os.path.join(os.getcwd(), 'output-contours' + os.sep)
+def createContoursFolder(input_rembg_folder,output_cont):
+	image_dir = os.path.join(os.getcwd(), input_rembg_folder)
+	image_dest = os.path.join(os.getcwd(), output_cont + os.sep)
 	files = os.listdir(image_dir)
 
 	n = 0

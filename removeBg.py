@@ -5,10 +5,10 @@ from PIL import Image as Img
 from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras.preprocessing.image import img_to_array
 
-def remove():
-    image_dir = os.path.join(os.getcwd(), 'input-images')
+def remove(input_folder,output_folder):
+    image_dir = os.path.join(os.getcwd(), input_folder)
 
-    bg_dir = 'output-removeBg' + os.sep
+    bg_dir = output_folder + os.sep
 
     names = [name[:-4] for name in os.listdir(image_dir)]
     THRESHOLD = 0.9
@@ -32,7 +32,7 @@ def remove():
         a_layer = mul_layer*a_layer_init
         rgba_out = np.append(out_img,a_layer,axis=2)
 
-        input = load_img('input-images/'+name+'.png')
+        input = load_img(input_folder+ os.sep +name+'.png')
         inp_img = img_to_array(input)
         inp_img /= RESCALE
 
