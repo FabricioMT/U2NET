@@ -1,9 +1,8 @@
-from asyncore import ExitNow
 import os, shutil, torch
 
 def clear(folder):
-    for filename in os.listdir(folder):
-        file_path = os.path.join(folder, filename)
+    for filename in os.listdir('input_folder/'+ folder):
+        file_path = os.path.join('input_folder/'+ folder, filename)
         try:
             if os.path.isfile(file_path) or os.path.islink(file_path):
                 os.unlink(file_path)
@@ -17,6 +16,7 @@ def inputReady(folder):
     if len(input) != 0:
         return True
     else:
+        print("Restart!")
         raise Exception()
 
 def checkImagesNum(input_folder,check_folder):
@@ -24,8 +24,10 @@ def checkImagesNum(input_folder,check_folder):
         input = os.listdir(input_folder)
         check = os.listdir(check_folder)
         if len(check) != len(input):
+            print("Restart!")
             raise Exception()
     else:
+        print("Restart!")
         raise Exception()
 
 

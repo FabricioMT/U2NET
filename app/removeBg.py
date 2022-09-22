@@ -7,9 +7,9 @@ from tensorflow.keras.preprocessing.image import img_to_array
 
 def remove(input_folder,output_folder):
     image_dir = os.path.join(os.getcwd(), input_folder)
-
-    bg_dir = output_folder + os.sep
-
+    
+    bg_dir = os.path.join(os.getcwd(), output_folder + os.sep)
+    
     names = [name[:-4] for name in os.listdir(image_dir)]
     THRESHOLD = 0.9
     RESCALE = 255
@@ -19,7 +19,7 @@ def remove(input_folder,output_folder):
         if name == '.ipynb_checkpo':
             continue
         
-        output = load_img('results-mask/'+name+'.png')
+        output = load_img('input_folder/'+'results-mask/'+name+'.png')
         out_img = img_to_array(output)
         out_img /= RESCALE
 

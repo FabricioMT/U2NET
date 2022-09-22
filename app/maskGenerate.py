@@ -8,11 +8,11 @@ from torchvision import transforms
 from torch.autograd import Variable
 from torch.utils.data import DataLoader
 
-from data_loader import RescaleT
-from data_loader import ToTensorLab
-from data_loader import SalObjDataset
+from app.data_loader import RescaleT
+from app.data_loader import ToTensorLab
+from app.data_loader import SalObjDataset
 
-from model import U2NET
+from app.model import U2NET
 
 def normPRED(d):
     ma = torch.max(d)
@@ -45,8 +45,8 @@ def mask(input_images_folder):
     warnings.simplefilter("ignore", UserWarning)
     # --------- 1. get image path and name ---------
     image_dir = os.path.join(os.getcwd(), input_images_folder + os.sep) # changed to 'images' directory which is populated while running the script
-    prediction_dir = os.path.join(os.getcwd(), 'results-mask/') # changed to 'results' directory which is populated after the predictions
-    model_dir = os.path.join('model','model_saved/'+"u2net.pth") # path to u2net pretrained weights
+    prediction_dir = os.path.join(os.getcwd(), 'input_folder/'+'results-mask/') # changed to 'results' directory which is populated after the predictions
+    model_dir = os.path.join('app','model','model_saved/'+"u2net.pth") # path to u2net pretrained weights
 
     img_name_list = glob.glob(image_dir + os.sep + '*')
 
