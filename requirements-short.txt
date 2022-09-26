@@ -1,8 +1,10 @@
-#pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
+torch 
+torchvision
 opencv-python==4.6.0.66
 tensorflow==2.10.0
 scikit-image==0.19.3
 rocketry==2.3.0
-fastapi
+fastapi==0.85.0
+aiofiles==22.1.0
 uvicorn[standard]
-python-multipart
+python-multipart==0.0.5

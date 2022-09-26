@@ -38,7 +38,7 @@ def save_output(image_name,pred,d_dir):
     imidx = bbb[0]
     for i in range(1,len(bbb)):
         imidx = imidx + "." + bbb[i]
-
+    
     imo.save(d_dir+imidx+'.png')
     
 def mask(input_images_folder):

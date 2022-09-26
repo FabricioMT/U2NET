@@ -1,10 +1,5 @@
-"""
-This file combines the two applications.
-"""
-
 import asyncio
 import logging
-
 import uvicorn
 
 from api import app as app_fastapi
@@ -21,8 +16,9 @@ class Server(uvicorn.Server):
 
 
 async def main():
+    #10.3.152.115
     "Run Rocketry and FastAPI"
-    server = Server(config=uvicorn.Config(app_fastapi, workers=1, loop="asyncio"))
+    server = Server(config=uvicorn.Config(app_fastapi, host="0.0.0.0", port=8000, workers=1, loop="asyncio"))
 
     api = asyncio.create_task(server.serve())
     sched = asyncio.create_task(app_rocketry.serve())

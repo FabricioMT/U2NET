@@ -34,6 +34,3 @@ def createContoursFolder(input_rembg_folder,output_cont):
 		n = n+1
 		if n == finish:
 			return 0
-
-if __name__ == "__main__":
-    createContoursFolder()

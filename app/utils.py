@@ -23,11 +23,10 @@ def checkImagesNum(input_folder,check_folder):
         input = os.listdir(input_folder)
         check = os.listdir(check_folder)
         if len(check) != len(input):
-            print("Error ")
-            raise Exception()
+        
+            raise Exception("Folder go clear !")
     else:
-        print("Restart!")
-        raise Exception()
+        raise Exception("Folder is Empity !")
 
 def move(input,output):
 
@@ -50,6 +49,12 @@ def cuda_test():
         print('Memory Usage:')
         print('Allocated:', round(torch.cuda.memory_allocated(0)/1024**3,1), 'GB')
         print('Cached:   ', round(torch.cuda.memory_reserved(0)/1024**3,1), 'GB')
+
+def clear_directorys():
+    #clear('input-images/')
+    clear('output-removeBg/')
+    clear('output-contours/')
+    clear('results-mask/')
 
 if __name__ == "__main__":
     pass
