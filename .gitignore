@@ -1,5 +1,5 @@
 # general things to ignore
-model/
+model_saved/
 .venv/
 __pycache__/
 

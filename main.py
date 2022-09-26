@@ -16,7 +16,7 @@ class Server(uvicorn.Server):
 
 
 async def main():
-    #10.3.152.115
+    #host="10.3.152.115"
     "Run Rocketry and FastAPI"
     server = Server(config=uvicorn.Config(app_fastapi, host="0.0.0.0", port=8000, workers=1, loop="asyncio"))
 

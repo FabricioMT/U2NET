@@ -1,5 +1,5 @@
 import os, shutil, torch
-
+from PIL import Image, ExifTags
 def clear(folder):
     for filename in os.listdir('input_folder/'+ folder):
         file_path = os.path.join('input_folder/'+ folder, filename)
@@ -49,6 +49,12 @@ def cuda_test():
         print('Memory Usage:')
         print('Allocated:', round(torch.cuda.memory_allocated(0)/1024**3,1), 'GB')
         print('Cached:   ', round(torch.cuda.memory_reserved(0)/1024**3,1), 'GB')
+
+def extract_metadata(folder):
+    img = os.listdir(folder)
+    img = Image.open("/path/to/file.jpg")
+    exif = { ExifTags.TAGS[k]: v for k, v in img._getexif().items() if k in ExifTags.TAGS }
+    print(exif)
 
 def clear_directorys():
     #clear('input-images/')

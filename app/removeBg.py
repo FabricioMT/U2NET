@@ -19,7 +19,7 @@ def remove(input_folder,output_folder):
         if name == '.ipynb_checkpo':
             continue
         
-        output = load_img('input_folder/'+'results-mask/'+name+'.png')
+        output = load_img('input_folder/'+'results-mask/'+name+'.JPG')
         out_img = img_to_array(output)
         out_img /= RESCALE
 
@@ -32,7 +32,7 @@ def remove(input_folder,output_folder):
         a_layer = mul_layer*a_layer_init
         rgba_out = np.append(out_img,a_layer,axis=2)
 
-        input = load_img(input_folder+ os.sep +name+'.png')
+        input = load_img(input_folder+ os.sep +name+'.JPG')
         inp_img = img_to_array(input)
         inp_img /= RESCALE
 

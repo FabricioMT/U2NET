@@ -9,6 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi import File, UploadFile
 from app.folder_paths import (input_images_folder, output_without_bg_folder, output_contours_folder)
 from cli import app as app_rocketry
+from app.utils import clear_directorys
 
 app = FastAPI(
     title="Remove Background - PicStone",
@@ -93,12 +94,17 @@ class Log(BaseModel):
 # @router_params.delete("/session/parameters/{name}")
 # async def delete_session_parameter(name:str):
 #     del session.parameters[name]
-
+@app.get('/')
+async def home():
+    return {"opt - 1 ": "/upload",
+            "opt - 2 ": "/download_ct",
+            "opt - 3 ": "/download_bg" }
 
 ## Upload File
 router_data = APIRouter(tags=["data manipulate"])
 @router_data.post("/upload")
 async def upload(files: List[UploadFile] = File(...)):
+    clear_directorys()
     for file in files:
         try:
             with open(f"{input_images_folder}{file.filename}", 'wb') as f:
