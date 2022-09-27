@@ -1,7 +1,7 @@
 import asyncio
 import logging
 import uvicorn
-from app.utils import check_model
+from app.utils import check_model,clear_directorys
 
 from api import app as app_fastapi
 from cli import app as app_rocketry
@@ -29,6 +29,7 @@ async def main():
 if __name__ == "__main__":
     # Print Rocketry's logs to terminal
     check_model()
+    clear_directorys()
     logger = logging.getLogger("rocketry.task")
     logger.addHandler(logging.StreamHandler())
     # Run both applications

@@ -16,7 +16,7 @@ app = Rocketry(config={
     'silence_cond_check': True,
 })
 
-@app.task(every('1m'))
+@app.task(every('30s'))
 async def folder_check():
     if inputReady(input_images_folder) == True:
         pass
@@ -35,7 +35,7 @@ async def remove_background():
 async def create_contours():
     createContoursFolder(output_without_bg_folder,output_contours_folder)
     checkImagesNum(input_images_folder,output_contours_folder)
-    clear('input-images/')
+    #clear('input-images/')
 
 if __name__ == '__main__':
     app.run()

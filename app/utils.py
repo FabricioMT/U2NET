@@ -41,8 +41,9 @@ def move(input,output):
 
 def check_model():
     if os.path.isdir('./app/model/model_saved/') == False:
+        print("Donwload Model !")
         os.makedirs('./app/model/model_saved/', exist_ok=True)
-        gdown.download('https://drive.google.com/file/d/1BZWoNTdO8JRA3S9bwKncVD5KXQbq-5sB/view?usp=sharing',
+        gdown.download('https://drive.google.com/file/d/1RWApr3ItjWVPgBL75Tm1_fv3dfy3mBrv/view?usp=sharing',
         './app/model/model_saved/u2net.pth',
         quiet=False)
     else:
