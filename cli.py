@@ -19,23 +19,26 @@ app = Rocketry(config={
 @app.task(every('30s'))
 async def folder_check():
     if inputReady(input_images_folder) == True:
-        pass
+        clear_directorys()
          
 @app.task(after_success(folder_check))
 async def mask_generate():
-    mask(input_images_folder)
-    checkImagesNum(input_images_folder,output_result_mask)
+    mask()
 
 @app.task(after_success(mask_generate))
 async def remove_background():
     remove(input_images_folder,output_without_bg_folder)
-    checkImagesNum(input_images_folder,output_without_bg_folder)
     
 @app.task(after_success(remove_background))
 async def create_contours():
     createContoursFolder(output_without_bg_folder,output_contours_folder)
-    checkImagesNum(input_images_folder,output_contours_folder)
     #clear('input-images/')
+
+@app.task(after_success(create_contours))
+async def clear_input():
+    #clear('input-images/')
+    #clear_directorys()
+    pass
 
 if __name__ == '__main__':
     app.run()

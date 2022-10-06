@@ -10,7 +10,7 @@ def createContours(img):
 
 	contours, hierarchyct = cv2.findContours(image=image_edges,mode=cv2.RETR_EXTERNAL,method=cv2.CHAIN_APPROX_NONE)
 	#thickness=-1
-	cv2.drawContours(image=mask,contours=contours,contourIdx=-1,color=(0,0,0),thickness=1)
+	cv2.drawContours(image=mask,contours=contours,contourIdx=-1,color=(0,0,0),thickness=-1)
 	return mask
 
 def createContoursFolder(input_rembg_folder,output_cont):
@@ -26,10 +26,8 @@ def createContoursFolder(input_rembg_folder,output_cont):
 
 		if cv2.imwrite(image_dest + file, contour):
 			pass
-			#print("Image Contour Create in :",image_dest + file)
 		else:
-			print("Create Image Error !")
-			return 1
+			raise
 
 		n = n+1
 		if n == finish:

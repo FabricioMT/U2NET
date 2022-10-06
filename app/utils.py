@@ -1,5 +1,4 @@
 import os, shutil, torch, gdown
-from PIL import Image, ExifTags
 
 def inputReady(folder):
     input = os.listdir(folder)
@@ -25,7 +24,6 @@ def checkImagesNum(input_folder,check_folder):
         input = os.listdir(input_folder)
         check = os.listdir(check_folder)
         if len(check) != len(input):
-        
             raise Exception("Folder go clear !")
     else:
         raise Exception("Folder is Empity !")
@@ -49,13 +47,6 @@ def check_model():
     else:
         print("Model OK !")
 
-
-
-def extract_metadata(folder):
-    img = os.listdir(folder)
-    img = Image.open("/path/to/file.jpg")
-    exif = { ExifTags.TAGS[k]: v for k, v in img._getexif().items() if k in ExifTags.TAGS }
-    print(exif)
 
 def clear_directorys():
     #clear('input-images/')

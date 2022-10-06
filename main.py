@@ -28,7 +28,6 @@ async def main():
 
 if __name__ == "__main__":
     # Print Rocketry's logs to terminal
-    check_model()
     clear_directorys()
     logger = logging.getLogger("rocketry.task")
     logger.addHandler(logging.StreamHandler())
