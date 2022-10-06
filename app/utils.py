@@ -19,17 +19,13 @@ def clear(folder):
             print('Failed to delete %s. Reason: %s' % (file_path, e))
 
 
-def checkImagesNum(input_folder,check_folder):
-    if inputReady(input_folder) == True:
-        input = os.listdir(input_folder)
-        check = os.listdir(check_folder)
-        if len(check) != len(input):
-            raise Exception("Folder go clear !")
-    else:
-        raise Exception("Folder is Empity !")
+def delete(input):
+    image_dir = input
+    input_img = os.listdir(image_dir)[0]
+    removed_img = input + input_img
+    os.remove(removed_img)
 
 def move(input,output):
-
     srcPath = input
     destPath = output
     files = os.listdir(srcPath)
@@ -69,6 +65,7 @@ def cuda_test():
 
 
 if __name__ == "__main__":
+    remove()
     pass
     #cuda_test()
     #check_model()

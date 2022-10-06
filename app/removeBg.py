@@ -7,6 +7,7 @@ from tensorflow.keras.preprocessing.image import img_to_array
 from app.folder_paths import (output_result_mask,input_images_folder)
 
 def remove(input_folder,output_folder):
+
     image_dir = os.path.join(os.getcwd(), input_folder)
     bg_dir = os.path.join(os.getcwd(), output_folder + os.sep)
     input_img = os.listdir(image_dir)[0]
@@ -46,7 +47,5 @@ def remove(input_folder,output_folder):
     rem_back = cv2.resize(rem_back_scaled,(shape[1],shape[0]))
     result_img = Img.fromarray(rem_back.astype('uint8'), 'RGBA')
     result_img.save(bg_dir+f'{img_name}.png')
-    os.remove(input_images_folder + input_img)
-
 if __name__ == "__main__":
     remove()

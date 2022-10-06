@@ -1,17 +1,17 @@
 from rocketry import Rocketry
-from rocketry.conds import (every,after_success, after_all_success)
+from rocketry.conds import (every,after_success,after_any_fail)
 from app.maskGenerate import mask
 from app.removeBg import remove
 from app.contours import createContoursFolder
-from app.utils import clear, inputReady, checkImagesNum, clear_directorys
-from app.folder_paths import (input_images_folder, output_without_bg_folder, output_contours_folder, output_result_mask, output_final_bg, output_final_contours, output_images_usage)
+from app.utils import inputReady,clear_directorys,move,delete
+from app.folder_paths import (input_images_folder, output_without_bg_folder, output_contours_folder,final_output_bg,final_output_contours)
+
 
 #
 app = Rocketry(config={
     'task_execution': 'async',
     'task_pre_exist': 'raise',
     'force_status_from_logs': True,
-
     'silence_task_prerun': True,
     'silence_cond_check': True,
 })
@@ -23,22 +23,37 @@ async def folder_check():
          
 @app.task(after_success(folder_check))
 async def mask_generate():
-    mask()
+    try:
+        mask()
+    except Exception:
+        raise Exception("Mask Fail")
 
 @app.task(after_success(mask_generate))
 async def remove_background():
-    remove(input_images_folder,output_without_bg_folder)
-    
+    try:
+        remove(input_images_folder,output_without_bg_folder)
+    except Exception:
+        raise Exception("Remove Background Fail")
+
 @app.task(after_success(remove_background))
 async def create_contours():
-    createContoursFolder(output_without_bg_folder,output_contours_folder)
-    #clear('input-images/')
+    try:
+        createContoursFolder(output_without_bg_folder,output_contours_folder)
+    except Exception:
+        raise Exception("Create Contour Fail")
 
 @app.task(after_success(create_contours))
-async def clear_input():
-    #clear('input-images/')
-    #clear_directorys()
-    pass
+async def move_to_slab():
+    try:
+        #move(final_output_bg)
+        #move(final_output_contours)
+        delete(input_images_folder)
+    except Exception:
+        raise Exception("Move Finsh Fail")
+
+@app.task(after_any_fail(mask_generate,remove_background,create_contours))
+async def clear_for_erros():
+    clear_directorys()
 
 if __name__ == '__main__':
     app.run()
