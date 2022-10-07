@@ -13,12 +13,11 @@ from app.utils import clear_directorys
 
 app = FastAPI(
     title="Remove Background - PicStone",
-    #description="This is a REST API for a scheduler. It uses FastAPI as the web framework and Rocketry for scheduling."
+    # description="This is a REST API for a scheduler. It uses FastAPI as the web framework and Rocketry for scheduling."
 )
 session = app_rocketry.session
 
-
-# Enable CORS so that the React application 
+# Enable CORS so that the React application
 # can communicate with FastAPI. Modify these
 # if you put it to production.
 app.add_middleware(
@@ -29,8 +28,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 # Models (for serializing JSON)
 # -----------------------------
+
 
 class Task(BaseModel):
     name: str
@@ -54,14 +55,14 @@ class Task(BaseModel):
     last_inaction: Optional[datetime.datetime]
     last_crash: Optional[datetime.datetime]
 
+
 class Log(BaseModel):
     timestamp: Optional[datetime.datetime] = Field(alias="created")
     task_name: str
     action: str
 
-## Session Config
-## --------------
 
+# Session Config
 # router_config = APIRouter(tags=["config"])
 
 # @router_config.get("/session/config")
@@ -98,10 +99,13 @@ class Log(BaseModel):
 async def home():
     return {"opt - 1 ": "/upload",
             "opt - 2 ": "/download_ct",
-            "opt - 3 ": "/download_bg" }
+            "opt - 3 ": "/download_bg"}
 
-## Upload File
+
+# Upload File
 router_data = APIRouter(tags=["data manipulate"])
+
+
 @router_data.post("/upload")
 async def upload(files: List[UploadFile] = File(...)):
     clear_directorys()
@@ -114,10 +118,11 @@ async def upload(files: List[UploadFile] = File(...)):
             return {"message": "There was an error uploading the file(s)"}
         finally:
             file.file.close()
-            
+
     return {"message": f"Successfuly uploaded {[file.filename for file in files]}"}
 
-## Download Files
+
+# Download Files
 
 @router_data.get("/download_ct")
 async def download_ct():
@@ -126,27 +131,30 @@ async def download_ct():
     file = str(file_path + os.sep + file_name)
     return FileResponse(path=file, filename=file_name, media_type='image/png')
 
+
 @router_data.get("/download_bg")
 async def download_bg():
     file_name = os.listdir(output_without_bg_folder)[0]
     file_path = os.path.abspath(output_without_bg_folder)
     file = str(file_path + os.sep + file_name)
     return FileResponse(path=file, filename=file_name, media_type='image/png')
-    
 
-## Session Actions
-## ---------------
+
+# Session Actions ---------------
 
 router_session = APIRouter(tags=["session"])
+
 
 @router_session.post("/session/shut_down")
 async def shut_down_session():
     session.shut_down()
 
+
 # Task
 # ----
 
 router_task = APIRouter(tags=["task"])
+
 
 # @router_task.get("/tasks", response_model=List[Task])
 # async def get_tasks():
@@ -163,7 +171,7 @@ router_task = APIRouter(tags=["task"])
 # @router_task.get("/tasks/{task_name}")
 # async def get_task(task_name:str):
 #     return session[task_name]
-    
+
 # @router_task.patch("/tasks/{task_name}")
 # async def patch_task(task_name:str, values:dict):
 #     task = session[task_name]
@@ -175,22 +183,25 @@ router_task = APIRouter(tags=["task"])
 # ------------
 
 @router_task.post("/tasks/{task_name}/disable")
-async def disable_task(task_name:str):
+async def disable_task(task_name: str):
     task = session[task_name]
     task.disabled = True
 
+
 @router_task.post("/tasks/{task_name}/enable")
-async def enable_task(task_name:str):
+async def enable_task(task_name: str):
     task = session[task_name]
     task.disabled = False
 
+
 @router_task.post("/tasks/{task_name}/terminate")
-async def disable_task(task_name:str):
+async def disable_task(task_name: str):
     task = session[task_name]
     task.force_termination = True
 
+
 @router_task.post("/tasks/{task_name}/run")
-async def run_task(task_name:str):
+async def run_task(task_name: str):
     task = session[task_name]
     task.force_run = True
 
@@ -213,7 +224,7 @@ async def run_task(task_name:str):
 #         filter['created'] = between(min_created, max_created, none_as_open=True)
 #     elif past:
 #         filter['created'] = greater_equal(time.time() - past)
-    
+
 #     if task:
 #         filter['task_name'] = in_(task)
 
@@ -247,4 +258,4 @@ async def run_task(task_name:str):
 app.include_router(router_data)
 app.include_router(router_session)
 app.include_router(router_task)
-#app.include_router(router_logs)
+# app.include_router(router_logs)

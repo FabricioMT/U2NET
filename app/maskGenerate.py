@@ -13,43 +13,47 @@ from app.data_loader import ToTensorLab
 from app.data_loader import SalObjDataset
 
 from app.model import U2NET
-from app.folder_paths import (input_images_folder,output_result_mask)
+from app.folder_paths import (input_images_folder, output_result_mask)
+
 warnings.simplefilter("ignore", UserWarning)
 
 # --------- 3. model define ---------
-model_dir = os.path.join('app','model','model_saved/'+"u2net.pth")
-net = U2NET(3,1)    
+model_dir = os.path.join('app', 'model', 'model_saved/' + "u2net.pth")
+net = U2NET(3, 1)
 if torch.cuda.is_available():
     net.load_state_dict(torch.load(model_dir))
     net.cuda()
-else:   
+else:
     net.load_state_dict(torch.load(model_dir, map_location=torch.device('cpu')))
+
 
 def normPRED(d):
     ma = torch.max(d)
     mi = torch.min(d)
 
-    dn = (d-mi)/(ma-mi)
+    dn = (d - mi) / (ma - mi)
 
     return dn
 
-def save_output(image_name,pred,d_dir):
+
+def save_output(image_name, pred, d_dir):
     predict = pred
     predict = predict.squeeze()
     predict_np = predict.cpu().data.numpy()
 
-    im = Image.fromarray(predict_np*255).convert('RGB')
+    im = Image.fromarray(predict_np * 255).convert('RGB')
     img_name = image_name.split(os.sep)[-1]
     image = io.imread(image_name)
-    imo = im.resize((image.shape[1],image.shape[0]),resample=Image.Resampling.LANCZOS)
+    imo = im.resize((image.shape[1], image.shape[0]), resample=Image.Resampling.LANCZOS)
 
     aaa = img_name.split(".")
     bbb = aaa[0:-1]
     imidx = bbb[0]
-    for i in range(1,len(bbb)):
+    for i in range(1, len(bbb)):
         imidx = imidx + "." + bbb[i]
-    
-    imo.save(d_dir+imidx+'.JPG')
+
+    imo.save(d_dir + imidx + '.JPG')
+
 
 def mask():
     # --------- 1. get image path and name ---------
@@ -59,11 +63,11 @@ def mask():
     img_name_list = glob.glob(image_dir + os.sep + '*')
     img_slot_0 = [img_name_list[0]]
 
-    #1. dataloader
-    test_salobj_dataset = SalObjDataset(img_name_list = img_slot_0,
-                                        lbl_name_list = [],
+    # 1. dataloader
+    test_salobj_dataset = SalObjDataset(img_name_list=img_slot_0,
+                                        lbl_name_list=[],
                                         transform=transforms.Compose([RescaleT(320),
-                                                                        ToTensorLab(flag=0)])
+                                                                      ToTensorLab(flag=0)])
                                         )
     test_salobj_dataloader = DataLoader(test_salobj_dataset,
                                         batch_size=1,
@@ -81,13 +85,12 @@ def mask():
         else:
             inputs_test = Variable(inputs_test)
 
-        d1,d2,d3,d4,d5,d6,d7= net(inputs_test)
+        d1, d2, d3, d4, d5, d6, d7 = net(inputs_test)
 
         # normalization
-        pred = d1[:,0,:,:]
+        pred = d1[:, 0, :, :]
         pred = normPRED(pred)
-    
-        save_output(img_name_list[i_test],pred,prediction_dir)
 
-        del d1,d2,d3,d4,d5,d6,d7
+        save_output(img_name_list[i_test], pred, prediction_dir)
 
+        del d1, d2, d3, d4, d5, d6, d7
