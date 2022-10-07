@@ -1,15 +1,16 @@
-import gdown
 import os
 import shutil
+
+import gdown
 import torch
 
 
 def inputReady(folder):
-    input_folder = os.listdir(folder)
-    if len(input_folder) == 0:
-        raise Exception("Folder is Empty !")
-    else:
+    inputs = os.listdir(folder)
+    if len(inputs) != 0:
         return True
+    else:
+        raise Exception("Folder is Empty !")
 
 
 def clear(folder):
@@ -24,15 +25,15 @@ def clear(folder):
             print('Failed to delete %s. Reason: %s' % (file_path, e))
 
 
-def delete(input_folder):
-    image_dir = input_folder
+def delete(inputs):
+    image_dir = inputs
     input_img = os.listdir(image_dir)[0]
-    removed_img = input_folder + input_img
+    removed_img = inputs + input_img
     os.remove(removed_img)
 
 
-def move(input_folder, output):
-    srcPath = input_folder
+def move(inputs, output):
+    srcPath = inputs
     destPath = output
     files = os.listdir(srcPath)
 
@@ -42,7 +43,7 @@ def move(input_folder, output):
 
 def check_model():
     if not os.path.isdir('./app/model/model_saved/'):
-        print("Donwload Model !")
+        print("Download Model !")
         os.makedirs('./app/model/model_saved/', exist_ok=True)
         gdown.download('https://drive.google.com/file/d/1RWApr3ItjWVPgBL75Tm1_fv3dfy3mBrv/view?usp=sharing',
                        './app/model/model_saved/u2net.pth',
@@ -73,7 +74,8 @@ def cuda_test():
 
 
 if __name__ == "__main__":
-    pass
-    # cuda_test()
+    # remove()
+    cuda_test()
     # check_model()
     # clear('results-mask/')
+    pass

@@ -1,19 +1,19 @@
-import os
 import glob
-import torch
+import os
 import warnings
+
+import torch
 from PIL import Image
 from skimage import io
-from torchvision import transforms
 from torch.autograd import Variable
 from torch.utils.data import DataLoader
+from torchvision import transforms
 
 from app.data_loader import RescaleT
-from app.data_loader import ToTensorLab
 from app.data_loader import SalObjDataset
-
-from app.model import U2NET
+from app.data_loader import ToTensorLab
 from app.folder_paths import (input_images_folder, output_result_mask)
+from app.model import U2NET
 
 warnings.simplefilter("ignore", UserWarning)
 

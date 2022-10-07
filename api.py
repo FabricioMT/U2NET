@@ -1,15 +1,16 @@
 import datetime
-import time
 import os
-from typing import List, Literal, Optional
-from pydantic import BaseModel, Field, validator
-from fastapi import APIRouter, FastAPI, Query
-from fastapi.responses import FileResponse
-from fastapi.middleware.cors import CORSMiddleware
+from typing import List, Optional
+
+from fastapi import APIRouter, FastAPI
 from fastapi import File, UploadFile
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from pydantic import BaseModel, Field
+
 from app.folder_paths import (input_images_folder, output_without_bg_folder, output_contours_folder)
-from cli import app as app_rocketry
 from app.utils import clear_directorys
+from cli import app as app_rocketry
 
 app = FastAPI(
     title="Remove Background - PicStone",
@@ -31,7 +32,6 @@ app.add_middleware(
 
 # Models (for serializing JSON)
 # -----------------------------
-
 
 class Task(BaseModel):
     name: str
@@ -62,7 +62,9 @@ class Log(BaseModel):
     action: str
 
 
-# Session Config
+## Session Config
+## --------------
+
 # router_config = APIRouter(tags=["config"])
 
 # @router_config.get("/session/config")
@@ -102,7 +104,7 @@ async def home():
             "opt - 3 ": "/download_bg"}
 
 
-# Upload File
+## Upload File
 router_data = APIRouter(tags=["data manipulate"])
 
 
@@ -122,7 +124,7 @@ async def upload(files: List[UploadFile] = File(...)):
     return {"message": f"Successfuly uploaded {[file.filename for file in files]}"}
 
 
-# Download Files
+## Download Files
 
 @router_data.get("/download_ct")
 async def download_ct():
@@ -140,7 +142,8 @@ async def download_bg():
     return FileResponse(path=file, filename=file_name, media_type='image/png')
 
 
-# Session Actions ---------------
+## Session Actions
+## ---------------
 
 router_session = APIRouter(tags=["session"])
 

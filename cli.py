@@ -1,11 +1,11 @@
 from rocketry import Rocketry
 from rocketry.conds import (every, after_success, after_any_fail)
+
+from app.contours import createContoursFolder
+from app.folder_paths import (input_images_folder, output_without_bg_folder, output_contours_folder)
 from app.maskGenerate import mask
 from app.removeBg import remove
-from app.contours import createContoursFolder
-from app.utils import inputReady, clear_directorys, move, delete
-from app.folder_paths import (input_images_folder, output_without_bg_folder, output_contours_folder, final_output_bg,
-                              final_output_contours)
+from app.utils import inputReady, clear_directorys, delete
 
 #
 app = Rocketry(config={
@@ -19,7 +19,7 @@ app = Rocketry(config={
 
 @app.task(every('30s'))
 async def folder_check():
-    if inputReady(input_images_folder):
+    if inputReady(input_images_folder) == True:
         clear_directorys()
 
 
@@ -54,7 +54,7 @@ async def move_to_slab():
         # move(final_output_contours)
         delete(input_images_folder)
     except Exception:
-        raise Exception("Move finish Fail")
+        raise Exception("Move Finish Fail")
 
 
 @app.task(after_any_fail(mask_generate, remove_background, create_contours))
