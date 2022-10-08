@@ -14,7 +14,6 @@ from cli import app as app_rocketry
 
 app = FastAPI(
     title="Remove Background - PicStone",
-    # description="This is a REST API for a scheduler. It uses FastAPI as the web framework and Rocketry for scheduling."
 )
 session = app_rocketry.session
 
@@ -62,8 +61,8 @@ class Log(BaseModel):
     action: str
 
 
-## Session Config
-## --------------
+# Session Config
+# --------------
 
 # router_config = APIRouter(tags=["config"])
 
@@ -104,7 +103,7 @@ async def home():
             "opt - 3 ": "/download_bg"}
 
 
-## Upload File
+# Upload File
 router_data = APIRouter(tags=["data manipulate"])
 
 
@@ -124,7 +123,7 @@ async def upload(files: List[UploadFile] = File(...)):
     return {"message": f"Successfuly uploaded {[file.filename for file in files]}"}
 
 
-## Download Files
+# Download Files
 
 @router_data.get("/download_ct")
 async def download_ct():
@@ -142,8 +141,7 @@ async def download_bg():
     return FileResponse(path=file, filename=file_name, media_type='image/png')
 
 
-## Session Actions
-## ---------------
+# Session Actions
 
 router_session = APIRouter(tags=["session"])
 

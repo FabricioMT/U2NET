@@ -2,5 +2,5 @@
 model_saved/
 .venv/
 __pycache__/
-
+./idea
 

@@ -75,7 +75,7 @@ def cuda_test():
 
 if __name__ == "__main__":
     # remove()
-    cuda_test()
+    # cuda_test()
     # check_model()
     # clear('results-mask/')
     pass
