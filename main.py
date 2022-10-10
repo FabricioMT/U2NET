@@ -1,16 +1,17 @@
 import asyncio
 import logging
+
 import uvicorn
-from app.utils import check_model, clear_directorys
 
 from api import app as app_fastapi
+from app.utils import clear_directorys
 from cli import app as app_rocketry
 
 
 class Server(uvicorn.Server):
     """Customized uvicorn.Server
     
-    Uvicorn server overrides signals, and we need to include
+    Uvicorn server overrides signals and we need to include
     Rocketry to the signals."""
 
     def handle_exit(self, sig: int, frame) -> None:

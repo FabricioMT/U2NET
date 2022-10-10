@@ -1,9 +1,11 @@
-import os, glob
+import os
+
 import cv2
 import numpy as np
 from PIL import Image as Img
-from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras.preprocessing.image import img_to_array
+from tensorflow.keras.preprocessing.image import load_img
+
 from app.folder_paths import (output_result_mask, input_images_folder)
 
 
@@ -29,8 +31,8 @@ def remove(input_folder, output_folder):
     a_layer = mul_layer * a_layer_init
     rgba_out = np.append(out_img, a_layer, axis=2)
 
-    input_img = load_img(input_images_folder + input_img)
-    inp_img = img_to_array(input_img)
+    input = load_img(input_images_folder + input_img)
+    inp_img = img_to_array(input)
     inp_img /= RESCALE
 
     a_layer = np.ones(shape=(shape[0], shape[1], 1))
@@ -50,4 +52,4 @@ def remove(input_folder, output_folder):
 
 
 if __name__ == "__main__":
-    pass
+    remove()

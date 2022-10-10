@@ -1,15 +1,20 @@
-import gdown
+from logging import Filter
+from requests import session
+from rocketry.log import MinimalRecord
+from rocketry.args import Session
 import os
 import shutil
+
+import gdown
 import torch
 
-
 def inputReady(folder):
-    input_folder = os.listdir(folder)
-    if len(input_folder) == 0:
-        raise Exception("Folder is Empty !")
-    else:
+    inputs = os.listdir(folder)
+    if len(inputs) != 0:
         return True
+    else:
+        
+        raise Exception("Folder is Empty")
 
 
 def clear(folder):
@@ -24,15 +29,15 @@ def clear(folder):
             print('Failed to delete %s. Reason: %s' % (file_path, e))
 
 
-def delete(input_folder):
-    image_dir = input_folder
+def delete(inputs):
+    image_dir = inputs
     input_img = os.listdir(image_dir)[0]
-    removed_img = input_folder + input_img
+    removed_img = inputs + input_img
     os.remove(removed_img)
 
 
-def move(input_folder, output):
-    srcPath = input_folder
+def move(inputs, output):
+    srcPath = inputs
     destPath = output
     files = os.listdir(srcPath)
 
@@ -42,7 +47,7 @@ def move(input_folder, output):
 
 def check_model():
     if not os.path.isdir('./app/model/model_saved/'):
-        print("Donwload Model !")
+        print("Download Model !")
         os.makedirs('./app/model/model_saved/', exist_ok=True)
         gdown.download('https://drive.google.com/file/d/1RWApr3ItjWVPgBL75Tm1_fv3dfy3mBrv/view?usp=sharing',
                        './app/model/model_saved/u2net.pth',
@@ -70,10 +75,22 @@ def cuda_test():
         print('Memory Usage:')
         print('Allocated:', round(torch.cuda.memory_allocated(0) / 1024 ** 3, 1), 'GB')
         print('Cached:   ', round(torch.cuda.memory_reserved(0) / 1024 ** 3, 1), 'GB')
+#
+class SpamFilter(Filter):
+    def filter(self, record: MinimalRecord) -> bool:
 
+        start_cond = record.task_name.startswith('Start')
+        finish_cond = record.task_name.startswith('Close')
+        erros_cond = record.task_name.startswith('Erros')
 
+        if start_cond or finish_cond or erros_cond:
+            return True
+        return False
+
+    
 if __name__ == "__main__":
-    pass
+    # remove()
     # cuda_test()
     # check_model()
     # clear('results-mask/')
+    pass
