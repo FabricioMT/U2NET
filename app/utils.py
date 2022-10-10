@@ -8,6 +8,21 @@ import shutil
 import gdown
 import torch
 
+class SpamFilter(Filter):
+    def filter(self, record: MinimalRecord) -> bool:
+
+        start_cond = record.task_name.startswith('Start')
+        finish_cond = record.task_name.startswith('Close')
+        erros_cond = record.task_name.startswith('Erros')
+        contours_fail = record.task_name.startswith('Create') and record.action == 'fail'
+        move_cond = record.task_name.startswith('Move') and record.action == 'fail'
+        bg_cond = record.task_name.startswith('RemBg') and record.action == 'fail'
+        mask_cond = record.task_name.startswith('Masking') and record.action == 'fail'
+
+        if start_cond or finish_cond or erros_cond or contours_fail or move_cond or bg_cond or mask_cond:
+            return True
+        return False
+
 def inputReady(folder):
     inputs = os.listdir(folder)
     if len(inputs) != 0:
@@ -76,18 +91,7 @@ def cuda_test():
         print('Allocated:', round(torch.cuda.memory_allocated(0) / 1024 ** 3, 1), 'GB')
         print('Cached:   ', round(torch.cuda.memory_reserved(0) / 1024 ** 3, 1), 'GB')
 #
-class SpamFilter(Filter):
-    def filter(self, record: MinimalRecord) -> bool:
 
-        start_cond = record.task_name.startswith('Start')
-        finish_cond = record.task_name.startswith('Close')
-        erros_cond = record.task_name.startswith('Erros')
-
-        if start_cond or finish_cond or erros_cond:
-            return True
-        return False
-
-    
 if __name__ == "__main__":
     # remove()
     # cuda_test()

@@ -27,13 +27,14 @@ logger = logging.getLogger("rocketry.task")
 repo = CSVFileRepo(filename= logs_folder + "log.csv", model=TaskLogRecord)
 folder = RepoHandler(repo=repo)
 folder.addFilter(SpamFilter())
-logger.addHandler(logging.StreamHandler())
+#logger.addHandler(logging.StreamHandler())
 logger.addHandler(folder)
 
 sucess_count = 0
 @app.task(on_startup=True, name='Start')
 def Start():
     pass
+
 
 @app.task(on_shutdown=True,name='Close')
 def Close(count=Return('Move to Slab')):
@@ -44,12 +45,13 @@ def Close(count=Return('Move to Slab')):
 def Restart():
     pass
 
+
 @app.task(after_any_success(Start,'Move to Slab',Restart),name='Folder Check')
 def folder_check():
     if inputReady(input_images_folder):
         clear_directorys()
 
-#
+
 @app.task(after_success('Folder Check'), name='Masking')
 def mask_generate():
     try:
@@ -76,7 +78,6 @@ def create_contours():
 
 @app.task(after_success(create_contours), name='Move to Slab')
 def move_to_slab():
-    sucess_count = sucess_count + 1
     try:
         # move(final_output_bg)
         # move(final_output_contours)
@@ -84,7 +85,6 @@ def move_to_slab():
 
     except Exception:
         raise Exception("Move Finish Fail")
-    return sucess_count
 
 
 @app.task(after_any_fail(mask_generate, remove_background, create_contours), name='Erros')

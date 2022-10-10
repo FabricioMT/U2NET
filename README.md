@@ -2,10 +2,10 @@
 
 ## Install Guide
 
-1. Download and Install Python 3.9.12
+1. Download and Install Python 3.9.12 [link](https://www.python.org/downloads/release/python-3912/)
     - !!(Mark Checkbox for automatic set enviroments variables)!!
         - Resart your PC
-          [link](https://www.python.org/downloads/release/python-3912/)
+          
 
 2. Open Install.bat
     - wait for the installation to finish
