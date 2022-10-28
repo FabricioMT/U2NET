@@ -1,7 +1,5 @@
 from logging import Filter
-from requests import session
 from rocketry.log import MinimalRecord
-from rocketry.args import Session
 import os
 import shutil
 
@@ -44,11 +42,12 @@ def clear(folder):
             print('Failed to delete %s. Reason: %s' % (file_path, e))
 
 
-def delete(inputs):
+def move_input(inputs,output):
     image_dir = inputs
+    destPath = output
     input_img = os.listdir(image_dir)[0]
-    removed_img = inputs + input_img
-    os.remove(removed_img)
+    moved_img = inputs + input_img
+    shutil.move(moved_img, destPath + input_img)
 
 
 def move(inputs, output):
@@ -98,3 +97,4 @@ if __name__ == "__main__":
     # check_model()
     # clear('results-mask/')
     pass
+
