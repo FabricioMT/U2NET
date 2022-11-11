@@ -1,0 +1,93 @@
+task_name,action,created,start,end,runtime,message,exc_text
+Start,run,1667319551.7258322,2022-11-01 13:19:11.725832,,,Task 'Start' status: 'run',
+Start,success,1667319551.7268329,2022-11-01 13:19:11.725832,2022-11-01 13:19:11.726833,0:00:00.001001,Task 'Start' status: 'success',
+Move to Slab,fail,1667319557.766833,2022-11-01 13:19:17.765832,2022-11-01 13:19:17.766833,0:00:00.001001,Task 'Move to Slab' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 823, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [WinError 3] O sistema não pode encontrar o caminho especificado: 'C:\\Users\\fabri\\OneDrive\\Área de Trabalho\\PyScript\\U2NET\\input_folder\\output-removeBg\\00.png' -> 'C:\\Users\\fabri\\OneDrive\\Área de Trabalho\\PyScript\\U2NET\\input_folder\\main\\00.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\cli.py"", line 80, in move_to_slab
+    move(output_without_bg_folder,final_output_bg)
+  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\app\utils.py"", line 59, in move
+    shutil.move(srcPath + file, destPath + file)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 843, in move
+    copy_function(src, real_dst)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 444, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 266, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\fabri\\OneDrive\\Área de Trabalho\\PyScript\\U2NET\\input_folder\\main\\00.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\venv\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\venv\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\cli.py"", line 85, in move_to_slab
+    raise Exception(""Move Finish Fail"")
+Exception: Move Finish Fail"
+Close,run,1667319580.6548333,2022-11-01 13:19:40.654833,,,Task 'Close' status: 'run',
+Close,success,1667319580.6558344,2022-11-01 13:19:40.654833,2022-11-01 13:19:40.654833,0:00:00,Task 'Close' status: 'success',
+Start,run,1667319587.2338321,2022-11-01 13:19:47.233832,,,Task 'Start' status: 'run',
+Start,success,1667319587.2338321,2022-11-01 13:19:47.233832,2022-11-01 13:19:47.233832,0:00:00,Task 'Start' status: 'success',
+Move to Slab,fail,1667319593.1038337,2022-11-01 13:19:53.102832,2022-11-01 13:19:53.103834,0:00:00.001002,Task 'Move to Slab' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 823, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [WinError 3] O sistema não pode encontrar o caminho especificado: 'C:\\Users\\fabri\\OneDrive\\Área de Trabalho\\PyScript\\U2NET\\input_folder\\output-removeBg\\2777-PhotoRoom.png' -> 'C:\\Users\\fabri\\OneDrive\\Área de Trabalho\\PyScript\\U2NET\\input_folder\\main\\2777-PhotoRoom.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\cli.py"", line 80, in move_to_slab
+    move(output_without_bg_folder,final_output_bg)
+  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\app\utils.py"", line 59, in move
+    shutil.move(srcPath + file, destPath + file)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 843, in move
+    copy_function(src, real_dst)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 444, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 266, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\fabri\\OneDrive\\Área de Trabalho\\PyScript\\U2NET\\input_folder\\main\\2777-PhotoRoom.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\venv\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\venv\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\cli.py"", line 85, in move_to_slab
+    raise Exception(""Move Finish Fail"")
+Exception: Move Finish Fail"
+Close,run,1667319594.612832,2022-11-01 13:19:54.612832,,,Task 'Close' status: 'run',
+Close,success,1667319594.6138327,2022-11-01 13:19:54.612832,2022-11-01 13:19:54.613833,0:00:00.001001,Task 'Close' status: 'success',
+Start,run,1667321011.6971347,2022-11-01 13:43:31.697135,,,Task 'Start' status: 'run',
+Start,success,1667321011.6981335,2022-11-01 13:43:31.697135,2022-11-01 13:43:31.697135,0:00:00,Task 'Start' status: 'success',
+Close,run,1667321037.108134,2022-11-01 13:43:57.108134,,,Task 'Close' status: 'run',
+Close,success,1667321037.1091342,2022-11-01 13:43:57.108134,2022-11-01 13:43:57.109134,0:00:00.001000,Task 'Close' status: 'success',
+Start,run,1667321071.6061344,2022-11-01 13:44:31.606134,,,Task 'Start' status: 'run',
+Start,success,1667321071.6071365,2022-11-01 13:44:31.606134,2022-11-01 13:44:31.606134,0:00:00,Task 'Start' status: 'success',
+Close,run,1667321163.979136,2022-11-01 13:46:03.979136,,,Task 'Close' status: 'run',
+Close,success,1667321163.9801338,2022-11-01 13:46:03.979136,2022-11-01 13:46:03.980134,0:00:00.000998,Task 'Close' status: 'success',
+Start,run,1667495169.8396096,2022-11-03 14:06:09.839610,,,Task 'Start' status: 'run',
+Start,success,1667495169.8396096,2022-11-03 14:06:09.839610,2022-11-03 14:06:09.839610,0:00:00,Task 'Start' status: 'success',
+Close,run,1667495275.911637,2022-11-03 14:07:55.911637,,,Task 'Close' status: 'run',
+Close,success,1667495275.9126368,2022-11-03 14:07:55.911637,2022-11-03 14:07:55.912637,0:00:00.001000,Task 'Close' status: 'success',
+Start,run,1667501244.7966223,2022-11-03 15:47:24.796622,,,Task 'Start' status: 'run',
+Start,success,1667501244.7966223,2022-11-03 15:47:24.796622,2022-11-03 15:47:24.796622,0:00:00,Task 'Start' status: 'success',
+Close,run,1667501339.2155433,2022-11-03 15:48:59.215543,,,Task 'Close' status: 'run',
+Close,success,1667501339.216545,2022-11-03 15:48:59.215543,2022-11-03 15:48:59.215543,0:00:00,Task 'Close' status: 'success',
+Start,run,1667999898.755938,2022-11-09 10:18:18.755938,,,Task 'Start' status: 'run',
+Start,success,1667999898.7569394,2022-11-09 10:18:18.755938,2022-11-09 10:18:18.756939,0:00:00.001001,Task 'Start' status: 'success',
+Close,run,1667999931.4425628,2022-11-09 10:18:51.442563,,,Task 'Close' status: 'run',
+Close,success,1667999931.4435632,2022-11-09 10:18:51.442563,2022-11-09 10:18:51.442563,0:00:00,Task 'Close' status: 'success',
+Start,run,1668000002.05998,2022-11-09 10:20:02.059980,,,Task 'Start' status: 'run',
+Start,success,1668000002.05998,2022-11-09 10:20:02.059980,2022-11-09 10:20:02.059980,0:00:00,Task 'Start' status: 'success',
+Close,run,1668000020.878979,2022-11-09 10:20:20.878979,,,Task 'Close' status: 'run',
+Close,success,1668000020.879979,2022-11-09 10:20:20.878979,2022-11-09 10:20:20.879979,0:00:00.001000,Task 'Close' status: 'success',

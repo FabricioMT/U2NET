@@ -13,11 +13,12 @@ def createContours(img):
 
     contours, hierarchyct = cv2.findContours(image=image_edges,mode=cv2.RETR_EXTERNAL,method=cv2.CHAIN_APPROX_NONE)
     #thickness=-1
-    hierarchyct = hierarchyct[0]
-    hierarchyct_len = len(hierarchyct)-1
-    contours = contours[hierarchyct_len]
 
-    cv2.drawContours(image=mask,contours=contours,contourIdx=-1,color=(0,0,0),thickness=1)
+    pixel_count = []
+    for component in contours: pixel_count.append(len(component))
+    max_pixel_ct = pixel_count.index(max(pixel_count))
+
+    cv2.drawContours(image=mask,contours=contours[max_pixel_ct],contourIdx=-1,color=(0,0,0),thickness=1)
 
     return mask
 
