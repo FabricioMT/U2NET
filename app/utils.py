@@ -1,12 +1,25 @@
 from logging import Filter
-from requests import session
 from rocketry.log import MinimalRecord
-from rocketry.args import Session
 import os
 import shutil
 
 import gdown
 import torch
+
+class SpamFilter(Filter):
+    def filter(self, record: MinimalRecord) -> bool:
+
+        start_cond = record.task_name.startswith('Start')
+        finish_cond = record.task_name.startswith('Close')
+        erros_cond = record.task_name.startswith('Erros')
+        contours_fail = record.task_name.startswith('Create') and record.action == 'fail'
+        move_cond = record.task_name.startswith('Move') and record.action == 'fail'
+        bg_cond = record.task_name.startswith('RemBg') and record.action == 'fail'
+        mask_cond = record.task_name.startswith('Masking') and record.action == 'fail'
+
+        if start_cond or finish_cond or erros_cond or contours_fail or move_cond or bg_cond or mask_cond:
+            return True
+        return False
 
 def inputReady(folder):
     inputs = os.listdir(folder)
@@ -29,11 +42,12 @@ def clear(folder):
             print('Failed to delete %s. Reason: %s' % (file_path, e))
 
 
-def delete(inputs):
+def move_input(inputs,output):
     image_dir = inputs
+    destPath = output
     input_img = os.listdir(image_dir)[0]
-    removed_img = inputs + input_img
-    os.remove(removed_img)
+    moved_img = inputs + input_img
+    shutil.move(moved_img, destPath + input_img)
 
 
 def move(inputs, output):
@@ -76,21 +90,11 @@ def cuda_test():
         print('Allocated:', round(torch.cuda.memory_allocated(0) / 1024 ** 3, 1), 'GB')
         print('Cached:   ', round(torch.cuda.memory_reserved(0) / 1024 ** 3, 1), 'GB')
 #
-class SpamFilter(Filter):
-    def filter(self, record: MinimalRecord) -> bool:
 
-        start_cond = record.task_name.startswith('Start')
-        finish_cond = record.task_name.startswith('Close')
-        erros_cond = record.task_name.startswith('Erros')
-
-        if start_cond or finish_cond or erros_cond:
-            return True
-        return False
-
-    
 if __name__ == "__main__":
     # remove()
     # cuda_test()
     # check_model()
     # clear('results-mask/')
     pass
+

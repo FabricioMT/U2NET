@@ -3,16 +3,15 @@ import logging
 from rocketry import Rocketry
 from rocketry.conds import (after_any_success, after_success, after_any_fail, after_fail)
 from rocketry.log import TaskLogRecord
-from rocketry.args import Return
 from redbird.repos import CSVFileRepo
 from redbird.logging import RepoHandler
 
 
 from app.contours import createContoursFolder
-from app.folder_paths import (input_images_folder, output_without_bg_folder, output_contours_folder,logs_folder)
+from app.folder_paths import (input_images_folder, output_without_bg_folder, output_contours_folder,logs_folder,final_output_bg,final_output_contours,final_input)
 from app.maskGenerate import mask
 from app.removeBg import remove
-from app.utils import inputReady, clear_directorys, delete, SpamFilter
+from app.utils import inputReady, clear_directorys, move_input,SpamFilter, move
 
 app = Rocketry(config={
     'task_execution': 'async',
@@ -27,29 +26,30 @@ logger = logging.getLogger("rocketry.task")
 repo = CSVFileRepo(filename= logs_folder + "log.csv", model=TaskLogRecord)
 folder = RepoHandler(repo=repo)
 folder.addFilter(SpamFilter())
-logger.addHandler(logging.StreamHandler())
+#logger.addHandler(logging.StreamHandler())
 logger.addHandler(folder)
 
-sucess_count = 0
 @app.task(on_startup=True, name='Start')
 def Start():
     pass
 
+
 @app.task(on_shutdown=True,name='Close')
-def Close(count=Return('Move to Slab')):
-    print('Total Contours Create: ',count)
+def Close():
+    pass
 
 
 @app.task(after_fail('Folder Check'))
 def Restart():
     pass
 
+
 @app.task(after_any_success(Start,'Move to Slab',Restart),name='Folder Check')
 def folder_check():
     if inputReady(input_images_folder):
         clear_directorys()
 
-#
+
 @app.task(after_success('Folder Check'), name='Masking')
 def mask_generate():
     try:
@@ -76,15 +76,13 @@ def create_contours():
 
 @app.task(after_success(create_contours), name='Move to Slab')
 def move_to_slab():
-    sucess_count = sucess_count + 1
     try:
-        # move(final_output_bg)
-        # move(final_output_contours)
-        delete(input_images_folder)
+        move(output_without_bg_folder,final_output_bg)
+        move(output_contours_folder,final_output_contours)
+        move_input(input_images_folder,final_input)
 
     except Exception:
         raise Exception("Move Finish Fail")
-    return sucess_count
 
 
 @app.task(after_any_fail(mask_generate, remove_background, create_contours), name='Erros')
