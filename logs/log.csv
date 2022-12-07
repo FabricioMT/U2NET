@@ -1,93 +1,118 @@
 task_name,action,created,start,end,runtime,message,exc_text
-Start,run,1667319551.7258322,2022-11-01 13:19:11.725832,,,Task 'Start' status: 'run',
-Start,success,1667319551.7268329,2022-11-01 13:19:11.725832,2022-11-01 13:19:11.726833,0:00:00.001001,Task 'Start' status: 'success',
-Move to Slab,fail,1667319557.766833,2022-11-01 13:19:17.765832,2022-11-01 13:19:17.766833,0:00:00.001001,Task 'Move to Slab' status: 'fail',"Traceback (most recent call last):
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 823, in move
-    os.rename(src, real_dst)
-FileNotFoundError: [WinError 3] O sistema não pode encontrar o caminho especificado: 'C:\\Users\\fabri\\OneDrive\\Área de Trabalho\\PyScript\\U2NET\\input_folder\\output-removeBg\\00.png' -> 'C:\\Users\\fabri\\OneDrive\\Área de Trabalho\\PyScript\\U2NET\\input_folder\\main\\00.png'
+Close,run,1670349216.9499528,2022-12-06 14:53:36.949953,,,Task 'Close' status: 'run',
+Close,success,1670349216.9519491,2022-12-06 14:53:36.949953,2022-12-06 14:53:36.950949,0:00:00.000996,Task 'Close' status: 'success',
+Start,run,1670353779.9004703,2022-12-06 16:09:39.900470,,,Task 'Start' status: 'run',
+Start,success,1670353779.9004703,2022-12-06 16:09:39.900470,2022-12-06 16:09:39.900470,0:00:00,Task 'Start' status: 'success',
+Close,run,1670354041.08838,2022-12-06 16:14:01.088380,,,Task 'Close' status: 'run',
+Close,success,1670354041.090382,2022-12-06 16:14:01.088380,2022-12-06 16:14:01.088380,0:00:00,Task 'Close' status: 'success',
+Start,run,1670355698.82654,2022-12-06 16:41:38.826540,,,Task 'Start' status: 'run',
+Start,success,1670355698.82654,2022-12-06 16:41:38.826540,2022-12-06 16:41:38.826540,0:00:00,Task 'Start' status: 'success',
+Close,run,1670355906.2445598,2022-12-06 16:45:06.244560,,,Task 'Close' status: 'run',
+Close,success,1670355906.2613988,2022-12-06 16:45:06.244560,2022-12-06 16:45:06.259394,0:00:00.014834,Task 'Close' status: 'success',
+Start,run,1670356054.7155592,2022-12-06 16:47:34.715559,,,Task 'Start' status: 'run',
+Start,success,1670356054.7155592,2022-12-06 16:47:34.715559,2022-12-06 16:47:34.715559,0:00:00,Task 'Start' status: 'success',
+Close,run,1670356393.5065374,2022-12-06 16:53:13.506537,,,Task 'Close' status: 'run',
+Close,success,1670356393.5265393,2022-12-06 16:53:13.506537,2022-12-06 16:53:13.522542,0:00:00.016005,Task 'Close' status: 'success',
+Start,run,1670356503.2628822,2022-12-06 16:55:03.262882,,,Task 'Start' status: 'run',
+Start,success,1670356503.2628822,2022-12-06 16:55:03.262882,2022-12-06 16:55:03.262882,0:00:00,Task 'Start' status: 'success',
+Close,run,1670356689.48056,2022-12-06 16:58:09.480560,,,Task 'Close' status: 'run',
+Close,success,1670356689.4965646,2022-12-06 16:58:09.480560,2022-12-06 16:58:09.495564,0:00:00.015004,Task 'Close' status: 'success',
+Start,run,1670356744.2005408,2022-12-06 16:59:04.200541,,,Task 'Start' status: 'run',
+Start,success,1670356744.2005408,2022-12-06 16:59:04.200541,2022-12-06 16:59:04.200541,0:00:00,Task 'Start' status: 'success',
+Close,run,1670356771.4503155,2022-12-06 16:59:31.450315,,,Task 'Close' status: 'run',
+Close,success,1670356771.4533179,2022-12-06 16:59:31.450315,2022-12-06 16:59:31.452318,0:00:00.002003,Task 'Close' status: 'success',
+Start,run,1670358687.0696368,2022-12-06 17:31:27.069637,,,Task 'Start' status: 'run',
+Start,success,1670358687.0696368,2022-12-06 17:31:27.069637,2022-12-06 17:31:27.069637,0:00:00,Task 'Start' status: 'success',
+Close,run,1670358993.7152073,2022-12-06 17:36:33.715207,,,Task 'Close' status: 'run',
+Close,success,1670358993.7342083,2022-12-06 17:36:33.715207,2022-12-06 17:36:33.730211,0:00:00.015004,Task 'Close' status: 'success',
+Start,run,1670359097.2929382,2022-12-06 17:38:17.292938,,,Task 'Start' status: 'run',
+Start,success,1670359097.2929382,2022-12-06 17:38:17.292938,2022-12-06 17:38:17.292938,0:00:00,Task 'Start' status: 'success',
+Close,terminate,1670359482.9913635,,2022-12-06 17:44:42.987363,,unknown reason,
+Start,run,1670359550.2500548,2022-12-06 17:45:50.250055,,,Task 'Start' status: 'run',
+Start,success,1670359550.2500548,2022-12-06 17:45:50.250055,2022-12-06 17:45:50.250055,0:00:00,Task 'Start' status: 'success',
+Close,run,1670359556.7225611,2022-12-06 17:45:56.722561,,,Task 'Close' status: 'run',
+Close,success,1670359556.7385635,2022-12-06 17:45:56.722561,2022-12-06 17:45:56.738564,0:00:00.016003,Task 'Close' status: 'success',
+Start,run,1670359564.5349495,2022-12-06 17:46:04.534950,,,Task 'Start' status: 'run',
+Start,success,1670359564.5349495,2022-12-06 17:46:04.534950,2022-12-06 17:46:04.534950,0:00:00,Task 'Start' status: 'success',
+RemBg,fail,1670359641.9352787,2022-12-06 17:47:21.906280,2022-12-06 17:47:21.934279,0:00:00.027999,Task 'RemBg' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\cli.py"", line 65, in remove_background
+    remove(input_images_folder, output_without_bg_folder)
+  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\app\removeBg.py"", line 39, in remove
+    rgba_inp = np.append(inp_img, a_layer, axis=2)
+  File ""<__array_function__ internals>"", line 180, in append
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\numpy\lib\function_base.py"", line 5444, in append
+    return concatenate((arr, values), axis=axis)
+  File ""<__array_function__ internals>"", line 180, in concatenate
+ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 644 and the array at index 1 has size 646
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\cli.py"", line 80, in move_to_slab
-    move(output_without_bg_folder,final_output_bg)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\app\utils.py"", line 59, in move
-    shutil.move(srcPath + file, destPath + file)
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 843, in move
-    copy_function(src, real_dst)
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 444, in copy2
-    copyfile(src, dst, follow_symlinks=follow_symlinks)
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 266, in copyfile
-    with open(dst, 'wb') as fdst:
-FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\fabri\\OneDrive\\Área de Trabalho\\PyScript\\U2NET\\input_folder\\main\\00.png'
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 229, in execute
+    output = await func(**params)
+  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\cli.py"", line 67, in remove_background
+    raise Exception(""Remove Background Fail"")
+Exception: Remove Background Fail"
+Erros,run,1670359642.0472798,2022-12-06 17:47:22.047280,,,Task 'Erros' status: 'run',
+Erros,success,1670359642.0482788,2022-12-06 17:47:22.047280,2022-12-06 17:47:22.047280,0:00:00,Task 'Erros' status: 'success',
+Close,run,1670359869.2605603,2022-12-06 17:51:09.260560,,,Task 'Close' status: 'run',
+Close,success,1670359869.267562,2022-12-06 17:51:09.260560,2022-12-06 17:51:09.267562,0:00:00.007002,Task 'Close' status: 'success',
+Start,run,1670359915.4192555,2022-12-06 17:51:55.419255,,,Task 'Start' status: 'run',
+Start,success,1670359915.4192555,2022-12-06 17:51:55.419255,2022-12-06 17:51:55.419255,0:00:00,Task 'Start' status: 'success',
+Close,run,1670360370.249555,2022-12-06 17:59:30.249555,,,Task 'Close' status: 'run',
+Close,success,1670360370.2755551,2022-12-06 17:59:30.249555,2022-12-06 17:59:30.270556,0:00:00.021001,Task 'Close' status: 'success',
+Start,run,1670362199.5733275,2022-12-06 18:29:59.573328,,,Task 'Start' status: 'run',
+Start,success,1670362199.5733275,2022-12-06 18:29:59.573328,2022-12-06 18:29:59.573328,0:00:00,Task 'Start' status: 'success',
+Close,run,1670362437.246086,2022-12-06 18:33:57.246086,,,Task 'Close' status: 'run',
+Close,success,1670362437.2670872,2022-12-06 18:33:57.246086,2022-12-06 18:33:57.266088,0:00:00.020002,Task 'Close' status: 'success',
+Start,run,1670363448.0741544,2022-12-06 18:50:48.074154,,,Task 'Start' status: 'run',
+Start,success,1670363448.0741544,2022-12-06 18:50:48.074154,2022-12-06 18:50:48.074154,0:00:00,Task 'Start' status: 'success',
+Close,run,1670363685.2015493,2022-12-06 18:54:45.201549,,,Task 'Close' status: 'run',
+Close,success,1670363685.2229667,2022-12-06 18:54:45.201549,2022-12-06 18:54:45.221966,0:00:00.020417,Task 'Close' status: 'success',
+Start,run,1670421232.0573504,2022-12-07 10:53:52.057350,,,Task 'Start' status: 'run',
+Start,success,1670421232.0583513,2022-12-07 10:53:52.057350,2022-12-07 10:53:52.058351,0:00:00.001001,Task 'Start' status: 'success',
+Create Contours,fail,1670421237.6266384,2022-12-07 10:53:57.598893,2022-12-07 10:53:57.626638,0:00:00.027745,Task 'Create Contours' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\cli.py"", line 73, in create_contours
+    createContoursFolder(output_without_bg_folder, output_contours_folder)
+  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\app\contours.py"", line 31, in createContoursFolder
+    contour = createContours(image_dir + os.sep + file)
+  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\app\contours.py"", line 18, in createContours
+    max_pixel_ct = pixel_count.index(max(pixel_count))
+ValueError: max() arg is an empty sequence
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
   File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\venv\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
     output = await self.execute(**params)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\venv\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
-    output = func(**params)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\cli.py"", line 85, in move_to_slab
-    raise Exception(""Move Finish Fail"")
-Exception: Move Finish Fail"
-Close,run,1667319580.6548333,2022-11-01 13:19:40.654833,,,Task 'Close' status: 'run',
-Close,success,1667319580.6558344,2022-11-01 13:19:40.654833,2022-11-01 13:19:40.654833,0:00:00,Task 'Close' status: 'success',
-Start,run,1667319587.2338321,2022-11-01 13:19:47.233832,,,Task 'Start' status: 'run',
-Start,success,1667319587.2338321,2022-11-01 13:19:47.233832,2022-11-01 13:19:47.233832,0:00:00,Task 'Start' status: 'success',
-Move to Slab,fail,1667319593.1038337,2022-11-01 13:19:53.102832,2022-11-01 13:19:53.103834,0:00:00.001002,Task 'Move to Slab' status: 'fail',"Traceback (most recent call last):
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 823, in move
-    os.rename(src, real_dst)
-FileNotFoundError: [WinError 3] O sistema não pode encontrar o caminho especificado: 'C:\\Users\\fabri\\OneDrive\\Área de Trabalho\\PyScript\\U2NET\\input_folder\\output-removeBg\\2777-PhotoRoom.png' -> 'C:\\Users\\fabri\\OneDrive\\Área de Trabalho\\PyScript\\U2NET\\input_folder\\main\\2777-PhotoRoom.png'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\cli.py"", line 80, in move_to_slab
-    move(output_without_bg_folder,final_output_bg)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\app\utils.py"", line 59, in move
-    shutil.move(srcPath + file, destPath + file)
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 843, in move
-    copy_function(src, real_dst)
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 444, in copy2
-    copyfile(src, dst, follow_symlinks=follow_symlinks)
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 266, in copyfile
-    with open(dst, 'wb') as fdst:
-FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\fabri\\OneDrive\\Área de Trabalho\\PyScript\\U2NET\\input_folder\\main\\2777-PhotoRoom.png'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\venv\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
-    output = await self.execute(**params)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\venv\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
-    output = func(**params)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\cli.py"", line 85, in move_to_slab
-    raise Exception(""Move Finish Fail"")
-Exception: Move Finish Fail"
-Close,run,1667319594.612832,2022-11-01 13:19:54.612832,,,Task 'Close' status: 'run',
-Close,success,1667319594.6138327,2022-11-01 13:19:54.612832,2022-11-01 13:19:54.613833,0:00:00.001001,Task 'Close' status: 'success',
-Start,run,1667321011.6971347,2022-11-01 13:43:31.697135,,,Task 'Start' status: 'run',
-Start,success,1667321011.6981335,2022-11-01 13:43:31.697135,2022-11-01 13:43:31.697135,0:00:00,Task 'Start' status: 'success',
-Close,run,1667321037.108134,2022-11-01 13:43:57.108134,,,Task 'Close' status: 'run',
-Close,success,1667321037.1091342,2022-11-01 13:43:57.108134,2022-11-01 13:43:57.109134,0:00:00.001000,Task 'Close' status: 'success',
-Start,run,1667321071.6061344,2022-11-01 13:44:31.606134,,,Task 'Start' status: 'run',
-Start,success,1667321071.6071365,2022-11-01 13:44:31.606134,2022-11-01 13:44:31.606134,0:00:00,Task 'Start' status: 'success',
-Close,run,1667321163.979136,2022-11-01 13:46:03.979136,,,Task 'Close' status: 'run',
-Close,success,1667321163.9801338,2022-11-01 13:46:03.979136,2022-11-01 13:46:03.980134,0:00:00.000998,Task 'Close' status: 'success',
-Start,run,1667495169.8396096,2022-11-03 14:06:09.839610,,,Task 'Start' status: 'run',
-Start,success,1667495169.8396096,2022-11-03 14:06:09.839610,2022-11-03 14:06:09.839610,0:00:00,Task 'Start' status: 'success',
-Close,run,1667495275.911637,2022-11-03 14:07:55.911637,,,Task 'Close' status: 'run',
-Close,success,1667495275.9126368,2022-11-03 14:07:55.911637,2022-11-03 14:07:55.912637,0:00:00.001000,Task 'Close' status: 'success',
-Start,run,1667501244.7966223,2022-11-03 15:47:24.796622,,,Task 'Start' status: 'run',
-Start,success,1667501244.7966223,2022-11-03 15:47:24.796622,2022-11-03 15:47:24.796622,0:00:00,Task 'Start' status: 'success',
-Close,run,1667501339.2155433,2022-11-03 15:48:59.215543,,,Task 'Close' status: 'run',
-Close,success,1667501339.216545,2022-11-03 15:48:59.215543,2022-11-03 15:48:59.215543,0:00:00,Task 'Close' status: 'success',
-Start,run,1667999898.755938,2022-11-09 10:18:18.755938,,,Task 'Start' status: 'run',
-Start,success,1667999898.7569394,2022-11-09 10:18:18.755938,2022-11-09 10:18:18.756939,0:00:00.001001,Task 'Start' status: 'success',
-Close,run,1667999931.4425628,2022-11-09 10:18:51.442563,,,Task 'Close' status: 'run',
-Close,success,1667999931.4435632,2022-11-09 10:18:51.442563,2022-11-09 10:18:51.442563,0:00:00,Task 'Close' status: 'success',
-Start,run,1668000002.05998,2022-11-09 10:20:02.059980,,,Task 'Start' status: 'run',
-Start,success,1668000002.05998,2022-11-09 10:20:02.059980,2022-11-09 10:20:02.059980,0:00:00,Task 'Start' status: 'success',
-Close,run,1668000020.878979,2022-11-09 10:20:20.878979,,,Task 'Close' status: 'run',
-Close,success,1668000020.879979,2022-11-09 10:20:20.878979,2022-11-09 10:20:20.879979,0:00:00.001000,Task 'Close' status: 'success',
+  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\venv\lib\site-packages\rocketry\tasks\func.py"", line 229, in execute
+    output = await func(**params)
+  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\cli.py"", line 75, in create_contours
+    raise Exception(""Create Contour Fail"")
+Exception: Create Contour Fail"
+Erros,run,1670421237.7406409,2022-12-07 10:53:57.740641,,,Task 'Erros' status: 'run',
+Erros,success,1670421237.741645,2022-12-07 10:53:57.740641,2022-12-07 10:53:57.741645,0:00:00.001004,Task 'Erros' status: 'success',
+Close,run,1670421261.096618,2022-12-07 10:54:21.096618,,,Task 'Close' status: 'run',
+Close,success,1670421261.096618,2022-12-07 10:54:21.096618,2022-12-07 10:54:21.096618,0:00:00,Task 'Close' status: 'success',
+Start,run,1670421267.487619,2022-12-07 10:54:27.487619,,,Task 'Start' status: 'run',
+Start,success,1670421267.487619,2022-12-07 10:54:27.487619,2022-12-07 10:54:27.487619,0:00:00,Task 'Start' status: 'success',
+Close,run,1670421292.0956178,2022-12-07 10:54:52.095618,,,Task 'Close' status: 'run',
+Close,success,1670421292.0976186,2022-12-07 10:54:52.095618,2022-12-07 10:54:52.097619,0:00:00.002001,Task 'Close' status: 'success',
+Start,run,1670421666.6376202,2022-12-07 11:01:06.637620,,,Task 'Start' status: 'run',
+Start,success,1670421666.6376202,2022-12-07 11:01:06.637620,2022-12-07 11:01:06.637620,0:00:00,Task 'Start' status: 'success',
+Close,run,1670421687.4516141,2022-12-07 11:01:27.451614,,,Task 'Close' status: 'run',
+Close,success,1670421687.4536145,2022-12-07 11:01:27.451614,2022-12-07 11:01:27.453614,0:00:00.002000,Task 'Close' status: 'success',
+Start,run,1670422904.55315,2022-12-07 11:21:44.553150,,,Task 'Start' status: 'run',
+Start,success,1670422904.5541506,2022-12-07 11:21:44.553150,2022-12-07 11:21:44.553150,0:00:00,Task 'Start' status: 'success',
+Close,run,1670422926.2386444,2022-12-07 11:22:06.238644,,,Task 'Close' status: 'run',
+Close,success,1670422926.2406423,2022-12-07 11:22:06.238644,2022-12-07 11:22:06.240642,0:00:00.001998,Task 'Close' status: 'success',
+Start,run,1670423058.145639,2022-12-07 11:24:18.145639,,,Task 'Start' status: 'run',
+Start,success,1670423058.145639,2022-12-07 11:24:18.145639,2022-12-07 11:24:18.145639,0:00:00,Task 'Start' status: 'success',
+Close,run,1670423078.39464,2022-12-07 11:24:38.394640,,,Task 'Close' status: 'run',
+Close,success,1670423078.4006429,2022-12-07 11:24:38.394640,2022-12-07 11:24:38.400643,0:00:00.006003,Task 'Close' status: 'success',
+Start,run,1670424213.369617,2022-12-07 11:43:33.369617,,,Task 'Start' status: 'run',
+Start,success,1670424213.369617,2022-12-07 11:43:33.369617,2022-12-07 11:43:33.369617,0:00:00,Task 'Start' status: 'success',
+Close,run,1670424234.1016386,2022-12-07 11:43:54.101639,,,Task 'Close' status: 'run',
+Close,success,1670424234.1086414,2022-12-07 11:43:54.101639,2022-12-07 11:43:54.107641,0:00:00.006002,Task 'Close' status: 'success',

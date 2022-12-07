@@ -1,6 +1,7 @@
 # general things to ignore
 model_saved/
-.venv/
+venv/
 __pycache__/
 .idea/
 testes_models/
+DATA TEST GERAL/

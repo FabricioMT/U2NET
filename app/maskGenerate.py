@@ -12,19 +12,19 @@ from torchvision import transforms
 from app.data_loader import RescaleT
 from app.data_loader import SalObjDataset
 from app.data_loader import ToTensorLab
-from app.folder_paths import (input_images_folder, output_result_mask)
+from app.folder_paths import (input_images_folder, output_result_mask, model_in_work)
 from app.model import U2NET
 
 warnings.simplefilter("ignore", UserWarning)
 
 # --------- 3. model define ---------
-model_dir = os.path.join('app', 'model', 'model_saved/' + "u2net.pth")
+
 net = U2NET(3, 1)
 if torch.cuda.is_available():
-    net.load_state_dict(torch.load(model_dir))
+    net.load_state_dict(torch.load(model_in_work))
     net.cuda()
 else:
-    net.load_state_dict(torch.load(model_dir, map_location=torch.device('cpu')))
+    net.load_state_dict(torch.load(model_in_work, map_location=torch.device('cpu')))
 
 
 def normPRED(d):
