@@ -82,7 +82,6 @@ def cuda_test():
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     print('Using device:', device)
     print()
-
     # Additional Info when using cuda
     if device.type == 'cuda':
         print(torch.cuda.get_device_name(0))
@@ -90,10 +89,18 @@ def cuda_test():
         print('Allocated:', round(torch.cuda.memory_allocated(0) / 1024 ** 3, 1), 'GB')
         print('Cached:   ', round(torch.cuda.memory_reserved(0) / 1024 ** 3, 1), 'GB')
 #
+def move_for_tests():
+    srcPath = r"C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\input_folder\testes_models\04-12input" + os.sep
+    destPath = r"C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\input_folder\input-images" + os.sep
+    files = os.listdir(srcPath)
+
+    for file in files[:len(files)]:
+        #print(srcPath + file)
+        shutil.move(srcPath + file, destPath + file)
 
 if __name__ == "__main__":
     # remove()
-    # cuda_test()
+    #cuda_test()
     # check_model()
     # clear('results-mask/')
     pass

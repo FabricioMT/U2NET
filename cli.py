@@ -11,7 +11,7 @@ from app.contours import createContoursFolder
 from app.folder_paths import (input_images_folder, output_without_bg_folder, output_contours_folder,logs_folder,final_output_bg,final_output_contours,final_input)
 from app.maskGenerate import mask
 from app.removeBg import remove
-from app.utils import inputReady, clear_directorys, move_input,SpamFilter, move
+from app.utils import (inputReady, clear_directorys, move_input,SpamFilter, move,move_for_tests)
 
 app = Rocketry(config={
     'task_execution': 'async',
@@ -30,28 +30,29 @@ folder.addFilter(SpamFilter())
 logger.addHandler(folder)
 
 @app.task(on_startup=True, name='Start')
-def Start():
+async def Start():
     pass
 
 
 @app.task(on_shutdown=True,name='Close')
-def Close():
+async def Close():
+    move_for_tests()
     pass
 
 
 @app.task(after_fail('Folder Check'))
-def Restart():
+async def Restart():
     pass
 
 
 @app.task(after_any_success(Start,'Move to Slab',Restart),name='Folder Check')
-def folder_check():
+async def folder_check():
     if inputReady(input_images_folder):
         clear_directorys()
 
 
 @app.task(after_success('Folder Check'), name='Masking')
-def mask_generate():
+async def mask_generate():
     try:
         mask()
     except Exception:
@@ -59,7 +60,7 @@ def mask_generate():
 
 
 @app.task(after_success(mask_generate), name='RemBg')
-def remove_background():
+async def remove_background():
     try:
         remove(input_images_folder, output_without_bg_folder)
     except Exception:
@@ -67,15 +68,16 @@ def remove_background():
 
 
 @app.task(after_success(remove_background), name='Create Contours')
-def create_contours():
+async def create_contours():
     try:
+        pass
         createContoursFolder(output_without_bg_folder, output_contours_folder)
     except Exception:
         raise Exception("Create Contour Fail")
 
 
 @app.task(after_success(create_contours), name='Move to Slab')
-def move_to_slab():
+async def move_to_slab():
     try:
         move(output_without_bg_folder,final_output_bg)
         move(output_contours_folder,final_output_contours)

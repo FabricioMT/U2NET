@@ -1,5 +1,4 @@
 import os
-
 import cv2
 import numpy as np
 
@@ -12,14 +11,14 @@ def createContours(img):
     mask.fill(255)
 
     contours, hierarchyct = cv2.findContours(image=image_edges,mode=cv2.RETR_EXTERNAL,method=cv2.CHAIN_APPROX_NONE)
-    #thickness=-1
+    
 
     pixel_count = []
     for component in contours: pixel_count.append(len(component))
     max_pixel_ct = pixel_count.index(max(pixel_count))
 
     cv2.drawContours(image=mask,contours=contours[max_pixel_ct],contourIdx=-1,color=(0,0,0),thickness=1)
-
+    #thickness=-1
     return mask
 
 
@@ -28,9 +27,6 @@ def createContoursFolder(input_rembg_folder, output_cont):
     image_dest = os.path.join(os.getcwd(), output_cont + os.sep)
     files = os.listdir(image_dir)
 
-    n = 0
-    finish = len(files)
-
     for file in files:
         contour = createContours(image_dir + os.sep + file)
 
@@ -38,7 +34,3 @@ def createContoursFolder(input_rembg_folder, output_cont):
             pass
         else:
             raise
-
-        n = n + 1
-        if n == finish:
-            return 0
