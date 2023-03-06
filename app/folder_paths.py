@@ -1,5 +1,5 @@
 import os
-model_in_work = os.path.join(os.getcwd(), 'app' + os.sep + 'model' + os.sep+ 'model_saved' + os.sep + "Invertido_Lr_1e-2_Loss_0.027270_Epoch_101.pth")
+model_in_work = os.path.join(os.getcwd(), 'app' + os.sep + 'model' + os.sep+ 'model_saved' + os.sep + "Grey-Last_Lr_0.0001_Loss_0.349331_Epoch_21.pth")
 # FOLDERS u2net.pth
 input_images_folder = os.path.join(os.getcwd(), 'input_folder' + os.sep + 'input-images' + os.sep)
 output_without_bg_folder = os.path.join(os.getcwd(), 'input_folder' + os.sep + 'output-removeBg' + os.sep)

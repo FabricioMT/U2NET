@@ -35,7 +35,6 @@ def normPRED(d):
 
     return dn
 
-
 def save_output(image_name, pred, d_dir):
     predict = pred
     predict = predict.squeeze()
