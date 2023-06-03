@@ -2,9 +2,10 @@ from logging import Filter
 from rocketry.log import MinimalRecord
 import os
 import shutil
-
+import time
 import gdown
 import torch
+import pathlib as pl
 
 class SpamFilter(Filter):
     def filter(self, record: MinimalRecord) -> bool:
@@ -16,19 +17,34 @@ class SpamFilter(Filter):
         move_cond = record.task_name.startswith('Move') and record.action == 'fail'
         bg_cond = record.task_name.startswith('RemBg') and record.action == 'fail'
         mask_cond = record.task_name.startswith('Masking') and record.action == 'fail'
+        exec_cond = record.task_name.startswith('Execution') and record.action == 'fail'
 
-        if start_cond or finish_cond or erros_cond or contours_fail or move_cond or bg_cond or mask_cond:
+        if start_cond or finish_cond or erros_cond or move_cond or contours_fail or bg_cond or mask_cond or exec_cond:
             return True
         return False
 
 def inputReady(folder):
     inputs = os.listdir(folder)
+
     if len(inputs) != 0:
         return True
     else:
-        
         raise Exception("Folder is Empty")
 
+def move_controler(inputs, output):
+    move_item(inputs,output)
+    output_folder = len(os.listdir(output))
+    name = os.listdir(output)[0]
+    packet = name
+    print(packet)
+    if output_folder == 1:
+        return packet
+    else:
+        raise Exception("Move to exec queue Error !")
+
+
+
+    
 
 def clear(folder):
     for filename in os.listdir('input_folder/' + folder):
@@ -41,13 +57,26 @@ def clear(folder):
         except Exception as e:
             print('Failed to delete %s. Reason: %s' % (file_path, e))
 
-
-def move_input(inputs,output):
+def move_item(inputs,output):
     image_dir = inputs
     destPath = output
     input_img = os.listdir(image_dir)[0]
     moved_img = inputs + input_img
     shutil.move(moved_img, destPath + input_img)
+
+
+def move_for_name(packet,inputs,output):
+    image_dir = os.listdir(inputs)
+    destPath = output
+    files_image_dir = [pl.PurePath(file).name for file in image_dir]
+
+    for filename in files_image_dir:
+        if filename == packet:
+            moved_img = inputs + filename
+            shutil.move(moved_img, destPath + filename)
+
+
+    
 
 
 def move(inputs, output):
@@ -71,7 +100,7 @@ def check_model():
 
 
 def clear_directorys():
-    # clear('input-images/')
+
     clear('output-removeBg/')
     clear('output-contours/')
     clear('results-mask/')
@@ -88,7 +117,7 @@ def cuda_test():
         print('Memory Usage:')
         print('Allocated:', round(torch.cuda.memory_allocated(0) / 1024 ** 3, 1), 'GB')
         print('Cached:   ', round(torch.cuda.memory_reserved(0) / 1024 ** 3, 1), 'GB')
-#
+
 def move_for_tests():
     srcPath = r"C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\input_folder\testes_models\04-12input" + os.sep
     destPath = r"C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\input_folder\input-images" + os.sep

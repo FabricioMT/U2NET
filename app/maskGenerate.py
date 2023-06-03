@@ -12,7 +12,7 @@ from torchvision import transforms
 from app.data_loader import RescaleT
 from app.data_loader import SalObjDataset
 from app.data_loader import ToTensorLab
-from app.folder_paths import (input_images_folder, output_result_mask, model_in_work)
+from app.folder_paths import (input_images_folder, output_result_mask, model_in_work,execution_queue_folder)
 from app.model import U2NET
 
 warnings.simplefilter("ignore", UserWarning)
@@ -43,21 +43,22 @@ def save_output(image_name, pred, d_dir):
     im = Image.fromarray(predict_np * 255).convert('RGB')
     img_name = image_name.split(os.sep)[-1]
     image = io.imread(image_name)
-    imo = im.resize((image.shape[1], image.shape[0]), resample=Image.Resampling.LANCZOS)
+    imo = im.resize((image.shape[1], image.shape[0]), resample=Image.LANCZOS)
 
     aaa = img_name.split(".")
     bbb = aaa[0:-1]
     imidx = bbb[0]
     for i in range(1, len(bbb)):
         imidx = imidx + "." + bbb[i]
-
+    
+    imo.save(r"C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\input_folder\MASK" + imidx + '.JPG')
     imo.save(d_dir + imidx + '.JPG')
 
 
-def mask():
+def mask(input,output):
     # --------- 1. get image path and name ---------
-    image_dir = os.path.join(input_images_folder)
-    prediction_dir = os.path.join(output_result_mask)
+    image_dir = os.path.join(input)
+    prediction_dir = os.path.join(output)
     img_slot_0 = []
     img_name_list = glob.glob(image_dir + os.sep + '*')
     img_slot_0 = [img_name_list[0]]
