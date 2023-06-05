@@ -31,6 +31,24 @@ def inputReady(folder):
     else:
         raise Exception("Folder is Empty")
 
+def clear(folder):
+    for filename in os.listdir('input_folder/' + folder):
+        file_path = os.path.join('input_folder/' + folder, filename)
+        try:
+            if os.path.isfile(file_path) or os.path.islink(file_path):
+                os.unlink(file_path)
+            elif os.path.isdir(file_path):
+                shutil.rmtree(file_path)
+        except Exception as e:
+            print('Failed to delete %s. Reason: %s' % (file_path, e))
+
+def clear_directorys():
+
+    clear('output-removeBg/')
+    clear('output-contours/')
+    clear('results-mask/')
+
+
 def move_controler(inputs, output):
     move_item(inputs,output)
     output_folder = len(os.listdir(output))
@@ -42,20 +60,13 @@ def move_controler(inputs, output):
     else:
         raise Exception("Move to exec queue Error !")
 
+def move(inputs, output):
+    srcPath = inputs
+    destPath = output
+    files = os.listdir(srcPath)
 
-
-    
-
-def clear(folder):
-    for filename in os.listdir('input_folder/' + folder):
-        file_path = os.path.join('input_folder/' + folder, filename)
-        try:
-            if os.path.isfile(file_path) or os.path.islink(file_path):
-                os.unlink(file_path)
-            elif os.path.isdir(file_path):
-                shutil.rmtree(file_path)
-        except Exception as e:
-            print('Failed to delete %s. Reason: %s' % (file_path, e))
+    for file in files[:len(files)]:
+        shutil.move(srcPath + file, destPath + file)
 
 def move_item(inputs,output):
     image_dir = inputs
@@ -76,34 +87,48 @@ def move_for_name(packet,inputs,output):
             shutil.move(moved_img, destPath + filename)
 
 
+
+def check_dirs():
     
+    if not os.path.isdir('./logs/'):
+        os.makedirs('./logs/', exist_ok=True)
 
-
-def move(inputs, output):
-    srcPath = inputs
-    destPath = output
-    files = os.listdir(srcPath)
-
-    for file in files[:len(files)]:
-        shutil.move(srcPath + file, destPath + file)
-
-
-def check_model():
     if not os.path.isdir('./app/model/model_saved/'):
-        print("Download Model !")
         os.makedirs('./app/model/model_saved/', exist_ok=True)
-        gdown.download('https://drive.google.com/file/d/1RWApr3ItjWVPgBL75Tm1_fv3dfy3mBrv/view?usp=sharing',
-                       './app/model/model_saved/u2net.pth',
-                       quiet=False)
+
+    if not os.path.isdir('./input_folder/'):
+        os.makedirs('./input_folder/input-images/', exist_ok=True)
+        os.makedirs('./input_folder/exec-queue/', exist_ok=True)
+        os.makedirs('./input_folder/output-removeBg/', exist_ok=True)
+        os.makedirs('./input_folder/output-contours/', exist_ok=True)
+        os.makedirs('./input_folder/results-mask/', exist_ok=True)
+
+    elif os.path.isdir('./input_folder/'):
+        if not os.path.isdir('./input_folder/input-images/'):
+            os.makedirs('./input_folder/input-images/', exist_ok=True)
+            print("input-images create !")
+
+        if not os.path.isdir('./input_folder/exec-queue/'):
+            os.makedirs('./input_folder/exec-queue/', exist_ok=True)
+            print("exec-queue create !")
+
+        if not os.path.isdir('./input_folder/output-removeBg/'):
+            os.makedirs('./input_folder/output-removeBg/', exist_ok=True)
+            print("output-removeBg create !")
+
+        if not os.path.isdir('./input_folder/output-contours/'):
+            os.makedirs('./input_folder/output-contours/', exist_ok=True)
+            print("output-contours create !")
+
+        if not os.path.isdir('./input_folder/results-mask/'):
+            os.makedirs('./input_folder/results-mask/', exist_ok=True)
+            print("results-mask create !")
+            
     else:
-        print("Model OK !")
+        print("Dirs Check !")
 
 
-def clear_directorys():
 
-    clear('output-removeBg/')
-    clear('output-contours/')
-    clear('results-mask/')
 
 
 def cuda_test():

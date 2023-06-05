@@ -13,10 +13,10 @@ from app.utils import clear
 def remove(input_folder, output_folder):
     image_dir = os.path.join(os.getcwd(), input_folder)
     bg_dir = os.path.join(os.getcwd(), output_folder + os.sep)
-
-
     input_img = os.listdir(image_dir)[0]
     file = os.listdir(output_result_mask)[0]
+
+
     img_name = input_img[:-4]
     THRESHOLD = 0.9
     RESCALE = 255
@@ -48,10 +48,8 @@ def remove(input_folder, output_folder):
 
     inp_img *= RESCALE
     inp_img = np.append(inp_img, RESCALE * a_layer, axis=2)
-    #inp_img = cv2.resize(inp_img, (int(shape[1] / 3), int(shape[0] / 3)))
     rem_back = cv2.resize(rem_back_scaled, (shape[1], shape[0]))
     result_img = Img.fromarray(rem_back.astype('uint8'), 'RGBA')
     result_img.save(bg_dir + f'{img_name}.png')
-    clear('results-mask/')
 
     

@@ -11,7 +11,7 @@ from app.contours import createContoursFolder
 from app.folder_paths import (input_images_folder, output_without_bg_folder, output_contours_folder, logs_folder,final_output_bg, final_output_contours, final_input,execution_queue_folder, output_result_mask)
 from app.maskGenerate import mask
 from app.removeBg import remove
-from app.utils import (inputReady, clear_directorys, move_item,SpamFilter, move,move_for_tests,move_controler,move_for_name)
+from app.utils import (inputReady, clear_directorys,SpamFilter, move,move_for_tests,move_controler,move_for_name,check_dirs)
 
 app = Rocketry(config={
     'task_execution': 'async',
@@ -31,6 +31,8 @@ logger.addHandler(folder)
 
 @app.task(on_startup=True, name='Start')
 def Start():
+    check_dirs()
+    move(execution_queue_folder, input_images_folder)
     print("start")
     pass
 
@@ -111,12 +113,8 @@ def packet_move(packet=Return(execution_queue)):
 def move_to_slab():
     try:
         
-
         move(output_without_bg_folder,final_output_bg)
-
         move(output_contours_folder,final_output_contours)
-
-        move_item(input_images_folder,final_input)
 
 
     except Exception:
