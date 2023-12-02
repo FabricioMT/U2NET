@@ -8,7 +8,19 @@ from redbird.logging import RepoHandler
 
 from rocketry.args import Return
 from app.contours import createContoursFolder
-from app.folder_paths import (input_images_folder, output_without_bg_folder, output_contours_folder, logs_folder,final_output_bg, final_output_contours, final_input,execution_queue_folder, output_result_mask)
+from app.crop import cropBoundingBoxFolder
+from app.folder_paths import (input_images_folder, 
+                              output_without_bg_folder, 
+                              output_contours_folder, 
+                              logs_folder,final_output_bg, 
+                              final_output_contours,
+                              final_input,
+                              execution_queue_folder,
+                              output_result_mask,
+                              output_erros,
+                              final_output_crop,
+                              output_crop)
+
 from app.maskGenerate import mask
 from app.removeBg import remove
 from app.utils import (inputReady, clear_directorys,SpamFilter, move,move_for_tests,move_controler,move_for_name,check_dirs)
@@ -34,7 +46,10 @@ def Start():
     check_dirs()
     move(execution_queue_folder, input_images_folder)
     print("start")
-    pass
+    relax = input("Informe o valor de sobra para o Crop: ")
+
+    return relax
+
 
 
 @app.task(on_shutdown=True,name='Close')
@@ -57,7 +72,7 @@ def Next():
     pass
 
 
-@app.task(after_any_success(Start,Restart,Next),name='Folder Check')
+@app.task(after_any_success(Start,Restart,Next,'Erros'),name='Folder Check')
 def folder_check():
     print("foldercheck")
     if inputReady(input_images_folder):
@@ -96,34 +111,42 @@ def remove_background():
 def create_contours():
     print("createcontours")
     try:
-        pass
         createContoursFolder(output_without_bg_folder, output_contours_folder)
     except Exception:
         raise Exception("Create Contour Fail")
 
-@app.task(after_success(create_contours), name='packet_move')
+@app.task(after_success(create_contours), name='Crop')
+def crop_bounding_box(relax=Return(Start)):
+    print("Crop")
+    try:
+        cropBoundingBoxFolder(execution_queue_folder,
+                              output_without_bg_folder,
+                              output_crop,
+                              relax)
+    except Exception:
+        raise Exception("crop_bounding_box Fail")
+
+@app.task(after_success(crop_bounding_box), name='packet_move')
 def packet_move(packet=Return(execution_queue)):
     try:
         move_for_name(packet,execution_queue_folder,final_input)
     except Exception:
         raise Exception("Move Finish Fail")
     
-
-@app.task(after_success(create_contours), name='Move to Slab')
+@app.task(after_success(packet_move), name='Move to Slab')
 def move_to_slab():
     try:
-        
         move(output_without_bg_folder,final_output_bg)
         move(output_contours_folder,final_output_contours)
-
-
+        move(output_crop,final_output_crop)
     except Exception:
         raise Exception("Move Finish Fail")
 
 
 @app.task(after_any_fail(mask_generate, remove_background, create_contours), name='Erros')
-def clear_for_erro():
+def clear_for_erro(packet=Return(execution_queue)):
     print("Clear")
+    move_for_name(packet,execution_queue_folder,output_erros)
     clear_directorys()
 
 

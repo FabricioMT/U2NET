@@ -1,6 +1,6 @@
 import os
 
-model_in_work = os.path.join(r'D:\Models\Model_Saved_U2NET' + os.sep + "Grey_PosSAM_fullTransform-_0.0001_Loss_0.124252_Epoch_201.pth") # testes
+model_in_work = os.path.join(r'D:\Models\Model_Saved_U2NET' + os.sep + "Model_Version_1.2.3-_0.0001_Loss_0.139055_Epoch_31.pth") # testes
 
 
 # FOLDERS u2net.pthGrey_CorrectRC120_0.0001_Loss_0.080863_Epoch_101
@@ -9,11 +9,15 @@ execution_queue_folder = os.path.join(os.getcwd(), 'input_folder' + os.sep + 'ex
 output_without_bg_folder = os.path.join(os.getcwd(), 'input_folder' + os.sep + 'output-removeBg' + os.sep)
 output_contours_folder = os.path.join(os.getcwd(), 'input_folder' + os.sep + 'output-contours' + os.sep)
 output_result_mask = os.path.join(os.getcwd(), 'input_folder' + os.sep + 'results-mask' + os.sep)
+output_crop = os.path.join(os.getcwd(), 'input_folder' + os.sep + 'output-crop' + os.sep)
 
 # FOLDERS PASTE YOUR PATHS
-final_output_bg = os.path.join(os.getcwd(), 'input_folder' + os.sep + 'testes_models' + os.sep + '04-12m' + os.sep)
-final_output_contours = os.path.join(os.getcwd(), 'input_folder' + os.sep + 'testes_models' + os.sep + '04-12mm' + os.sep)
-final_input = os.path.join(os.getcwd(), 'input_folder' + os.sep + 'testes_models' + os.sep + '04-12input' + os.sep)
+final_input = os.path.join(os.getcwd(), 'input_folder' + os.sep + 'testes_models' + os.sep + 'Input_Return' + os.sep)
+final_output_bg = os.path.join(os.getcwd(), 'input_folder' + os.sep + 'testes_models' + os.sep + 'Output_Removed_Background' + os.sep)
+final_output_contours = os.path.join(os.getcwd(), 'input_folder' + os.sep + 'testes_models' + os.sep + 'Output_Edges' + os.sep)
+final_output_crop = os.path.join(os.getcwd(), 'input_folder' + os.sep + 'testes_models' + os.sep + 'cropBoundingBox' + os.sep)
+
+output_erros = os.path.join(os.getcwd(), 'input_folder' + os.sep + 'testes_models' + os.sep + 'Erros' + os.sep)
 
 logs_folder = os.path.join(os.getcwd(), 'logs' + os.sep)
 

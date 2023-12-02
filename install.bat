@@ -13,5 +13,6 @@ cd %original_dir%
 
 call pip install -r requirements.txt
 
+call python.exe -m pip install --upgrade pip
 call pip freeze
 pause

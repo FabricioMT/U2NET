@@ -6,6 +6,7 @@ import time
 import gdown
 import torch
 import pathlib as pl
+from app.folder_paths import (input_images_folder,execution_queue_folder)
 
 class SpamFilter(Filter):
     def filter(self, record: MinimalRecord) -> bool:
@@ -48,18 +49,6 @@ def clear_directorys():
     clear('output-contours/')
     clear('results-mask/')
 
-
-def move_controler(inputs, output):
-    move_item(inputs,output)
-    output_folder = len(os.listdir(output))
-    name = os.listdir(output)[0]
-    packet = name
-    print(packet)
-    if output_folder == 1:
-        return packet
-    else:
-        raise Exception("Move to exec queue Error !")
-
 def move(inputs, output):
     srcPath = inputs
     destPath = output
@@ -67,6 +56,22 @@ def move(inputs, output):
 
     for file in files[:len(files)]:
         shutil.move(srcPath + file, destPath + file)
+
+def move_controler(inputs, output):
+    output_folder = len(os.listdir(output))
+    if output_folder != 0:
+        move(execution_queue_folder, input_images_folder)
+
+    move_item(inputs,output)      
+    name = os.listdir(output)[0]
+    packet = name
+    print(packet)
+    output_folder = len(os.listdir(output))
+    if output_folder == 1:
+        return packet
+    else:
+        raise Exception("Move to exec queue Error !")
+
 
 def move_item(inputs,output):
     image_dir = inputs
@@ -97,16 +102,12 @@ def check_dirs():
         os.makedirs('./app/model/model_saved/', exist_ok=True)
 
     if not os.path.isdir('./input_folder/'):
-        os.makedirs('./input_folder/input-images/', exist_ok=True)
         os.makedirs('./input_folder/exec-queue/', exist_ok=True)
         os.makedirs('./input_folder/output-removeBg/', exist_ok=True)
         os.makedirs('./input_folder/output-contours/', exist_ok=True)
         os.makedirs('./input_folder/results-mask/', exist_ok=True)
 
     elif os.path.isdir('./input_folder/'):
-        if not os.path.isdir('./input_folder/input-images/'):
-            os.makedirs('./input_folder/input-images/', exist_ok=True)
-            print("input-images create !")
 
         if not os.path.isdir('./input_folder/exec-queue/'):
             os.makedirs('./input_folder/exec-queue/', exist_ok=True)
@@ -127,10 +128,6 @@ def check_dirs():
     else:
         print("Dirs Check !")
 
-
-
-
-
 def cuda_test():
     # setting device on GPU if available, else CPU
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -144,8 +141,8 @@ def cuda_test():
         print('Cached:   ', round(torch.cuda.memory_reserved(0) / 1024 ** 3, 1), 'GB')
 
 def move_for_tests():
-    srcPath = r"C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\input_folder\testes_models\04-12input" + os.sep
-    destPath = r"C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\input_folder\input-images" + os.sep
+    srcPath = r"C:\Users\fabri\Desktop\PyScript\U2NET\input_folder\testes_models\Input_Return" + os.sep
+    destPath = r"C:\Users\fabri\Desktop\PyScript\U2NET\input_folder\input-images" + os.sep
     files = os.listdir(srcPath)
 
     for file in files[:len(files)]:

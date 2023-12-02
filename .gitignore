@@ -4,4 +4,5 @@ venv/
 __pycache__/
 .idea/
 testes_models/
+input-images/
 DATA TEST GERAL/

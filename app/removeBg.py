@@ -18,7 +18,7 @@ def remove(input_folder, output_folder):
 
 
     img_name = input_img[:-4]
-    THRESHOLD = 0.9
+    THRESHOLD = 0.5
     RESCALE = 255
 
     mask = cv2.imread(output_result_mask + file)

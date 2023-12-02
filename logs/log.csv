@@ -1,140 +1,27 @@
 task_name,action,created,start,end,runtime,message,exc_text
-Start,run,1685993405.7023337,2023-06-05 16:30:05.702334,,,Task 'Start' status: 'run',
-Start,success,1685993405.7043328,2023-06-05 16:30:05.702334,2023-06-05 16:30:05.704333,0:00:00.001999,Task 'Start' status: 'success',
-Close,run,1685993441.3544953,2023-06-05 16:30:41.354495,,,Task 'Close' status: 'run',
-Close,success,1685993441.358491,2023-06-05 16:30:41.354495,2023-06-05 16:30:41.358491,0:00:00.003996,Task 'Close' status: 'success',
-Start,run,1685994695.3534353,2023-06-05 16:51:35.353435,,,Task 'Start' status: 'run',
-Start,success,1685994695.354437,2023-06-05 16:51:35.353435,2023-06-05 16:51:35.354437,0:00:00.001002,Task 'Start' status: 'success',
-Close,run,1685994698.155779,2023-06-05 16:51:38.155779,,,Task 'Close' status: 'run',
-Close,success,1685994698.1577768,2023-06-05 16:51:38.155779,2023-06-05 16:51:38.157777,0:00:00.001998,Task 'Close' status: 'success',
-Start,run,1685994747.144345,2023-06-05 16:52:27.144345,,,Task 'Start' status: 'run',
-Start,fail,1685994747.1453452,2023-06-05 16:52:27.144345,2023-06-05 16:52:27.145345,0:00:00.001000,Task 'Start' status: 'fail',"Traceback (most recent call last):
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\venv\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
-    output = await self.execute(**params)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\venv\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
-    output = func(**params)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\cli.py"", line 35, in Start
-    move(execution_queue_folder, input_images_folder)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\app\utils.py"", line 82, in move
-    files = os.listdir(srcPath)
-FileNotFoundError: [WinError 3] O sistema não pode encontrar o caminho especificado: 'C:\\Users\\fabri\\OneDrive\\Área de Trabalho\\PyScript\\U2NET\\input_folder\\exec-queue\\'"
-Close,run,1685994787.004176,2023-06-05 16:53:07.004176,,,Task 'Close' status: 'run',
-Close,fail,1685994787.0051765,2023-06-05 16:53:07.004176,2023-06-05 16:53:07.005177,0:00:00.001001,Task 'Close' status: 'fail',"Traceback (most recent call last):
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\asyncio\runners.py"", line 44, in run
-    return loop.run_until_complete(main)
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py"", line 634, in run_until_complete
-    self.run_forever()
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\asyncio\windows_events.py"", line 321, in run_forever
-    super().run_forever()
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py"", line 601, in run_forever
-    self._run_once()
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py"", line 1869, in _run_once
-    event_list = self._selector.select(timeout)
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\asyncio\windows_events.py"", line 439, in select
-    self._poll(timeout)
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\asyncio\windows_events.py"", line 788, in _poll
-    status = _overlapped.GetQueuedCompletionStatus(self._iocp, ms)
-KeyboardInterrupt
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\venv\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
-    output = await self.execute(**params)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\venv\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
-    output = func(**params)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\cli.py"", line 44, in Close
-    move(execution_queue_folder, input_images_folder)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\app\utils.py"", line 82, in move
-    files = os.listdir(srcPath)
-FileNotFoundError: [WinError 3] O sistema não pode encontrar o caminho especificado: 'C:\\Users\\fabri\\OneDrive\\Área de Trabalho\\PyScript\\U2NET\\input_folder\\exec-queue\\'"
-Start,run,1685995051.9744139,2023-06-05 16:57:31.974414,,,Task 'Start' status: 'run',
-Start,success,1685995051.975416,2023-06-05 16:57:31.974414,2023-06-05 16:57:31.975416,0:00:00.001002,Task 'Start' status: 'success',
-Close,run,1685995053.8245852,2023-06-05 16:57:33.824585,,,Task 'Close' status: 'run',
-Close,success,1685995053.8265855,2023-06-05 16:57:33.824585,2023-06-05 16:57:33.826586,0:00:00.002001,Task 'Close' status: 'success',
-Start,run,1685995148.4002817,2023-06-05 16:59:08.400282,,,Task 'Start' status: 'run',
-Start,fail,1685995148.402283,2023-06-05 16:59:08.400282,2023-06-05 16:59:08.402283,0:00:00.002001,Task 'Start' status: 'fail',"Traceback (most recent call last):
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\venv\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
-    output = await self.execute(**params)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\venv\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
-    output = func(**params)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\cli.py"", line 35, in Start
-    move(execution_queue_folder, input_images_folder)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\app\utils.py"", line 82, in move
-    files = os.listdir(srcPath)
-FileNotFoundError: [WinError 3] O sistema não pode encontrar o caminho especificado: 'C:\\Users\\fabri\\OneDrive\\Área de Trabalho\\PyScript\\U2NET\\input_folder\\exec-queue\\'"
-Close,run,1685995158.1082933,2023-06-05 16:59:18.108293,,,Task 'Close' status: 'run',
-Close,fail,1685995158.1092982,2023-06-05 16:59:18.108293,2023-06-05 16:59:18.109298,0:00:00.001005,Task 'Close' status: 'fail',"Traceback (most recent call last):
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\asyncio\runners.py"", line 44, in run
-    return loop.run_until_complete(main)
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py"", line 634, in run_until_complete
-    self.run_forever()
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\asyncio\windows_events.py"", line 321, in run_forever
-    super().run_forever()
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py"", line 601, in run_forever
-    self._run_once()
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py"", line 1869, in _run_once
-    event_list = self._selector.select(timeout)
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\asyncio\windows_events.py"", line 439, in select
-    self._poll(timeout)
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\asyncio\windows_events.py"", line 788, in _poll
-    status = _overlapped.GetQueuedCompletionStatus(self._iocp, ms)
-KeyboardInterrupt
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\venv\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
-    output = await self.execute(**params)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\venv\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
-    output = func(**params)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\cli.py"", line 44, in Close
-    move(execution_queue_folder, input_images_folder)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\app\utils.py"", line 82, in move
-    files = os.listdir(srcPath)
-FileNotFoundError: [WinError 3] O sistema não pode encontrar o caminho especificado: 'C:\\Users\\fabri\\OneDrive\\Área de Trabalho\\PyScript\\U2NET\\input_folder\\exec-queue\\'"
-Start,run,1685995231.5191512,2023-06-05 17:00:31.519151,,,Task 'Start' status: 'run',
-Start,fail,1685995231.5211523,2023-06-05 17:00:31.519151,2023-06-05 17:00:31.520153,0:00:00.001002,Task 'Start' status: 'fail',"Traceback (most recent call last):
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\venv\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
-    output = await self.execute(**params)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\venv\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
-    output = func(**params)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\cli.py"", line 35, in Start
-    move(execution_queue_folder, input_images_folder)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\app\utils.py"", line 82, in move
-    files = os.listdir(srcPath)
-FileNotFoundError: [WinError 3] O sistema não pode encontrar o caminho especificado: 'C:\\Users\\fabri\\OneDrive\\Área de Trabalho\\PyScript\\U2NET\\input_folder\\exec-queue\\'"
-Close,run,1685995239.6469135,2023-06-05 17:00:39.646914,,,Task 'Close' status: 'run',
-Close,fail,1685995239.6479151,2023-06-05 17:00:39.646914,2023-06-05 17:00:39.647915,0:00:00.001001,Task 'Close' status: 'fail',"Traceback (most recent call last):
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\asyncio\runners.py"", line 44, in run
-    return loop.run_until_complete(main)
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py"", line 634, in run_until_complete
-    self.run_forever()
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\asyncio\windows_events.py"", line 321, in run_forever
-    super().run_forever()
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py"", line 601, in run_forever
-    self._run_once()
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py"", line 1869, in _run_once
-    event_list = self._selector.select(timeout)
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\asyncio\windows_events.py"", line 439, in select
-    self._poll(timeout)
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\asyncio\windows_events.py"", line 788, in _poll
-    status = _overlapped.GetQueuedCompletionStatus(self._iocp, ms)
-KeyboardInterrupt
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\venv\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
-    output = await self.execute(**params)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\venv\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
-    output = func(**params)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\cli.py"", line 44, in Close
-    move(execution_queue_folder, input_images_folder)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\app\utils.py"", line 82, in move
-    files = os.listdir(srcPath)
-FileNotFoundError: [WinError 3] O sistema não pode encontrar o caminho especificado: 'C:\\Users\\fabri\\OneDrive\\Área de Trabalho\\PyScript\\U2NET\\input_folder\\exec-queue\\'"
-Start,run,1685995486.5296621,2023-06-05 17:04:46.529662,,,Task 'Start' status: 'run',
-Start,success,1685995486.5306637,2023-06-05 17:04:46.529662,2023-06-05 17:04:46.530664,0:00:00.001002,Task 'Start' status: 'success',
-Close,run,1685995490.543563,2023-06-05 17:04:50.543563,,,Task 'Close' status: 'run',
-Close,success,1685995490.5455642,2023-06-05 17:04:50.543563,2023-06-05 17:04:50.545564,0:00:00.002001,Task 'Close' status: 'success',
+Start,run,1701538944.093326,2023-12-02 14:42:24.093141,,,Task 'Start' status: 'run',
+Start,success,1701538944.0953379,2023-12-02 14:42:24.093326,2023-12-02 14:42:24.094331,0:00:00.001005,Task 'Start' status: 'success',
+Close,run,1701538957.7413213,2023-12-02 14:42:37.741321,,,Task 'Close' status: 'run',
+Close,success,1701538957.7429507,2023-12-02 14:42:37.741321,2023-12-02 14:42:37.742951,0:00:00.001630,Task 'Close' status: 'success',
+Start,run,1701539026.300821,2023-12-02 14:43:46.300821,,,Task 'Start' status: 'run',
+Start,success,1701539026.3013253,2023-12-02 14:43:46.300821,2023-12-02 14:43:46.301325,0:00:00.000504,Task 'Start' status: 'success',
+Close,run,1701539039.8574789,2023-12-02 14:43:59.857479,,,Task 'Close' status: 'run',
+Close,success,1701539039.859479,2023-12-02 14:43:59.857479,2023-12-02 14:43:59.859479,0:00:00.002000,Task 'Close' status: 'success',
+Start,run,1701539091.2700114,2023-12-02 14:44:51.270011,,,Task 'Start' status: 'run',
+Start,success,1701539091.271017,2023-12-02 14:44:51.270011,2023-12-02 14:44:51.271017,0:00:00.001006,Task 'Start' status: 'success',
+Close,terminate,1701539103.8951304,,2023-12-02 14:45:03.895130,,unknown reason,
+Start,run,1701539157.3822033,2023-12-02 14:45:57.382203,,,Task 'Start' status: 'run',
+Start,success,1701539157.3832035,2023-12-02 14:45:57.382203,2023-12-02 14:45:57.383204,0:00:00.001001,Task 'Start' status: 'success',
+Close,run,1701539158.4795537,2023-12-02 14:45:58.479554,,,Task 'Close' status: 'run',
+Close,success,1701539158.481066,2023-12-02 14:45:58.479554,2023-12-02 14:45:58.481066,0:00:00.001512,Task 'Close' status: 'success',
+Start,run,1701539166.538477,2023-12-02 14:46:06.538477,,,Task 'Start' status: 'run',
+Start,success,1701539166.5394776,2023-12-02 14:46:06.538477,2023-12-02 14:46:06.539478,0:00:00.001001,Task 'Start' status: 'success',
+Close,terminate,1701539179.1800485,,2023-12-02 14:46:19.180048,,unknown reason,
+Start,run,1701540521.7253149,2023-12-02 15:08:41.725315,,,Task 'Start' status: 'run',
+Start,success,1701540528.7597437,2023-12-02 15:08:41.725315,2023-12-02 15:08:48.759744,0:00:07.034429,Task 'Start' status: 'success',
+Close,run,1701540532.2001927,2023-12-02 15:08:52.200193,,,Task 'Close' status: 'run',
+Close,success,1701540532.202199,2023-12-02 15:08:52.200193,2023-12-02 15:08:52.202199,0:00:00.002006,Task 'Close' status: 'success',
+Start,run,1701541025.1845832,2023-12-02 15:17:05.184583,,,Task 'Start' status: 'run',
+Start,success,1701541026.9314072,2023-12-02 15:17:05.184583,2023-12-02 15:17:06.930406,0:00:01.745823,Task 'Start' status: 'success',
+Close,run,1701541039.4428873,2023-12-02 15:17:19.442887,,,Task 'Close' status: 'run',
+Close,success,1701541039.4443996,2023-12-02 15:17:19.442887,2023-12-02 15:17:19.444400,0:00:00.001513,Task 'Close' status: 'success',
