@@ -1,7 +1,7 @@
 import glob
 import os
 import warnings
-import numpy as np
+
 import torch
 from PIL import Image
 from skimage import io
@@ -12,7 +12,7 @@ from torchvision import transforms
 from app.data_loader import RescaleT
 from app.data_loader import SalObjDataset
 from app.data_loader import ToTensorLab
-from app.folder_paths import model_in_work
+from app.folder_paths import (input_images_folder, output_result_mask, model_in_work,execution_queue_folder)
 from app.model import U2NET
 
 warnings.simplefilter("ignore", UserWarning)
@@ -40,7 +40,7 @@ def save_output(image_name, pred, d_dir):
     predict = predict.squeeze()
     predict_np = predict.cpu().data.numpy()
 
-    im = Image.fromarray(predict_np * 255).convert('L')
+    im = Image.fromarray(predict_np * 255).convert('RGB')
     img_name = image_name.split(os.sep)[-1]
     image = io.imread(image_name)
     imo = im.resize((image.shape[1], image.shape[0]), resample=Image.LANCZOS)
@@ -51,10 +51,8 @@ def save_output(image_name, pred, d_dir):
     for i in range(1, len(bbb)):
         imidx = imidx + "." + bbb[i]
     
-    imo.save(r"C:\Users\fabri\Desktop\PyScript\U2NET\input_folder/" + imidx + '.JPG')
+    #imo.save(r"C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\input_folder\MASK" + imidx + '.JPG')
     imo.save(d_dir + imidx + '.JPG')
-
-
 
 
 def mask(input,output):
@@ -77,24 +75,22 @@ def mask(input,output):
                                         num_workers=1)
 
     net.eval()
-    with torch.no_grad():
-        for i_test, data_test in enumerate(test_salobj_dataloader):
+    for i_test, data_test in enumerate(test_salobj_dataloader):
 
-            inputs_test = data_test['image']
-            inputs_test = inputs_test.type(torch.FloatTensor)
+        inputs_test = data_test['image']
+        inputs_test = inputs_test.type(torch.FloatTensor)
 
-            if torch.cuda.is_available():
-                inputs_test = Variable(inputs_test.cuda())
-            else:
-                inputs_test = Variable(inputs_test)
+        if torch.cuda.is_available():
+            inputs_test = Variable(inputs_test.cuda())
+        else:
+            inputs_test = Variable(inputs_test)
 
-            d1, d2, d3, d4, d5, d6, d7 = net(inputs_test)
+        d1, d2, d3, d4, d5, d6, d7 = net(inputs_test)
 
-            # normalization
-            pred = d1[:, 0, :, :]
-            pred = normPRED(pred)
-        
+        # normalization
+        pred = d1[:, 0, :, :]
+        pred = normPRED(pred)
 
-            save_output(img_name_list[i_test], pred, prediction_dir)
+        save_output(img_name_list[i_test], pred, prediction_dir)
 
-            del d1, d2, d3, d4, d5, d6, d7
+        del d1, d2, d3, d4, d5, d6, d7

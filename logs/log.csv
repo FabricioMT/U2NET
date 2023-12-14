@@ -1,27 +1,91 @@
 task_name,action,created,start,end,runtime,message,exc_text
-Start,run,1701538944.093326,2023-12-02 14:42:24.093141,,,Task 'Start' status: 'run',
-Start,success,1701538944.0953379,2023-12-02 14:42:24.093326,2023-12-02 14:42:24.094331,0:00:00.001005,Task 'Start' status: 'success',
-Close,run,1701538957.7413213,2023-12-02 14:42:37.741321,,,Task 'Close' status: 'run',
-Close,success,1701538957.7429507,2023-12-02 14:42:37.741321,2023-12-02 14:42:37.742951,0:00:00.001630,Task 'Close' status: 'success',
-Start,run,1701539026.300821,2023-12-02 14:43:46.300821,,,Task 'Start' status: 'run',
-Start,success,1701539026.3013253,2023-12-02 14:43:46.300821,2023-12-02 14:43:46.301325,0:00:00.000504,Task 'Start' status: 'success',
-Close,run,1701539039.8574789,2023-12-02 14:43:59.857479,,,Task 'Close' status: 'run',
-Close,success,1701539039.859479,2023-12-02 14:43:59.857479,2023-12-02 14:43:59.859479,0:00:00.002000,Task 'Close' status: 'success',
-Start,run,1701539091.2700114,2023-12-02 14:44:51.270011,,,Task 'Start' status: 'run',
-Start,success,1701539091.271017,2023-12-02 14:44:51.270011,2023-12-02 14:44:51.271017,0:00:00.001006,Task 'Start' status: 'success',
-Close,terminate,1701539103.8951304,,2023-12-02 14:45:03.895130,,unknown reason,
-Start,run,1701539157.3822033,2023-12-02 14:45:57.382203,,,Task 'Start' status: 'run',
-Start,success,1701539157.3832035,2023-12-02 14:45:57.382203,2023-12-02 14:45:57.383204,0:00:00.001001,Task 'Start' status: 'success',
-Close,run,1701539158.4795537,2023-12-02 14:45:58.479554,,,Task 'Close' status: 'run',
-Close,success,1701539158.481066,2023-12-02 14:45:58.479554,2023-12-02 14:45:58.481066,0:00:00.001512,Task 'Close' status: 'success',
-Start,run,1701539166.538477,2023-12-02 14:46:06.538477,,,Task 'Start' status: 'run',
-Start,success,1701539166.5394776,2023-12-02 14:46:06.538477,2023-12-02 14:46:06.539478,0:00:00.001001,Task 'Start' status: 'success',
-Close,terminate,1701539179.1800485,,2023-12-02 14:46:19.180048,,unknown reason,
-Start,run,1701540521.7253149,2023-12-02 15:08:41.725315,,,Task 'Start' status: 'run',
-Start,success,1701540528.7597437,2023-12-02 15:08:41.725315,2023-12-02 15:08:48.759744,0:00:07.034429,Task 'Start' status: 'success',
-Close,run,1701540532.2001927,2023-12-02 15:08:52.200193,,,Task 'Close' status: 'run',
-Close,success,1701540532.202199,2023-12-02 15:08:52.200193,2023-12-02 15:08:52.202199,0:00:00.002006,Task 'Close' status: 'success',
-Start,run,1701541025.1845832,2023-12-02 15:17:05.184583,,,Task 'Start' status: 'run',
-Start,success,1701541026.9314072,2023-12-02 15:17:05.184583,2023-12-02 15:17:06.930406,0:00:01.745823,Task 'Start' status: 'success',
-Close,run,1701541039.4428873,2023-12-02 15:17:19.442887,,,Task 'Close' status: 'run',
-Close,success,1701541039.4443996,2023-12-02 15:17:19.442887,2023-12-02 15:17:19.444400,0:00:00.001513,Task 'Close' status: 'success',
+Start,run,1702334464.2516508,2023-12-11 19:41:04.251651,,,Task 'Start' status: 'run',
+Start,success,1702334466.6517932,2023-12-11 19:41:04.251651,2023-12-11 19:41:06.650288,0:00:02.398637,Task 'Start' status: 'success',
+Close,run,1702334502.1136754,2023-12-11 19:41:42.113675,,,Task 'Close' status: 'run',
+Close,success,1702334502.1157258,2023-12-11 19:41:42.113675,2023-12-11 19:41:42.115726,0:00:00.002051,Task 'Close' status: 'success',
+Start,run,1702334871.87197,2023-12-11 19:47:51.871970,,,Task 'Start' status: 'run',
+Start,success,1702334874.0853772,2023-12-11 19:47:51.871970,2023-12-11 19:47:54.085377,0:00:02.213407,Task 'Start' status: 'success',
+Close,run,1702334905.3199646,2023-12-11 19:48:25.319965,,,Task 'Close' status: 'run',
+Close,success,1702334905.3224683,2023-12-11 19:48:25.319965,2023-12-11 19:48:25.322468,0:00:00.002503,Task 'Close' status: 'success',
+Start,run,1702334933.1693754,2023-12-11 19:48:53.169375,,,Task 'Start' status: 'run',
+Start,success,1702334936.3400557,2023-12-11 19:48:53.169375,2023-12-11 19:48:56.340056,0:00:03.170681,Task 'Start' status: 'success',
+Close,run,1702334969.3619118,2023-12-11 19:49:29.361912,,,Task 'Close' status: 'run',
+Close,success,1702334969.3644233,2023-12-11 19:49:29.361912,2023-12-11 19:49:29.363417,0:00:00.001505,Task 'Close' status: 'success',
+Start,run,1702335138.6878335,2023-12-11 19:52:18.687834,,,Task 'Start' status: 'run',
+Start,success,1702335140.401546,2023-12-11 19:52:18.687834,2023-12-11 19:52:20.401546,0:00:01.713712,Task 'Start' status: 'success',
+Close,run,1702335169.8863854,2023-12-11 19:52:49.886385,,,Task 'Close' status: 'run',
+Close,success,1702335169.8883874,2023-12-11 19:52:49.886385,2023-12-11 19:52:49.888387,0:00:00.002002,Task 'Close' status: 'success',
+Start,run,1702335269.3582983,2023-12-11 19:54:29.358298,,,Task 'Start' status: 'run',
+Start,success,1702335272.0801547,2023-12-11 19:54:29.358298,2023-12-11 19:54:32.080155,0:00:02.721857,Task 'Start' status: 'success',
+Close,run,1702335297.3872283,2023-12-11 19:54:57.387228,,,Task 'Close' status: 'run',
+Close,success,1702335297.389231,2023-12-11 19:54:57.387228,2023-12-11 19:54:57.389231,0:00:00.002003,Task 'Close' status: 'success',
+Start,run,1702335375.070699,2023-12-11 19:56:15.070699,,,Task 'Start' status: 'run',
+Start,success,1702335377.8069544,2023-12-11 19:56:15.070699,2023-12-11 19:56:17.806954,0:00:02.736255,Task 'Start' status: 'success',
+Close,run,1702335415.8109195,2023-12-11 19:56:55.810920,,,Task 'Close' status: 'run',
+Close,success,1702335415.8124242,2023-12-11 19:56:55.810920,2023-12-11 19:56:55.811920,0:00:00.001000,Task 'Close' status: 'success',
+Start,run,1702343240.9809294,2023-12-11 22:07:20.980929,,,Task 'Start' status: 'run',
+Start,success,1702343244.066973,2023-12-11 22:07:20.980929,2023-12-11 22:07:24.066973,0:00:03.086044,Task 'Start' status: 'success',
+Close,run,1702343257.967312,2023-12-11 22:07:37.967312,,,Task 'Close' status: 'run',
+Close,success,1702343257.9683216,2023-12-11 22:07:37.967312,2023-12-11 22:07:37.968322,0:00:00.001010,Task 'Close' status: 'success',
+Start,run,1702345685.6774979,2023-12-11 22:48:05.677498,,,Task 'Start' status: 'run',
+Start,success,1702345687.5216908,2023-12-11 22:48:05.677498,2023-12-11 22:48:07.521691,0:00:01.844193,Task 'Start' status: 'success',
+RemBg,fail,1702345694.6110246,2023-12-11 22:48:14.583986,2023-12-11 22:48:14.611025,0:00:00.027039,Task 'RemBg' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\Network-att\run.py"", line 105, in remove_background
+    remove(execution_queue_folder, output_without_bg_folder)
+  File ""C:\Users\fabri\Desktop\Network-att\app\removeBg.py"", line 29, in remove
+    out_img = Img.toarray(image_gray)
+AttributeError: module 'PIL.Image' has no attribute 'toarray'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\Network-att\venv\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\Desktop\Network-att\venv\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\Network-att\run.py"", line 107, in remove_background
+    raise Exception(""Remove Background Fail"")
+Exception: Remove Background Fail"
+Erros,run,1702345694.7096765,2023-12-11 22:48:14.709677,,,Task 'Erros' status: 'run',
+Erros,success,1702345694.7106771,2023-12-11 22:48:14.709677,2023-12-11 22:48:14.710677,0:00:00.001000,Task 'Erros' status: 'success',
+Close,run,1702345719.3139625,2023-12-11 22:48:39.313962,,,Task 'Close' status: 'run',
+Close,success,1702345719.3159685,2023-12-11 22:48:39.313962,2023-12-11 22:48:39.314967,0:00:00.001005,Task 'Close' status: 'success',
+Start,run,1702345733.8326826,2023-12-11 22:48:53.832683,,,Task 'Start' status: 'run',
+Start,success,1702345736.2401023,2023-12-11 22:48:53.832683,2023-12-11 22:48:56.240102,0:00:02.407419,Task 'Start' status: 'success',
+Close,run,1702345747.5802903,2023-12-11 22:49:07.580290,,,Task 'Close' status: 'run',
+Close,success,1702345748.1676939,2023-12-11 22:49:07.580290,2023-12-11 22:49:08.167694,0:00:00.587404,Task 'Close' status: 'success',
+Start,run,1702346497.8834927,2023-12-11 23:01:37.883493,,,Task 'Start' status: 'run',
+Start,success,1702346500.0863838,2023-12-11 23:01:37.883493,2023-12-11 23:01:40.086384,0:00:02.202891,Task 'Start' status: 'success',
+Close,run,1702346509.6816416,2023-12-11 23:01:49.681642,,,Task 'Close' status: 'run',
+Close,success,1702346509.6835926,2023-12-11 23:01:49.681642,2023-12-11 23:01:49.683593,0:00:00.001951,Task 'Close' status: 'success',
+Start,run,1702348108.321527,2023-12-11 23:28:28.321527,,,Task 'Start' status: 'run',
+Start,success,1702348110.7046278,2023-12-11 23:28:28.321527,2023-12-11 23:28:30.704628,0:00:02.383101,Task 'Start' status: 'success',
+RemBg,fail,1702348117.6093173,2023-12-11 23:28:37.565253,2023-12-11 23:28:37.609317,0:00:00.044064,Task 'RemBg' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\Network-att\run.py"", line 105, in remove_background
+    remove(execution_queue_folder, output_without_bg_folder)
+  File ""C:\Users\fabri\Desktop\Network-att\app\removeBg.py"", line 43, in remove
+    rem_back = rgba_inp * rgba_out
+ValueError: operands could not be broadcast together with shapes (654,1027,4) (654,1027,2) 
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\Network-att\venv\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\Desktop\Network-att\venv\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\Network-att\run.py"", line 107, in remove_background
+    raise Exception(""Remove Background Fail"")
+Exception: Remove Background Fail"
+Erros,run,1702348117.6909282,2023-12-11 23:28:37.690928,,,Task 'Erros' status: 'run',
+Erros,success,1702348117.6924348,2023-12-11 23:28:37.690928,2023-12-11 23:28:37.691929,0:00:00.001001,Task 'Erros' status: 'success',
+Close,run,1702348147.798871,2023-12-11 23:29:07.798871,,,Task 'Close' status: 'run',
+Close,success,1702348147.7998717,2023-12-11 23:29:07.798871,2023-12-11 23:29:07.799872,0:00:00.001001,Task 'Close' status: 'success',
+Start,run,1702348839.1855006,2023-12-11 23:40:39.185501,,,Task 'Start' status: 'run',
+Start,success,1702348841.5262961,2023-12-11 23:40:39.185501,2023-12-11 23:40:41.526296,0:00:02.340795,Task 'Start' status: 'success',
+Close,run,1702348853.5892892,2023-12-11 23:40:53.589289,,,Task 'Close' status: 'run',
+Close,success,1702348853.590315,2023-12-11 23:40:53.589289,2023-12-11 23:40:53.590315,0:00:00.001026,Task 'Close' status: 'success',
+Start,run,1702559971.3569582,2023-12-14 10:19:31.356958,,,Task 'Start' status: 'run',
+Start,success,1702560276.476419,2023-12-14 10:19:31.356958,2023-12-14 10:24:36.475419,0:05:05.118461,Task 'Start' status: 'success',
+Close,run,1702560440.8126128,2023-12-14 10:27:20.812613,,,Task 'Close' status: 'run',
+Close,success,1702560440.8156238,2023-12-14 10:27:20.812613,2023-12-14 10:27:20.813618,0:00:00.001005,Task 'Close' status: 'success',

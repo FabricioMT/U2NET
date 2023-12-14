@@ -6,7 +6,7 @@ import time
 import gdown
 import torch
 import pathlib as pl
-from app.folder_paths import (input_images_folder,execution_queue_folder)
+from app.folder_paths import (execution_queue_folder, input_images_folder)
 
 class SpamFilter(Filter):
     def filter(self, record: MinimalRecord) -> bool:
@@ -49,19 +49,12 @@ def clear_directorys():
     clear('output-contours/')
     clear('results-mask/')
 
-def move(inputs, output):
-    srcPath = inputs
-    destPath = output
-    files = os.listdir(srcPath)
-
-    for file in files[:len(files)]:
-        shutil.move(srcPath + file, destPath + file)
 
 def move_controler(inputs, output):
     output_folder = len(os.listdir(output))
     if output_folder != 0:
         move(execution_queue_folder, input_images_folder)
-
+     
     move_item(inputs,output)      
     name = os.listdir(output)[0]
     packet = name
@@ -72,6 +65,13 @@ def move_controler(inputs, output):
     else:
         raise Exception("Move to exec queue Error !")
 
+def move(inputs, output):
+    srcPath = inputs
+    destPath = output
+    files = os.listdir(srcPath)
+
+    for file in files[:len(files)]:
+        shutil.move(srcPath + file, destPath + file)
 
 def move_item(inputs,output):
     image_dir = inputs
@@ -102,12 +102,16 @@ def check_dirs():
         os.makedirs('./app/model/model_saved/', exist_ok=True)
 
     if not os.path.isdir('./input_folder/'):
+        os.makedirs('./input_folder/input-images/', exist_ok=True)
         os.makedirs('./input_folder/exec-queue/', exist_ok=True)
         os.makedirs('./input_folder/output-removeBg/', exist_ok=True)
         os.makedirs('./input_folder/output-contours/', exist_ok=True)
         os.makedirs('./input_folder/results-mask/', exist_ok=True)
 
     elif os.path.isdir('./input_folder/'):
+        if not os.path.isdir('./input_folder/input-images/'):
+            os.makedirs('./input_folder/input-images/', exist_ok=True)
+            print("input-images create !")
 
         if not os.path.isdir('./input_folder/exec-queue/'):
             os.makedirs('./input_folder/exec-queue/', exist_ok=True)
@@ -124,9 +128,48 @@ def check_dirs():
         if not os.path.isdir('./input_folder/results-mask/'):
             os.makedirs('./input_folder/results-mask/', exist_ok=True)
             print("results-mask create !")
-            
-    else:
-        print("Dirs Check !")
+    
+    if not os.path.isdir('./output_geral/'):
+        os.makedirs('./output_geral/cropBoundingBox/', exist_ok=True)
+        os.makedirs('./output_geral/Erros/', exist_ok=True)
+        os.makedirs('./output_geral/Input_Return/', exist_ok=True)
+        os.makedirs('./output_geral/Output_Edges/', exist_ok=True)
+        os.makedirs('./output_geral/Output_Removed_Background/', exist_ok=True)
+        os.makedirs('./output_geral/Output_Removed_Background_CROP/', exist_ok=True)
+
+    elif os.path.isdir('./output_geral/'):
+
+        if not os.path.isdir('./output_geral/cropBoundingBox/'):
+            os.makedirs('./output_geral/cropBoundingBox/', exist_ok=True)
+            print("cropBoundingBox create !")
+
+        if not os.path.isdir('./output_geral/Erros/'):
+            os.makedirs('./output_geral/Erros/', exist_ok=True)
+            print("Erros create !")
+
+        if not os.path.isdir('./output_geral/Input_Return/'):
+            os.makedirs('./output_geral/Input_Return/', exist_ok=True)
+            print("Input_Return create !")
+
+        if not os.path.isdir('./output_geral/Output_Edges/'):
+            os.makedirs('./output_geral/Output_Edges/', exist_ok=True)
+            print("Output_Edges create !")
+
+        if not os.path.isdir('./output_geral/Output_Removed_Background/'):
+            os.makedirs('./output_geral/Output_Removed_Background/', exist_ok=True)
+            print("Output_Removed_Background create !")
+
+        if not os.path.isdir('./output_geral/Output_Removed_Background_CROP/'):
+            os.makedirs('./output_geral/Output_Removed_Background_CROP/', exist_ok=True)
+            print("Output_Removed_Background create !")
+
+
+    
+    return print("Dirs Check !")
+
+
+
+
 
 def cuda_test():
     # setting device on GPU if available, else CPU
@@ -141,8 +184,8 @@ def cuda_test():
         print('Cached:   ', round(torch.cuda.memory_reserved(0) / 1024 ** 3, 1), 'GB')
 
 def move_for_tests():
-    srcPath = r"C:\Users\fabri\Desktop\PyScript\U2NET\input_folder\testes_models\Input_Return" + os.sep
-    destPath = r"C:\Users\fabri\Desktop\PyScript\U2NET\input_folder\input-images" + os.sep
+    srcPath = r"C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\input_folder\testes_models\04-12input" + os.sep
+    destPath = r"C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\input_folder\input-images" + os.sep
     files = os.listdir(srcPath)
 
     for file in files[:len(files)]:
