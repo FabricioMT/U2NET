@@ -2,7 +2,6 @@ import os
 import cv2
 import numpy as np
 
-
 def createContours(img):
     image = cv2.imread(img, cv2.IMREAD_UNCHANGED)
     image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)

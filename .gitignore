@@ -3,5 +3,5 @@ model_saved/
 venv/
 __pycache__/
 .idea/
-testes_models/
-DATA TEST GERAL/
+input_folder/
+output_geral/

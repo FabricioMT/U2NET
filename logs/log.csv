@@ -1,118 +1,91 @@
 task_name,action,created,start,end,runtime,message,exc_text
-Close,run,1670349216.9499528,2022-12-06 14:53:36.949953,,,Task 'Close' status: 'run',
-Close,success,1670349216.9519491,2022-12-06 14:53:36.949953,2022-12-06 14:53:36.950949,0:00:00.000996,Task 'Close' status: 'success',
-Start,run,1670353779.9004703,2022-12-06 16:09:39.900470,,,Task 'Start' status: 'run',
-Start,success,1670353779.9004703,2022-12-06 16:09:39.900470,2022-12-06 16:09:39.900470,0:00:00,Task 'Start' status: 'success',
-Close,run,1670354041.08838,2022-12-06 16:14:01.088380,,,Task 'Close' status: 'run',
-Close,success,1670354041.090382,2022-12-06 16:14:01.088380,2022-12-06 16:14:01.088380,0:00:00,Task 'Close' status: 'success',
-Start,run,1670355698.82654,2022-12-06 16:41:38.826540,,,Task 'Start' status: 'run',
-Start,success,1670355698.82654,2022-12-06 16:41:38.826540,2022-12-06 16:41:38.826540,0:00:00,Task 'Start' status: 'success',
-Close,run,1670355906.2445598,2022-12-06 16:45:06.244560,,,Task 'Close' status: 'run',
-Close,success,1670355906.2613988,2022-12-06 16:45:06.244560,2022-12-06 16:45:06.259394,0:00:00.014834,Task 'Close' status: 'success',
-Start,run,1670356054.7155592,2022-12-06 16:47:34.715559,,,Task 'Start' status: 'run',
-Start,success,1670356054.7155592,2022-12-06 16:47:34.715559,2022-12-06 16:47:34.715559,0:00:00,Task 'Start' status: 'success',
-Close,run,1670356393.5065374,2022-12-06 16:53:13.506537,,,Task 'Close' status: 'run',
-Close,success,1670356393.5265393,2022-12-06 16:53:13.506537,2022-12-06 16:53:13.522542,0:00:00.016005,Task 'Close' status: 'success',
-Start,run,1670356503.2628822,2022-12-06 16:55:03.262882,,,Task 'Start' status: 'run',
-Start,success,1670356503.2628822,2022-12-06 16:55:03.262882,2022-12-06 16:55:03.262882,0:00:00,Task 'Start' status: 'success',
-Close,run,1670356689.48056,2022-12-06 16:58:09.480560,,,Task 'Close' status: 'run',
-Close,success,1670356689.4965646,2022-12-06 16:58:09.480560,2022-12-06 16:58:09.495564,0:00:00.015004,Task 'Close' status: 'success',
-Start,run,1670356744.2005408,2022-12-06 16:59:04.200541,,,Task 'Start' status: 'run',
-Start,success,1670356744.2005408,2022-12-06 16:59:04.200541,2022-12-06 16:59:04.200541,0:00:00,Task 'Start' status: 'success',
-Close,run,1670356771.4503155,2022-12-06 16:59:31.450315,,,Task 'Close' status: 'run',
-Close,success,1670356771.4533179,2022-12-06 16:59:31.450315,2022-12-06 16:59:31.452318,0:00:00.002003,Task 'Close' status: 'success',
-Start,run,1670358687.0696368,2022-12-06 17:31:27.069637,,,Task 'Start' status: 'run',
-Start,success,1670358687.0696368,2022-12-06 17:31:27.069637,2022-12-06 17:31:27.069637,0:00:00,Task 'Start' status: 'success',
-Close,run,1670358993.7152073,2022-12-06 17:36:33.715207,,,Task 'Close' status: 'run',
-Close,success,1670358993.7342083,2022-12-06 17:36:33.715207,2022-12-06 17:36:33.730211,0:00:00.015004,Task 'Close' status: 'success',
-Start,run,1670359097.2929382,2022-12-06 17:38:17.292938,,,Task 'Start' status: 'run',
-Start,success,1670359097.2929382,2022-12-06 17:38:17.292938,2022-12-06 17:38:17.292938,0:00:00,Task 'Start' status: 'success',
-Close,terminate,1670359482.9913635,,2022-12-06 17:44:42.987363,,unknown reason,
-Start,run,1670359550.2500548,2022-12-06 17:45:50.250055,,,Task 'Start' status: 'run',
-Start,success,1670359550.2500548,2022-12-06 17:45:50.250055,2022-12-06 17:45:50.250055,0:00:00,Task 'Start' status: 'success',
-Close,run,1670359556.7225611,2022-12-06 17:45:56.722561,,,Task 'Close' status: 'run',
-Close,success,1670359556.7385635,2022-12-06 17:45:56.722561,2022-12-06 17:45:56.738564,0:00:00.016003,Task 'Close' status: 'success',
-Start,run,1670359564.5349495,2022-12-06 17:46:04.534950,,,Task 'Start' status: 'run',
-Start,success,1670359564.5349495,2022-12-06 17:46:04.534950,2022-12-06 17:46:04.534950,0:00:00,Task 'Start' status: 'success',
-RemBg,fail,1670359641.9352787,2022-12-06 17:47:21.906280,2022-12-06 17:47:21.934279,0:00:00.027999,Task 'RemBg' status: 'fail',"Traceback (most recent call last):
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\cli.py"", line 65, in remove_background
-    remove(input_images_folder, output_without_bg_folder)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\app\removeBg.py"", line 39, in remove
-    rgba_inp = np.append(inp_img, a_layer, axis=2)
-  File ""<__array_function__ internals>"", line 180, in append
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\numpy\lib\function_base.py"", line 5444, in append
-    return concatenate((arr, values), axis=axis)
-  File ""<__array_function__ internals>"", line 180, in concatenate
-ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 644 and the array at index 1 has size 646
+Start,run,1702334464.2516508,2023-12-11 19:41:04.251651,,,Task 'Start' status: 'run',
+Start,success,1702334466.6517932,2023-12-11 19:41:04.251651,2023-12-11 19:41:06.650288,0:00:02.398637,Task 'Start' status: 'success',
+Close,run,1702334502.1136754,2023-12-11 19:41:42.113675,,,Task 'Close' status: 'run',
+Close,success,1702334502.1157258,2023-12-11 19:41:42.113675,2023-12-11 19:41:42.115726,0:00:00.002051,Task 'Close' status: 'success',
+Start,run,1702334871.87197,2023-12-11 19:47:51.871970,,,Task 'Start' status: 'run',
+Start,success,1702334874.0853772,2023-12-11 19:47:51.871970,2023-12-11 19:47:54.085377,0:00:02.213407,Task 'Start' status: 'success',
+Close,run,1702334905.3199646,2023-12-11 19:48:25.319965,,,Task 'Close' status: 'run',
+Close,success,1702334905.3224683,2023-12-11 19:48:25.319965,2023-12-11 19:48:25.322468,0:00:00.002503,Task 'Close' status: 'success',
+Start,run,1702334933.1693754,2023-12-11 19:48:53.169375,,,Task 'Start' status: 'run',
+Start,success,1702334936.3400557,2023-12-11 19:48:53.169375,2023-12-11 19:48:56.340056,0:00:03.170681,Task 'Start' status: 'success',
+Close,run,1702334969.3619118,2023-12-11 19:49:29.361912,,,Task 'Close' status: 'run',
+Close,success,1702334969.3644233,2023-12-11 19:49:29.361912,2023-12-11 19:49:29.363417,0:00:00.001505,Task 'Close' status: 'success',
+Start,run,1702335138.6878335,2023-12-11 19:52:18.687834,,,Task 'Start' status: 'run',
+Start,success,1702335140.401546,2023-12-11 19:52:18.687834,2023-12-11 19:52:20.401546,0:00:01.713712,Task 'Start' status: 'success',
+Close,run,1702335169.8863854,2023-12-11 19:52:49.886385,,,Task 'Close' status: 'run',
+Close,success,1702335169.8883874,2023-12-11 19:52:49.886385,2023-12-11 19:52:49.888387,0:00:00.002002,Task 'Close' status: 'success',
+Start,run,1702335269.3582983,2023-12-11 19:54:29.358298,,,Task 'Start' status: 'run',
+Start,success,1702335272.0801547,2023-12-11 19:54:29.358298,2023-12-11 19:54:32.080155,0:00:02.721857,Task 'Start' status: 'success',
+Close,run,1702335297.3872283,2023-12-11 19:54:57.387228,,,Task 'Close' status: 'run',
+Close,success,1702335297.389231,2023-12-11 19:54:57.387228,2023-12-11 19:54:57.389231,0:00:00.002003,Task 'Close' status: 'success',
+Start,run,1702335375.070699,2023-12-11 19:56:15.070699,,,Task 'Start' status: 'run',
+Start,success,1702335377.8069544,2023-12-11 19:56:15.070699,2023-12-11 19:56:17.806954,0:00:02.736255,Task 'Start' status: 'success',
+Close,run,1702335415.8109195,2023-12-11 19:56:55.810920,,,Task 'Close' status: 'run',
+Close,success,1702335415.8124242,2023-12-11 19:56:55.810920,2023-12-11 19:56:55.811920,0:00:00.001000,Task 'Close' status: 'success',
+Start,run,1702343240.9809294,2023-12-11 22:07:20.980929,,,Task 'Start' status: 'run',
+Start,success,1702343244.066973,2023-12-11 22:07:20.980929,2023-12-11 22:07:24.066973,0:00:03.086044,Task 'Start' status: 'success',
+Close,run,1702343257.967312,2023-12-11 22:07:37.967312,,,Task 'Close' status: 'run',
+Close,success,1702343257.9683216,2023-12-11 22:07:37.967312,2023-12-11 22:07:37.968322,0:00:00.001010,Task 'Close' status: 'success',
+Start,run,1702345685.6774979,2023-12-11 22:48:05.677498,,,Task 'Start' status: 'run',
+Start,success,1702345687.5216908,2023-12-11 22:48:05.677498,2023-12-11 22:48:07.521691,0:00:01.844193,Task 'Start' status: 'success',
+RemBg,fail,1702345694.6110246,2023-12-11 22:48:14.583986,2023-12-11 22:48:14.611025,0:00:00.027039,Task 'RemBg' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\Network-att\run.py"", line 105, in remove_background
+    remove(execution_queue_folder, output_without_bg_folder)
+  File ""C:\Users\fabri\Desktop\Network-att\app\removeBg.py"", line 29, in remove
+    out_img = Img.toarray(image_gray)
+AttributeError: module 'PIL.Image' has no attribute 'toarray'
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+  File ""C:\Users\fabri\Desktop\Network-att\venv\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
     output = await self.execute(**params)
-  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 229, in execute
-    output = await func(**params)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\cli.py"", line 67, in remove_background
+  File ""C:\Users\fabri\Desktop\Network-att\venv\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\Network-att\run.py"", line 107, in remove_background
     raise Exception(""Remove Background Fail"")
 Exception: Remove Background Fail"
-Erros,run,1670359642.0472798,2022-12-06 17:47:22.047280,,,Task 'Erros' status: 'run',
-Erros,success,1670359642.0482788,2022-12-06 17:47:22.047280,2022-12-06 17:47:22.047280,0:00:00,Task 'Erros' status: 'success',
-Close,run,1670359869.2605603,2022-12-06 17:51:09.260560,,,Task 'Close' status: 'run',
-Close,success,1670359869.267562,2022-12-06 17:51:09.260560,2022-12-06 17:51:09.267562,0:00:00.007002,Task 'Close' status: 'success',
-Start,run,1670359915.4192555,2022-12-06 17:51:55.419255,,,Task 'Start' status: 'run',
-Start,success,1670359915.4192555,2022-12-06 17:51:55.419255,2022-12-06 17:51:55.419255,0:00:00,Task 'Start' status: 'success',
-Close,run,1670360370.249555,2022-12-06 17:59:30.249555,,,Task 'Close' status: 'run',
-Close,success,1670360370.2755551,2022-12-06 17:59:30.249555,2022-12-06 17:59:30.270556,0:00:00.021001,Task 'Close' status: 'success',
-Start,run,1670362199.5733275,2022-12-06 18:29:59.573328,,,Task 'Start' status: 'run',
-Start,success,1670362199.5733275,2022-12-06 18:29:59.573328,2022-12-06 18:29:59.573328,0:00:00,Task 'Start' status: 'success',
-Close,run,1670362437.246086,2022-12-06 18:33:57.246086,,,Task 'Close' status: 'run',
-Close,success,1670362437.2670872,2022-12-06 18:33:57.246086,2022-12-06 18:33:57.266088,0:00:00.020002,Task 'Close' status: 'success',
-Start,run,1670363448.0741544,2022-12-06 18:50:48.074154,,,Task 'Start' status: 'run',
-Start,success,1670363448.0741544,2022-12-06 18:50:48.074154,2022-12-06 18:50:48.074154,0:00:00,Task 'Start' status: 'success',
-Close,run,1670363685.2015493,2022-12-06 18:54:45.201549,,,Task 'Close' status: 'run',
-Close,success,1670363685.2229667,2022-12-06 18:54:45.201549,2022-12-06 18:54:45.221966,0:00:00.020417,Task 'Close' status: 'success',
-Start,run,1670421232.0573504,2022-12-07 10:53:52.057350,,,Task 'Start' status: 'run',
-Start,success,1670421232.0583513,2022-12-07 10:53:52.057350,2022-12-07 10:53:52.058351,0:00:00.001001,Task 'Start' status: 'success',
-Create Contours,fail,1670421237.6266384,2022-12-07 10:53:57.598893,2022-12-07 10:53:57.626638,0:00:00.027745,Task 'Create Contours' status: 'fail',"Traceback (most recent call last):
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\cli.py"", line 73, in create_contours
-    createContoursFolder(output_without_bg_folder, output_contours_folder)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\app\contours.py"", line 31, in createContoursFolder
-    contour = createContours(image_dir + os.sep + file)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\app\contours.py"", line 18, in createContours
-    max_pixel_ct = pixel_count.index(max(pixel_count))
-ValueError: max() arg is an empty sequence
+Erros,run,1702345694.7096765,2023-12-11 22:48:14.709677,,,Task 'Erros' status: 'run',
+Erros,success,1702345694.7106771,2023-12-11 22:48:14.709677,2023-12-11 22:48:14.710677,0:00:00.001000,Task 'Erros' status: 'success',
+Close,run,1702345719.3139625,2023-12-11 22:48:39.313962,,,Task 'Close' status: 'run',
+Close,success,1702345719.3159685,2023-12-11 22:48:39.313962,2023-12-11 22:48:39.314967,0:00:00.001005,Task 'Close' status: 'success',
+Start,run,1702345733.8326826,2023-12-11 22:48:53.832683,,,Task 'Start' status: 'run',
+Start,success,1702345736.2401023,2023-12-11 22:48:53.832683,2023-12-11 22:48:56.240102,0:00:02.407419,Task 'Start' status: 'success',
+Close,run,1702345747.5802903,2023-12-11 22:49:07.580290,,,Task 'Close' status: 'run',
+Close,success,1702345748.1676939,2023-12-11 22:49:07.580290,2023-12-11 22:49:08.167694,0:00:00.587404,Task 'Close' status: 'success',
+Start,run,1702346497.8834927,2023-12-11 23:01:37.883493,,,Task 'Start' status: 'run',
+Start,success,1702346500.0863838,2023-12-11 23:01:37.883493,2023-12-11 23:01:40.086384,0:00:02.202891,Task 'Start' status: 'success',
+Close,run,1702346509.6816416,2023-12-11 23:01:49.681642,,,Task 'Close' status: 'run',
+Close,success,1702346509.6835926,2023-12-11 23:01:49.681642,2023-12-11 23:01:49.683593,0:00:00.001951,Task 'Close' status: 'success',
+Start,run,1702348108.321527,2023-12-11 23:28:28.321527,,,Task 'Start' status: 'run',
+Start,success,1702348110.7046278,2023-12-11 23:28:28.321527,2023-12-11 23:28:30.704628,0:00:02.383101,Task 'Start' status: 'success',
+RemBg,fail,1702348117.6093173,2023-12-11 23:28:37.565253,2023-12-11 23:28:37.609317,0:00:00.044064,Task 'RemBg' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\Network-att\run.py"", line 105, in remove_background
+    remove(execution_queue_folder, output_without_bg_folder)
+  File ""C:\Users\fabri\Desktop\Network-att\app\removeBg.py"", line 43, in remove
+    rem_back = rgba_inp * rgba_out
+ValueError: operands could not be broadcast together with shapes (654,1027,4) (654,1027,2) 
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\venv\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+  File ""C:\Users\fabri\Desktop\Network-att\venv\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
     output = await self.execute(**params)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\venv\lib\site-packages\rocketry\tasks\func.py"", line 229, in execute
-    output = await func(**params)
-  File ""C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\cli.py"", line 75, in create_contours
-    raise Exception(""Create Contour Fail"")
-Exception: Create Contour Fail"
-Erros,run,1670421237.7406409,2022-12-07 10:53:57.740641,,,Task 'Erros' status: 'run',
-Erros,success,1670421237.741645,2022-12-07 10:53:57.740641,2022-12-07 10:53:57.741645,0:00:00.001004,Task 'Erros' status: 'success',
-Close,run,1670421261.096618,2022-12-07 10:54:21.096618,,,Task 'Close' status: 'run',
-Close,success,1670421261.096618,2022-12-07 10:54:21.096618,2022-12-07 10:54:21.096618,0:00:00,Task 'Close' status: 'success',
-Start,run,1670421267.487619,2022-12-07 10:54:27.487619,,,Task 'Start' status: 'run',
-Start,success,1670421267.487619,2022-12-07 10:54:27.487619,2022-12-07 10:54:27.487619,0:00:00,Task 'Start' status: 'success',
-Close,run,1670421292.0956178,2022-12-07 10:54:52.095618,,,Task 'Close' status: 'run',
-Close,success,1670421292.0976186,2022-12-07 10:54:52.095618,2022-12-07 10:54:52.097619,0:00:00.002001,Task 'Close' status: 'success',
-Start,run,1670421666.6376202,2022-12-07 11:01:06.637620,,,Task 'Start' status: 'run',
-Start,success,1670421666.6376202,2022-12-07 11:01:06.637620,2022-12-07 11:01:06.637620,0:00:00,Task 'Start' status: 'success',
-Close,run,1670421687.4516141,2022-12-07 11:01:27.451614,,,Task 'Close' status: 'run',
-Close,success,1670421687.4536145,2022-12-07 11:01:27.451614,2022-12-07 11:01:27.453614,0:00:00.002000,Task 'Close' status: 'success',
-Start,run,1670422904.55315,2022-12-07 11:21:44.553150,,,Task 'Start' status: 'run',
-Start,success,1670422904.5541506,2022-12-07 11:21:44.553150,2022-12-07 11:21:44.553150,0:00:00,Task 'Start' status: 'success',
-Close,run,1670422926.2386444,2022-12-07 11:22:06.238644,,,Task 'Close' status: 'run',
-Close,success,1670422926.2406423,2022-12-07 11:22:06.238644,2022-12-07 11:22:06.240642,0:00:00.001998,Task 'Close' status: 'success',
-Start,run,1670423058.145639,2022-12-07 11:24:18.145639,,,Task 'Start' status: 'run',
-Start,success,1670423058.145639,2022-12-07 11:24:18.145639,2022-12-07 11:24:18.145639,0:00:00,Task 'Start' status: 'success',
-Close,run,1670423078.39464,2022-12-07 11:24:38.394640,,,Task 'Close' status: 'run',
-Close,success,1670423078.4006429,2022-12-07 11:24:38.394640,2022-12-07 11:24:38.400643,0:00:00.006003,Task 'Close' status: 'success',
-Start,run,1670424213.369617,2022-12-07 11:43:33.369617,,,Task 'Start' status: 'run',
-Start,success,1670424213.369617,2022-12-07 11:43:33.369617,2022-12-07 11:43:33.369617,0:00:00,Task 'Start' status: 'success',
-Close,run,1670424234.1016386,2022-12-07 11:43:54.101639,,,Task 'Close' status: 'run',
-Close,success,1670424234.1086414,2022-12-07 11:43:54.101639,2022-12-07 11:43:54.107641,0:00:00.006002,Task 'Close' status: 'success',
+  File ""C:\Users\fabri\Desktop\Network-att\venv\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\Network-att\run.py"", line 107, in remove_background
+    raise Exception(""Remove Background Fail"")
+Exception: Remove Background Fail"
+Erros,run,1702348117.6909282,2023-12-11 23:28:37.690928,,,Task 'Erros' status: 'run',
+Erros,success,1702348117.6924348,2023-12-11 23:28:37.690928,2023-12-11 23:28:37.691929,0:00:00.001001,Task 'Erros' status: 'success',
+Close,run,1702348147.798871,2023-12-11 23:29:07.798871,,,Task 'Close' status: 'run',
+Close,success,1702348147.7998717,2023-12-11 23:29:07.798871,2023-12-11 23:29:07.799872,0:00:00.001001,Task 'Close' status: 'success',
+Start,run,1702348839.1855006,2023-12-11 23:40:39.185501,,,Task 'Start' status: 'run',
+Start,success,1702348841.5262961,2023-12-11 23:40:39.185501,2023-12-11 23:40:41.526296,0:00:02.340795,Task 'Start' status: 'success',
+Close,run,1702348853.5892892,2023-12-11 23:40:53.589289,,,Task 'Close' status: 'run',
+Close,success,1702348853.590315,2023-12-11 23:40:53.589289,2023-12-11 23:40:53.590315,0:00:00.001026,Task 'Close' status: 'success',
+Start,run,1702559971.3569582,2023-12-14 10:19:31.356958,,,Task 'Start' status: 'run',
+Start,success,1702560276.476419,2023-12-14 10:19:31.356958,2023-12-14 10:24:36.475419,0:05:05.118461,Task 'Start' status: 'success',
+Close,run,1702560440.8126128,2023-12-14 10:27:20.812613,,,Task 'Close' status: 'run',
+Close,success,1702560440.8156238,2023-12-14 10:27:20.812613,2023-12-14 10:27:20.813618,0:00:00.001005,Task 'Close' status: 'success',

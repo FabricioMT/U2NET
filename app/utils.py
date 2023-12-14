@@ -2,9 +2,11 @@ from logging import Filter
 from rocketry.log import MinimalRecord
 import os
 import shutil
-
+import time
 import gdown
 import torch
+import pathlib as pl
+from app.folder_paths import (execution_queue_folder, input_images_folder)
 
 class SpamFilter(Filter):
     def filter(self, record: MinimalRecord) -> bool:
@@ -16,19 +18,19 @@ class SpamFilter(Filter):
         move_cond = record.task_name.startswith('Move') and record.action == 'fail'
         bg_cond = record.task_name.startswith('RemBg') and record.action == 'fail'
         mask_cond = record.task_name.startswith('Masking') and record.action == 'fail'
+        exec_cond = record.task_name.startswith('Execution') and record.action == 'fail'
 
-        if start_cond or finish_cond or erros_cond or contours_fail or move_cond or bg_cond or mask_cond:
+        if start_cond or finish_cond or erros_cond or move_cond or contours_fail or bg_cond or mask_cond or exec_cond:
             return True
         return False
 
 def inputReady(folder):
     inputs = os.listdir(folder)
+
     if len(inputs) != 0:
         return True
     else:
-        
         raise Exception("Folder is Empty")
-
 
 def clear(folder):
     for filename in os.listdir('input_folder/' + folder):
@@ -41,14 +43,27 @@ def clear(folder):
         except Exception as e:
             print('Failed to delete %s. Reason: %s' % (file_path, e))
 
+def clear_directorys():
 
-def move_input(inputs,output):
-    image_dir = inputs
-    destPath = output
-    input_img = os.listdir(image_dir)[0]
-    moved_img = inputs + input_img
-    shutil.move(moved_img, destPath + input_img)
+    clear('output-removeBg/')
+    clear('output-contours/')
+    clear('results-mask/')
 
+
+def move_controler(inputs, output):
+    output_folder = len(os.listdir(output))
+    if output_folder != 0:
+        move(execution_queue_folder, input_images_folder)
+     
+    move_item(inputs,output)      
+    name = os.listdir(output)[0]
+    packet = name
+    print(packet)
+    output_folder = len(os.listdir(output))
+    if output_folder == 1:
+        return packet
+    else:
+        raise Exception("Move to exec queue Error !")
 
 def move(inputs, output):
     srcPath = inputs
@@ -58,23 +73,102 @@ def move(inputs, output):
     for file in files[:len(files)]:
         shutil.move(srcPath + file, destPath + file)
 
+def move_item(inputs,output):
+    image_dir = inputs
+    destPath = output
+    input_img = os.listdir(image_dir)[0]
+    moved_img = inputs + input_img
+    shutil.move(moved_img, destPath + input_img)
 
-def check_model():
+
+def move_for_name(packet,inputs,output):
+    image_dir = os.listdir(inputs)
+    destPath = output
+    files_image_dir = [pl.PurePath(file).name for file in image_dir]
+
+    for filename in files_image_dir:
+        if filename == packet:
+            moved_img = inputs + filename
+            shutil.move(moved_img, destPath + filename)
+
+
+
+def check_dirs():
+    
+    if not os.path.isdir('./logs/'):
+        os.makedirs('./logs/', exist_ok=True)
+
     if not os.path.isdir('./app/model/model_saved/'):
-        print("Download Model !")
         os.makedirs('./app/model/model_saved/', exist_ok=True)
-        gdown.download('https://drive.google.com/file/d/1RWApr3ItjWVPgBL75Tm1_fv3dfy3mBrv/view?usp=sharing',
-                       './app/model/model_saved/u2net.pth',
-                       quiet=False)
-    else:
-        print("Model OK !")
+
+    if not os.path.isdir('./input_folder/'):
+        os.makedirs('./input_folder/input-images/', exist_ok=True)
+        os.makedirs('./input_folder/exec-queue/', exist_ok=True)
+        os.makedirs('./input_folder/output-removeBg/', exist_ok=True)
+        os.makedirs('./input_folder/output-contours/', exist_ok=True)
+        os.makedirs('./input_folder/results-mask/', exist_ok=True)
+
+    elif os.path.isdir('./input_folder/'):
+        if not os.path.isdir('./input_folder/input-images/'):
+            os.makedirs('./input_folder/input-images/', exist_ok=True)
+            print("input-images create !")
+
+        if not os.path.isdir('./input_folder/exec-queue/'):
+            os.makedirs('./input_folder/exec-queue/', exist_ok=True)
+            print("exec-queue create !")
+
+        if not os.path.isdir('./input_folder/output-removeBg/'):
+            os.makedirs('./input_folder/output-removeBg/', exist_ok=True)
+            print("output-removeBg create !")
+
+        if not os.path.isdir('./input_folder/output-contours/'):
+            os.makedirs('./input_folder/output-contours/', exist_ok=True)
+            print("output-contours create !")
+
+        if not os.path.isdir('./input_folder/results-mask/'):
+            os.makedirs('./input_folder/results-mask/', exist_ok=True)
+            print("results-mask create !")
+    
+    if not os.path.isdir('./output_geral/'):
+        os.makedirs('./output_geral/cropBoundingBox/', exist_ok=True)
+        os.makedirs('./output_geral/Erros/', exist_ok=True)
+        os.makedirs('./output_geral/Input_Return/', exist_ok=True)
+        os.makedirs('./output_geral/Output_Edges/', exist_ok=True)
+        os.makedirs('./output_geral/Output_Removed_Background/', exist_ok=True)
+        os.makedirs('./output_geral/Output_Removed_Background_CROP/', exist_ok=True)
+
+    elif os.path.isdir('./output_geral/'):
+
+        if not os.path.isdir('./output_geral/cropBoundingBox/'):
+            os.makedirs('./output_geral/cropBoundingBox/', exist_ok=True)
+            print("cropBoundingBox create !")
+
+        if not os.path.isdir('./output_geral/Erros/'):
+            os.makedirs('./output_geral/Erros/', exist_ok=True)
+            print("Erros create !")
+
+        if not os.path.isdir('./output_geral/Input_Return/'):
+            os.makedirs('./output_geral/Input_Return/', exist_ok=True)
+            print("Input_Return create !")
+
+        if not os.path.isdir('./output_geral/Output_Edges/'):
+            os.makedirs('./output_geral/Output_Edges/', exist_ok=True)
+            print("Output_Edges create !")
+
+        if not os.path.isdir('./output_geral/Output_Removed_Background/'):
+            os.makedirs('./output_geral/Output_Removed_Background/', exist_ok=True)
+            print("Output_Removed_Background create !")
+
+        if not os.path.isdir('./output_geral/Output_Removed_Background_CROP/'):
+            os.makedirs('./output_geral/Output_Removed_Background_CROP/', exist_ok=True)
+            print("Output_Removed_Background create !")
 
 
-def clear_directorys():
-    # clear('input-images/')
-    clear('output-removeBg/')
-    clear('output-contours/')
-    clear('results-mask/')
+    
+    return print("Dirs Check !")
+
+
+
 
 
 def cuda_test():
@@ -88,7 +182,7 @@ def cuda_test():
         print('Memory Usage:')
         print('Allocated:', round(torch.cuda.memory_allocated(0) / 1024 ** 3, 1), 'GB')
         print('Cached:   ', round(torch.cuda.memory_reserved(0) / 1024 ** 3, 1), 'GB')
-#
+
 def move_for_tests():
     srcPath = r"C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\input_folder\testes_models\04-12input" + os.sep
     destPath = r"C:\Users\fabri\OneDrive\Área de Trabalho\PyScript\U2NET\input_folder\input-images" + os.sep
