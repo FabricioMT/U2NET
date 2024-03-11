@@ -25,3 +25,843 @@ Start,run,1701541025.1845832,2023-12-02 15:17:05.184583,,,Task 'Start' status: '
 Start,success,1701541026.9314072,2023-12-02 15:17:05.184583,2023-12-02 15:17:06.930406,0:00:01.745823,Task 'Start' status: 'success',
 Close,run,1701541039.4428873,2023-12-02 15:17:19.442887,,,Task 'Close' status: 'run',
 Close,success,1701541039.4443996,2023-12-02 15:17:19.442887,2023-12-02 15:17:19.444400,0:00:00.001513,Task 'Close' status: 'success',
+Start,run,1702240969.2082572,2023-12-10 17:42:49.208257,,,Task 'Start' status: 'run',
+Close,run,1702240991.575963,2023-12-10 17:43:11.575963,,,Task 'Close' status: 'run',
+Close,success,1702240991.5769637,2023-12-10 17:43:11.575963,2023-12-10 17:43:11.576964,0:00:00.001001,Task 'Close' status: 'success',
+Start,run,1702240998.702111,2023-12-10 17:43:18.702111,,,Task 'Start' status: 'run',
+Close,run,1702241001.3631396,2023-12-10 17:43:21.363140,,,Task 'Close' status: 'run',
+Close,success,1702241001.3641405,2023-12-10 17:43:21.363140,2023-12-10 17:43:21.364141,0:00:00.001001,Task 'Close' status: 'success',
+Start,run,1702241371.0259044,2023-12-10 17:49:31.025904,,,Task 'Start' status: 'run',
+Close,run,1702241372.6170585,2023-12-10 17:49:32.617059,,,Task 'Close' status: 'run',
+Close,success,1702241372.6185718,2023-12-10 17:49:32.617059,2023-12-10 17:49:32.617565,0:00:00.000506,Task 'Close' status: 'success',
+Start,run,1709675475.3169525,2024-03-05 18:51:15.316952,,,Task 'Start' status: 'run',
+Start,success,1709675479.8649442,2024-03-05 18:51:15.316952,2024-03-05 18:51:19.863945,0:00:04.546993,Task 'Start' status: 'success',
+Close,run,1709676782.451959,2024-03-05 19:13:02.451959,,,Task 'Close' status: 'run',
+Close,success,1709676782.4749951,2024-03-05 19:13:02.451959,2024-03-05 19:13:02.462479,0:00:00.010520,Task 'Close' status: 'success',
+Start,run,1709677825.17387,2024-03-05 19:30:25.173870,,,Task 'Start' status: 'run',
+Start,success,1709677826.1109016,2024-03-05 19:30:25.173870,2024-03-05 19:30:26.110902,0:00:00.937032,Task 'Start' status: 'success',
+Close,run,1709678273.2111168,2024-03-05 19:37:53.211117,,,Task 'Close' status: 'run',
+Close,success,1709678273.2366874,2024-03-05 19:37:53.211117,2024-03-05 19:37:53.232176,0:00:00.021059,Task 'Close' status: 'success',
+Start,run,1710001018.3934977,2024-03-09 13:16:58.393498,,,Task 'Start' status: 'run',
+Start,success,1710001027.3465128,2024-03-09 13:16:58.393498,2024-03-09 13:17:07.346513,0:00:08.953015,Task 'Start' status: 'success',
+Close,run,1710001075.0161586,2024-03-09 13:17:55.016159,,,Task 'Close' status: 'run',
+Close,success,1710001075.0181673,2024-03-09 13:17:55.016159,2024-03-09 13:17:55.018167,0:00:00.002008,Task 'Close' status: 'success',
+Start,run,1710001110.900199,2024-03-09 13:18:30.900199,,,Task 'Start' status: 'run',
+Start,success,1710001115.2973003,2024-03-09 13:18:30.900199,2024-03-09 13:18:35.297300,0:00:04.397101,Task 'Start' status: 'success',
+Close,run,1710001148.0351577,2024-03-09 13:19:08.035158,,,Task 'Close' status: 'run',
+Close,success,1710001148.0371,2024-03-09 13:19:08.035158,2024-03-09 13:19:08.037100,0:00:00.001942,Task 'Close' status: 'success',
+Start,run,1710001160.0339367,2024-03-09 13:19:20.033937,,,Task 'Start' status: 'run',
+Start,success,1710001164.1936884,2024-03-09 13:19:20.033937,2024-03-09 13:19:24.193688,0:00:04.159751,Task 'Start' status: 'success',
+Close,run,1710001213.0898461,2024-03-09 13:20:13.089846,,,Task 'Close' status: 'run',
+Close,success,1710001213.0928483,2024-03-09 13:20:13.089846,2024-03-09 13:20:13.092848,0:00:00.003002,Task 'Close' status: 'success',
+Start,run,1710001233.0886421,2024-03-09 13:20:33.088642,,,Task 'Start' status: 'run',
+Start,success,1710001233.8893178,2024-03-09 13:20:33.088642,2024-03-09 13:20:33.888320,0:00:00.799678,Task 'Start' status: 'success',
+Close,run,1710008519.2376888,2024-03-09 15:21:59.237689,,,Task 'Close' status: 'run',
+Close,success,1710008519.4551756,2024-03-09 15:21:59.237689,2024-03-09 15:21:59.432618,0:00:00.194929,Task 'Close' status: 'success',
+Start,run,1710011349.3494797,2024-03-09 16:09:09.349480,,,Task 'Start' status: 'run',
+Start,success,1710011357.2090828,2024-03-09 16:09:09.349480,2024-03-09 16:09:17.208085,0:00:07.858605,Task 'Start' status: 'success',
+Execution,fail,1710016052.5602758,2024-03-09 17:27:32.540274,2024-03-09 17:27:32.547277,0:00:00.007003,Task 'Execution' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 825, in move
+    os.rename(src, real_dst)
+OSError: [WinError 17] O sistema não pode mover o arquivo para uma unidade de disco diferente: 'D:\\Data_set_Inits\\CS3\\cs3_originals\\Original_CS3_4k_forzip\\00053732012.jpg' -> 'C:\\Users\\fabri\\Desktop\\PyScript\\U2NET\\input_folder\\exec-queue\\00053732012.jpg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 86, in execution_queue
+    packet = move_controler(input_images_folder,execution_queue_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\utils.py"", line 65, in move_controler
+    move_item(inputs,output)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\utils.py"", line 81, in move_item
+    shutil.move(moved_img, destPath + input_img)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 845, in move
+    copy_function(src, real_dst)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 444, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 284, in copyfile
+    _copyfileobj_readinto(fsrc, fdst, min(file_size, COPY_BUFSIZE))
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 195, in _copyfileobj_readinto
+    fdst_write(mv)
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 90, in execution_queue
+    raise Exception(""execution_queue Fail !"")
+Exception: execution_queue Fail !"
+Close,run,1710016611.444537,2024-03-09 17:36:51.444537,,,Task 'Close' status: 'run',
+Close,success,1710016611.4655368,2024-03-09 17:36:51.444537,2024-03-09 17:36:51.453537,0:00:00.009000,Task 'Close' status: 'success',
+Start,run,1710016633.12679,2024-03-09 17:37:13.126790,,,Task 'Start' status: 'run',
+Start,success,1710016634.1007943,2024-03-09 17:37:13.126790,2024-03-09 17:37:14.099794,0:00:00.973004,Task 'Start' status: 'success',
+Masking,fail,1710016640.2304347,2024-03-09 17:37:14.366797,2024-03-09 17:37:20.230435,0:00:05.863638,Task 'Masking' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 98, in mask_generate
+    mask(execution_queue_folder,output_result_mask)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\maskGenerate.py"", line 81, in mask
+    for i_test, data_test in enumerate(test_salobj_dataloader):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\utils\data\dataloader.py"", line 633, in __next__
+    data = self._next_data()
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\utils\data\dataloader.py"", line 1345, in _next_data
+    return self._process_data(data)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\utils\data\dataloader.py"", line 1371, in _process_data
+    data.reraise()
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\_utils.py"", line 644, in reraise
+    raise exception
+OSError: Caught OSError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\utils\data\_utils\worker.py"", line 308, in _worker_loop
+    data = fetcher.fetch(index)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\utils\data\_utils\fetch.py"", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\utils\data\_utils\fetch.py"", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\data_loader.py"", line 351, in __getitem__
+    image = io.imread(self.image_name_list[idx])
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\skimage\io\_io.py"", line 53, in imread
+    img = call_plugin('imread', fname, plugin=plugin, **plugin_args)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\skimage\io\manage_plugins.py"", line 205, in call_plugin
+    return func(*args, **kwargs)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\skimage\io\_plugins\imageio_plugin.py"", line 11, in imread
+    out = np.asarray(imageio_imread(*args, **kwargs))
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\imageio\v3.py"", line 54, in imread
+    return np.asarray(img_file.read(**call_kwargs))
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\imageio\plugins\pillow.py"", line 224, in read
+    image = self._apply_transforms(
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\imageio\plugins\pillow.py"", line 307, in _apply_transforms
+    image = np.asarray(image)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\Image.py"", line 696, in __array_interface__
+    new[""data""] = self.tobytes()
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\Image.py"", line 754, in tobytes
+    self.load()
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\ImageFile.py"", line 266, in load
+    raise OSError(msg)
+OSError: image file is truncated (25 bytes not processed)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 100, in mask_generate
+    raise Exception(""Mask Fail"")
+Exception: Mask Fail"
+Erros,run,1710016640.2634354,2024-03-09 17:37:20.263435,,,Task 'Erros' status: 'run',
+Erros,success,1710016640.2644346,2024-03-09 17:37:20.263435,2024-03-09 17:37:20.264435,0:00:00.001000,Task 'Erros' status: 'success',
+Close,run,1710016808.8388577,2024-03-09 17:40:08.838858,,,Task 'Close' status: 'run',
+Close,success,1710016808.8528552,2024-03-09 17:40:08.838858,2024-03-09 17:40:08.851856,0:00:00.012998,Task 'Close' status: 'success',
+Start,run,1710017021.4538717,2024-03-09 17:43:41.453872,,,Task 'Start' status: 'run',
+Start,success,1710017031.649487,2024-03-09 17:43:41.453872,2024-03-09 17:43:51.649487,0:00:10.195615,Task 'Start' status: 'success',
+Close,run,1710017917.2506473,2024-03-09 17:58:37.250647,,,Task 'Close' status: 'run',
+Close,success,1710017917.261649,2024-03-09 17:58:37.250647,2024-03-09 17:58:37.259650,0:00:00.009003,Task 'Close' status: 'success',
+Start,run,1710017972.2197647,2024-03-09 17:59:32.219765,,,Task 'Start' status: 'run',
+Start,success,1710017974.4268923,2024-03-09 17:59:32.219765,2024-03-09 17:59:34.426892,0:00:02.207127,Task 'Start' status: 'success',
+RemBg,fail,1710021347.8314974,2024-03-09 18:55:45.334839,2024-03-09 18:55:47.823496,0:00:02.488657,Task 'RemBg' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\ImageFile.py"", line 515, in _save
+    fh = fp.fileno()
+AttributeError: '_idat' object has no attribute 'fileno'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 106, in remove_background
+    remove(execution_queue_folder, output_without_bg_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\removeBg.py"", line 53, in remove
+    result_img.save(bg_dir + f'{img_name}.png')
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\Image.py"", line 2432, in save
+    save_handler(self, fp, filename)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\PngImagePlugin.py"", line 1407, in _save
+    ImageFile._save(im, _idat(fp, chunk), [(""zip"", (0, 0) + im.size, 0, rawmode)])
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\ImageFile.py"", line 519, in _save
+    _encode_tile(im, fp, tile, bufsize, None, exc)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\ImageFile.py"", line 539, in _encode_tile
+    fp.write(data)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\PngImagePlugin.py"", line 1085, in write
+    self.chunk(self.fp, b""IDAT"", data)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\PngImagePlugin.py"", line 1072, in putchunk
+    fp.write(data)
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 108, in remove_background
+    raise Exception(""Remove Background Fail"")
+Exception: Remove Background Fail"
+Erros,run,1710021348.0863962,2024-03-09 18:55:48.086396,,,Task 'Erros' status: 'run',
+Erros,success,1710021348.0953941,2024-03-09 18:55:48.086396,2024-03-09 18:55:48.088396,0:00:00.002000,Task 'Erros' status: 'success',
+RemBg,fail,1710021360.8909163,2024-03-09 18:55:59.266300,2024-03-09 18:56:00.881885,0:00:01.615585,Task 'RemBg' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\ImageFile.py"", line 515, in _save
+    fh = fp.fileno()
+AttributeError: '_idat' object has no attribute 'fileno'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 106, in remove_background
+    remove(execution_queue_folder, output_without_bg_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\removeBg.py"", line 53, in remove
+    result_img.save(bg_dir + f'{img_name}.png')
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\Image.py"", line 2432, in save
+    save_handler(self, fp, filename)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\PngImagePlugin.py"", line 1407, in _save
+    ImageFile._save(im, _idat(fp, chunk), [(""zip"", (0, 0) + im.size, 0, rawmode)])
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\ImageFile.py"", line 519, in _save
+    _encode_tile(im, fp, tile, bufsize, None, exc)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\ImageFile.py"", line 539, in _encode_tile
+    fp.write(data)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\PngImagePlugin.py"", line 1085, in write
+    self.chunk(self.fp, b""IDAT"", data)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\PngImagePlugin.py"", line 1072, in putchunk
+    fp.write(data)
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 108, in remove_background
+    raise Exception(""Remove Background Fail"")
+Exception: Remove Background Fail"
+Erros,run,1710021361.2026603,2024-03-09 18:56:01.202660,,,Task 'Erros' status: 'run',
+Erros,success,1710021361.2126021,2024-03-09 18:56:01.202660,2024-03-09 18:56:01.205592,0:00:00.002932,Task 'Erros' status: 'success',
+Execution,fail,1710021362.0739691,2024-03-09 18:56:01.956708,2024-03-09 18:56:02.067457,0:00:00.110749,Task 'Execution' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 825, in move
+    os.rename(src, real_dst)
+OSError: [WinError 17] O sistema não pode mover o arquivo para uma unidade de disco diferente: 'D:\\Data_set_Inits\\CS3\\cs3_originals\\Original_CS3_4k_forzip\\00055415016.jpg' -> 'C:\\Users\\fabri\\Desktop\\PyScript\\U2NET\\input_folder\\exec-queue\\00055415016.jpg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 86, in execution_queue
+    packet = move_controler(input_images_folder,execution_queue_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\utils.py"", line 65, in move_controler
+    move_item(inputs,output)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\utils.py"", line 81, in move_item
+    shutil.move(moved_img, destPath + input_img)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 845, in move
+    copy_function(src, real_dst)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 444, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 284, in copyfile
+    _copyfileobj_readinto(fsrc, fdst, min(file_size, COPY_BUFSIZE))
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 195, in _copyfileobj_readinto
+    fdst_write(mv)
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 90, in execution_queue
+    raise Exception(""execution_queue Fail !"")
+Exception: execution_queue Fail !"
+Erros,run,1710021362.3405092,2024-03-09 18:56:02.340509,,,Task 'Erros' status: 'run',
+Erros,success,1710021362.3500307,2024-03-09 18:56:02.340509,2024-03-09 18:56:02.341512,0:00:00.001003,Task 'Erros' status: 'success',
+Execution,fail,1710021363.054998,2024-03-09 18:56:03.048469,2024-03-09 18:56:03.048469,0:00:00,Task 'Execution' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 86, in execution_queue
+    packet = move_controler(input_images_folder,execution_queue_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\utils.py"", line 63, in move_controler
+    move(execution_queue_folder, input_images_folder)
+NameError: name 'execution_queue_folder' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 90, in execution_queue
+    raise Exception(""execution_queue Fail !"")
+Exception: execution_queue Fail !"
+Erros,run,1710021363.3951576,2024-03-09 18:56:03.395158,,,Task 'Erros' status: 'run',
+Erros,success,1710021363.404673,2024-03-09 18:56:03.395158,2024-03-09 18:56:03.396160,0:00:00.001002,Task 'Erros' status: 'success',
+Execution,fail,1710021364.1403666,2024-03-09 18:56:04.133353,2024-03-09 18:56:04.133353,0:00:00,Task 'Execution' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 86, in execution_queue
+    packet = move_controler(input_images_folder,execution_queue_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\utils.py"", line 63, in move_controler
+    move(execution_queue_folder, input_images_folder)
+NameError: name 'execution_queue_folder' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 90, in execution_queue
+    raise Exception(""execution_queue Fail !"")
+Exception: execution_queue Fail !"
+Erros,run,1710021364.4959266,2024-03-09 18:56:04.495927,,,Task 'Erros' status: 'run',
+Erros,success,1710021364.5039327,2024-03-09 18:56:04.495927,2024-03-09 18:56:04.496935,0:00:00.001008,Task 'Erros' status: 'success',
+Execution,fail,1710021365.2209888,2024-03-09 18:56:05.214987,2024-03-09 18:56:05.214987,0:00:00,Task 'Execution' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 86, in execution_queue
+    packet = move_controler(input_images_folder,execution_queue_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\utils.py"", line 63, in move_controler
+    move(execution_queue_folder, input_images_folder)
+NameError: name 'execution_queue_folder' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 90, in execution_queue
+    raise Exception(""execution_queue Fail !"")
+Exception: execution_queue Fail !"
+Erros,run,1710021365.562343,2024-03-09 18:56:05.562343,,,Task 'Erros' status: 'run',
+Erros,success,1710021365.5703418,2024-03-09 18:56:05.562343,2024-03-09 18:56:05.563343,0:00:00.001000,Task 'Erros' status: 'success',
+Execution,fail,1710021366.2678082,2024-03-09 18:56:06.259808,2024-03-09 18:56:06.259808,0:00:00,Task 'Execution' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 86, in execution_queue
+    packet = move_controler(input_images_folder,execution_queue_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\utils.py"", line 63, in move_controler
+    move(execution_queue_folder, input_images_folder)
+NameError: name 'execution_queue_folder' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 90, in execution_queue
+    raise Exception(""execution_queue Fail !"")
+Exception: execution_queue Fail !"
+Erros,run,1710021366.6188781,2024-03-09 18:56:06.618878,,,Task 'Erros' status: 'run',
+Erros,success,1710021366.625875,2024-03-09 18:56:06.618878,2024-03-09 18:56:06.619876,0:00:00.000998,Task 'Erros' status: 'success',
+Execution,fail,1710021367.3462384,2024-03-09 18:56:07.339237,2024-03-09 18:56:07.339237,0:00:00,Task 'Execution' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 86, in execution_queue
+    packet = move_controler(input_images_folder,execution_queue_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\utils.py"", line 63, in move_controler
+    move(execution_queue_folder, input_images_folder)
+NameError: name 'execution_queue_folder' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 90, in execution_queue
+    raise Exception(""execution_queue Fail !"")
+Exception: execution_queue Fail !"
+Erros,run,1710021367.6997097,2024-03-09 18:56:07.699710,,,Task 'Erros' status: 'run',
+Erros,success,1710021367.7187095,2024-03-09 18:56:07.699710,2024-03-09 18:56:07.701709,0:00:00.001999,Task 'Erros' status: 'success',
+Execution,fail,1710021368.4244478,2024-03-09 18:56:08.416448,2024-03-09 18:56:08.417449,0:00:00.001001,Task 'Execution' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 86, in execution_queue
+    packet = move_controler(input_images_folder,execution_queue_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\utils.py"", line 63, in move_controler
+    move(execution_queue_folder, input_images_folder)
+NameError: name 'execution_queue_folder' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 90, in execution_queue
+    raise Exception(""execution_queue Fail !"")
+Exception: execution_queue Fail !"
+Erros,run,1710021368.7764475,2024-03-09 18:56:08.776448,,,Task 'Erros' status: 'run',
+Erros,success,1710021368.9384897,2024-03-09 18:56:08.776448,2024-03-09 18:56:08.932489,0:00:00.156041,Task 'Erros' status: 'success',
+Execution,fail,1710021369.568992,2024-03-09 18:56:09.560992,2024-03-09 18:56:09.561996,0:00:00.001004,Task 'Execution' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 86, in execution_queue
+    packet = move_controler(input_images_folder,execution_queue_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\utils.py"", line 63, in move_controler
+    move(execution_queue_folder, input_images_folder)
+NameError: name 'execution_queue_folder' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 90, in execution_queue
+    raise Exception(""execution_queue Fail !"")
+Exception: execution_queue Fail !"
+Erros,run,1710021370.009138,2024-03-09 18:56:10.009138,,,Task 'Erros' status: 'run',
+Erros,success,1710021370.0171373,2024-03-09 18:56:10.009138,2024-03-09 18:56:10.010134,0:00:00.000996,Task 'Erros' status: 'success',
+Execution,fail,1710021370.7216544,2024-03-09 18:56:10.714656,2024-03-09 18:56:10.715657,0:00:00.001001,Task 'Execution' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 86, in execution_queue
+    packet = move_controler(input_images_folder,execution_queue_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\utils.py"", line 63, in move_controler
+    move(execution_queue_folder, input_images_folder)
+NameError: name 'execution_queue_folder' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 90, in execution_queue
+    raise Exception(""execution_queue Fail !"")
+Exception: execution_queue Fail !"
+Erros,run,1710021371.0871558,2024-03-09 18:56:11.087156,,,Task 'Erros' status: 'run',
+Erros,success,1710021371.0951557,2024-03-09 18:56:11.087156,2024-03-09 18:56:11.088156,0:00:00.001000,Task 'Erros' status: 'success',
+Execution,fail,1710021371.8107655,2024-03-09 18:56:11.803764,2024-03-09 18:56:11.804765,0:00:00.001001,Task 'Execution' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 86, in execution_queue
+    packet = move_controler(input_images_folder,execution_queue_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\utils.py"", line 63, in move_controler
+    move(execution_queue_folder, input_images_folder)
+NameError: name 'execution_queue_folder' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 90, in execution_queue
+    raise Exception(""execution_queue Fail !"")
+Exception: execution_queue Fail !"
+Erros,run,1710021372.1634047,2024-03-09 18:56:12.163405,,,Task 'Erros' status: 'run',
+Erros,success,1710021372.1714053,2024-03-09 18:56:12.163405,2024-03-09 18:56:12.164406,0:00:00.001001,Task 'Erros' status: 'success',
+Execution,fail,1710021372.9059606,2024-03-09 18:56:12.898961,2024-03-09 18:56:12.899962,0:00:00.001001,Task 'Execution' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 86, in execution_queue
+    packet = move_controler(input_images_folder,execution_queue_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\utils.py"", line 63, in move_controler
+    move(execution_queue_folder, input_images_folder)
+NameError: name 'execution_queue_folder' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 90, in execution_queue
+    raise Exception(""execution_queue Fail !"")
+Exception: execution_queue Fail !"
+Erros,run,1710021373.2580976,2024-03-09 18:56:13.258098,,,Task 'Erros' status: 'run',
+Erros,success,1710021373.2660954,2024-03-09 18:56:13.258098,2024-03-09 18:56:13.259097,0:00:00.000999,Task 'Erros' status: 'success',
+Execution,fail,1710021373.9820893,2024-03-09 18:56:13.974089,2024-03-09 18:56:13.975090,0:00:00.001001,Task 'Execution' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 86, in execution_queue
+    packet = move_controler(input_images_folder,execution_queue_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\utils.py"", line 63, in move_controler
+    move(execution_queue_folder, input_images_folder)
+NameError: name 'execution_queue_folder' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 90, in execution_queue
+    raise Exception(""execution_queue Fail !"")
+Exception: execution_queue Fail !"
+Erros,run,1710021374.3357441,2024-03-09 18:56:14.335744,,,Task 'Erros' status: 'run',
+Erros,success,1710021374.3437943,2024-03-09 18:56:14.335744,2024-03-09 18:56:14.336743,0:00:00.000999,Task 'Erros' status: 'success',
+Execution,fail,1710021375.0714264,2024-03-09 18:56:15.064428,2024-03-09 18:56:15.065426,0:00:00.000998,Task 'Execution' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 86, in execution_queue
+    packet = move_controler(input_images_folder,execution_queue_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\utils.py"", line 63, in move_controler
+    move(execution_queue_folder, input_images_folder)
+NameError: name 'execution_queue_folder' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 90, in execution_queue
+    raise Exception(""execution_queue Fail !"")
+Exception: execution_queue Fail !"
+Erros,run,1710021375.4047549,2024-03-09 18:56:15.404755,,,Task 'Erros' status: 'run',
+Erros,success,1710021375.4127562,2024-03-09 18:56:15.404755,2024-03-09 18:56:15.405754,0:00:00.000999,Task 'Erros' status: 'success',
+Execution,fail,1710021376.131263,2024-03-09 18:56:16.123261,2024-03-09 18:56:16.124263,0:00:00.001002,Task 'Execution' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 86, in execution_queue
+    packet = move_controler(input_images_folder,execution_queue_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\utils.py"", line 63, in move_controler
+    move(execution_queue_folder, input_images_folder)
+NameError: name 'execution_queue_folder' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 90, in execution_queue
+    raise Exception(""execution_queue Fail !"")
+Exception: execution_queue Fail !"
+Erros,run,1710021376.4863641,2024-03-09 18:56:16.486364,,,Task 'Erros' status: 'run',
+Erros,success,1710021376.4963622,2024-03-09 18:56:16.486364,2024-03-09 18:56:16.487362,0:00:00.000998,Task 'Erros' status: 'success',
+Execution,fail,1710021377.211137,2024-03-09 18:56:17.203136,2024-03-09 18:56:17.204136,0:00:00.001000,Task 'Execution' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 86, in execution_queue
+    packet = move_controler(input_images_folder,execution_queue_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\utils.py"", line 63, in move_controler
+    move(execution_queue_folder, input_images_folder)
+NameError: name 'execution_queue_folder' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 90, in execution_queue
+    raise Exception(""execution_queue Fail !"")
+Exception: execution_queue Fail !"
+Erros,run,1710021377.547137,2024-03-09 18:56:17.547137,,,Task 'Erros' status: 'run',
+Erros,success,1710021377.5551379,2024-03-09 18:56:17.547137,2024-03-09 18:56:17.548137,0:00:00.001000,Task 'Erros' status: 'success',
+Execution,fail,1710021378.2571387,2024-03-09 18:56:18.250140,2024-03-09 18:56:18.250140,0:00:00,Task 'Execution' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 86, in execution_queue
+    packet = move_controler(input_images_folder,execution_queue_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\utils.py"", line 63, in move_controler
+    move(execution_queue_folder, input_images_folder)
+NameError: name 'execution_queue_folder' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 90, in execution_queue
+    raise Exception(""execution_queue Fail !"")
+Exception: execution_queue Fail !"
+Erros,run,1710021378.6133225,2024-03-09 18:56:18.613322,,,Task 'Erros' status: 'run',
+Erros,success,1710021378.6203249,2024-03-09 18:56:18.613322,2024-03-09 18:56:18.614326,0:00:00.001004,Task 'Erros' status: 'success',
+Execution,fail,1710021379.4641075,2024-03-09 18:56:19.452111,2024-03-09 18:56:19.452111,0:00:00,Task 'Execution' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 86, in execution_queue
+    packet = move_controler(input_images_folder,execution_queue_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\utils.py"", line 63, in move_controler
+    move(execution_queue_folder, input_images_folder)
+NameError: name 'execution_queue_folder' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 90, in execution_queue
+    raise Exception(""execution_queue Fail !"")
+Exception: execution_queue Fail !"
+Erros,run,1710021379.8345053,2024-03-09 18:56:19.834505,,,Task 'Erros' status: 'run',
+Erros,success,1710021379.8415005,2024-03-09 18:56:19.834505,2024-03-09 18:56:19.835503,0:00:00.000998,Task 'Erros' status: 'success',
+Erros,run,1710021380.949375,2024-03-09 18:56:20.949375,,,Task 'Erros' status: 'run',
+Erros,success,1710021380.9663725,2024-03-09 18:56:20.949375,2024-03-09 18:56:20.960372,0:00:00.010997,Task 'Erros' status: 'success',
+Erros,run,1710021382.3257291,2024-03-09 18:56:22.325729,,,Task 'Erros' status: 'run',
+Erros,success,1710021382.336076,2024-03-09 18:56:22.325729,2024-03-09 18:56:22.326726,0:00:00.000997,Task 'Erros' status: 'success',
+Erros,run,1710021383.420747,2024-03-09 18:56:23.420747,,,Task 'Erros' status: 'run',
+Erros,success,1710021383.430742,2024-03-09 18:56:23.420747,2024-03-09 18:56:23.421744,0:00:00.000997,Task 'Erros' status: 'success',
+Erros,run,1710021384.4712465,2024-03-09 18:56:24.471246,,,Task 'Erros' status: 'run',
+Erros,success,1710021384.4802442,2024-03-09 18:56:24.471246,2024-03-09 18:56:24.472244,0:00:00.000998,Task 'Erros' status: 'success',
+Erros,run,1710021385.5391607,2024-03-09 18:56:25.539161,,,Task 'Erros' status: 'run',
+Close,run,1710041515.770265,2024-03-10 00:31:55.770265,,,Task 'Close' status: 'run',
+Close,success,1710041515.7793217,2024-03-10 00:31:55.770265,2024-03-10 00:31:55.772133,0:00:00.001868,Task 'Close' status: 'success',
+Start,run,1710073764.267154,2024-03-10 09:29:24.267154,,,Task 'Start' status: 'run',
+Start,success,1710073766.7364736,2024-03-10 09:29:24.267154,2024-03-10 09:29:26.736474,0:00:02.469320,Task 'Start' status: 'success',
+RemBg,fail,1710085761.0457356,2024-03-10 12:49:18.921086,2024-03-10 12:49:21.022700,0:00:02.101614,Task 'RemBg' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\ImageFile.py"", line 515, in _save
+    fh = fp.fileno()
+AttributeError: '_idat' object has no attribute 'fileno'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 106, in remove_background
+    remove(execution_queue_folder, output_without_bg_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\removeBg.py"", line 53, in remove
+    result_img.save(bg_dir + f'{img_name}.png')
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\Image.py"", line 2432, in save
+    save_handler(self, fp, filename)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\PngImagePlugin.py"", line 1407, in _save
+    ImageFile._save(im, _idat(fp, chunk), [(""zip"", (0, 0) + im.size, 0, rawmode)])
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\ImageFile.py"", line 519, in _save
+    _encode_tile(im, fp, tile, bufsize, None, exc)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\ImageFile.py"", line 539, in _encode_tile
+    fp.write(data)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\PngImagePlugin.py"", line 1085, in write
+    self.chunk(self.fp, b""IDAT"", data)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\PngImagePlugin.py"", line 1072, in putchunk
+    fp.write(data)
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 108, in remove_background
+    raise Exception(""Remove Background Fail"")
+Exception: Remove Background Fail"
+Erros,run,1710085761.7721226,2024-03-10 12:49:21.772123,,,Task 'Erros' status: 'run',
+Erros,success,1710085761.7941513,2024-03-10 12:49:21.772123,2024-03-10 12:49:21.774126,0:00:00.002003,Task 'Erros' status: 'success',
+RemBg,fail,1710085776.9786313,2024-03-10 12:49:34.849924,2024-03-10 12:49:36.956586,0:00:02.106662,Task 'RemBg' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\ImageFile.py"", line 515, in _save
+    fh = fp.fileno()
+AttributeError: '_idat' object has no attribute 'fileno'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 106, in remove_background
+    remove(execution_queue_folder, output_without_bg_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\removeBg.py"", line 53, in remove
+    result_img.save(bg_dir + f'{img_name}.png')
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\Image.py"", line 2432, in save
+    save_handler(self, fp, filename)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\PngImagePlugin.py"", line 1407, in _save
+    ImageFile._save(im, _idat(fp, chunk), [(""zip"", (0, 0) + im.size, 0, rawmode)])
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\ImageFile.py"", line 519, in _save
+    _encode_tile(im, fp, tile, bufsize, None, exc)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\ImageFile.py"", line 539, in _encode_tile
+    fp.write(data)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\PngImagePlugin.py"", line 1085, in write
+    self.chunk(self.fp, b""IDAT"", data)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\PngImagePlugin.py"", line 1072, in putchunk
+    fp.write(data)
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 108, in remove_background
+    raise Exception(""Remove Background Fail"")
+Exception: Remove Background Fail"
+Erros,run,1710085777.6230984,2024-03-10 12:49:37.623098,,,Task 'Erros' status: 'run',
+Erros,success,1710085777.6451278,2024-03-10 12:49:37.623098,2024-03-10 12:49:37.625098,0:00:00.002000,Task 'Erros' status: 'success',
+Execution,fail,1710085779.486739,2024-03-10 12:49:39.288756,2024-03-10 12:49:39.464581,0:00:00.175825,Task 'Execution' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 825, in move
+    os.rename(src, real_dst)
+OSError: [WinError 17] O sistema não pode mover o arquivo para uma unidade de disco diferente: 'D:\\Data_set_Inits\\CS3\\cs3_originals\\Original_CS3_4k_forzip\\00055869033.jpg' -> 'C:\\Users\\fabri\\Desktop\\PyScript\\U2NET\\input_folder\\exec-queue\\00055869033.jpg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 86, in execution_queue
+    packet = move_controler(input_images_folder,execution_queue_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\utils.py"", line 65, in move_controler
+    move_item(inputs,output)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\utils.py"", line 81, in move_item
+    shutil.move(moved_img, destPath + input_img)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 845, in move
+    copy_function(src, real_dst)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 444, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 284, in copyfile
+    _copyfileobj_readinto(fsrc, fdst, min(file_size, COPY_BUFSIZE))
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 193, in _copyfileobj_readinto
+    fdst.write(smv)
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 90, in execution_queue
+    raise Exception(""execution_queue Fail !"")
+Exception: execution_queue Fail !"
+Erros,run,1710085780.2546272,2024-03-10 12:49:40.254627,,,Task 'Erros' status: 'run',
+Erros,success,1710085780.2751703,2024-03-10 12:49:40.254627,2024-03-10 12:49:40.255629,0:00:00.001002,Task 'Erros' status: 'success',
+Execution,fail,1710085782.192051,2024-03-10 12:49:42.170013,2024-03-10 12:49:42.170013,0:00:00,Task 'Execution' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 86, in execution_queue
+    packet = move_controler(input_images_folder,execution_queue_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\utils.py"", line 63, in move_controler
+    move(execution_queue_folder, input_images_folder)
+NameError: name 'execution_queue_folder' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 90, in execution_queue
+    raise Exception(""execution_queue Fail !"")
+Exception: execution_queue Fail !"
+Erros,run,1710085783.1066122,2024-03-10 12:49:43.106612,,,Task 'Erros' status: 'run',
+Erros,success,1710085783.13617,2024-03-10 12:49:43.106612,2024-03-10 12:49:43.108117,0:00:00.001505,Task 'Erros' status: 'success',
+Execution,fail,1710085784.9439666,2024-03-10 12:49:44.922953,2024-03-10 12:49:44.922953,0:00:00,Task 'Execution' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 86, in execution_queue
+    packet = move_controler(input_images_folder,execution_queue_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\utils.py"", line 63, in move_controler
+    move(execution_queue_folder, input_images_folder)
+NameError: name 'execution_queue_folder' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 90, in execution_queue
+    raise Exception(""execution_queue Fail !"")
+Exception: execution_queue Fail !"
+Erros,run,1710085785.8438652,2024-03-10 12:49:45.843865,,,Task 'Erros' status: 'run',
+Erros,success,1710085785.8649046,2024-03-10 12:49:45.843865,2024-03-10 12:49:45.844866,0:00:00.001001,Task 'Erros' status: 'success',
+Execution,fail,1710085787.5812616,2024-03-10 12:49:47.558714,2024-03-10 12:49:47.559715,0:00:00.001001,Task 'Execution' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 86, in execution_queue
+    packet = move_controler(input_images_folder,execution_queue_folder)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\utils.py"", line 63, in move_controler
+    move(execution_queue_folder, input_images_folder)
+NameError: name 'execution_queue_folder' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 90, in execution_queue
+    raise Exception(""execution_queue Fail !"")
+Exception: execution_queue Fail !"
+Erros,run,1710085788.3976707,2024-03-10 12:49:48.397671,,,Task 'Erros' status: 'run',
+Erros,success,1710085788.4182088,2024-03-10 12:49:48.397671,2024-03-10 12:49:48.398176,0:00:00.000505,Task 'Erros' status: 'success',
+Erros,run,1710085791.1050324,2024-03-10 12:49:51.105032,,,Task 'Erros' status: 'run',
+Close,run,1710086098.9505281,2024-03-10 12:54:58.950528,,,Task 'Close' status: 'run',
+Close,success,1710086098.9795804,2024-03-10 12:54:58.950528,2024-03-10 12:54:58.960047,0:00:00.009519,Task 'Close' status: 'success',
+Start,run,1710086106.3784347,2024-03-10 12:55:06.378435,,,Task 'Start' status: 'run',
+Start,success,1710086109.1909873,2024-03-10 12:55:06.378435,2024-03-10 12:55:09.190987,0:00:02.812552,Task 'Start' status: 'success',
+Masking,fail,1710086115.1293435,2024-03-10 12:55:09.435437,2024-03-10 12:55:15.129344,0:00:05.693907,Task 'Masking' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 98, in mask_generate
+    mask(execution_queue_folder,output_result_mask)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\maskGenerate.py"", line 81, in mask
+    for i_test, data_test in enumerate(test_salobj_dataloader):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\utils\data\dataloader.py"", line 633, in __next__
+    data = self._next_data()
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\utils\data\dataloader.py"", line 1345, in _next_data
+    return self._process_data(data)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\utils\data\dataloader.py"", line 1371, in _process_data
+    data.reraise()
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\_utils.py"", line 644, in reraise
+    raise exception
+OSError: Caught OSError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\utils\data\_utils\worker.py"", line 308, in _worker_loop
+    data = fetcher.fetch(index)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\utils\data\_utils\fetch.py"", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\utils\data\_utils\fetch.py"", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\data_loader.py"", line 351, in __getitem__
+    image = io.imread(self.image_name_list[idx])
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\skimage\io\_io.py"", line 53, in imread
+    img = call_plugin('imread', fname, plugin=plugin, **plugin_args)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\skimage\io\manage_plugins.py"", line 205, in call_plugin
+    return func(*args, **kwargs)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\skimage\io\_plugins\imageio_plugin.py"", line 11, in imread
+    out = np.asarray(imageio_imread(*args, **kwargs))
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\imageio\v3.py"", line 54, in imread
+    return np.asarray(img_file.read(**call_kwargs))
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\imageio\plugins\pillow.py"", line 224, in read
+    image = self._apply_transforms(
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\imageio\plugins\pillow.py"", line 307, in _apply_transforms
+    image = np.asarray(image)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\Image.py"", line 696, in __array_interface__
+    new[""data""] = self.tobytes()
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\Image.py"", line 754, in tobytes
+    self.load()
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\ImageFile.py"", line 266, in load
+    raise OSError(msg)
+OSError: image file is truncated (50 bytes not processed)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 100, in mask_generate
+    raise Exception(""Mask Fail"")
+Exception: Mask Fail"
+Erros,run,1710086115.1588814,2024-03-10 12:55:15.158881,,,Task 'Erros' status: 'run',
+Erros,success,1710086115.1598804,2024-03-10 12:55:15.158881,2024-03-10 12:55:15.159880,0:00:00.000999,Task 'Erros' status: 'success',
+Close,run,1710086704.2109838,2024-03-10 13:05:04.210984,,,Task 'Close' status: 'run',
+Close,success,1710086704.2144916,2024-03-10 13:05:04.210984,2024-03-10 13:05:04.211986,0:00:00.001002,Task 'Close' status: 'success',
+Start,run,1710168116.8340497,2024-03-11 11:41:56.834050,,,Task 'Start' status: 'run',
+Start,success,1710168119.167497,2024-03-11 11:41:56.834050,2024-03-11 11:41:59.167497,0:00:02.333447,Task 'Start' status: 'success',
+Close,run,1710168213.9464636,2024-03-11 11:43:33.946464,,,Task 'Close' status: 'run',
+Close,success,1710168213.9474628,2024-03-11 11:43:33.946464,2024-03-11 11:43:33.947463,0:00:00.000999,Task 'Close' status: 'success',
+Start,run,1710169122.0880394,2024-03-11 11:58:42.088039,,,Task 'Start' status: 'run',
+Start,success,1710169125.2062707,2024-03-11 11:58:42.088039,2024-03-11 11:58:45.206271,0:00:03.118232,Task 'Start' status: 'success',
+Close,run,1710169153.9856164,2024-03-11 11:59:13.985616,,,Task 'Close' status: 'run',
+Close,success,1710169153.9866173,2024-03-11 11:59:13.985616,2024-03-11 11:59:13.986617,0:00:00.001001,Task 'Close' status: 'success',
+Start,run,1710169250.47505,2024-03-11 12:00:50.475050,,,Task 'Start' status: 'run',
+Start,success,1710169253.956957,2024-03-11 12:00:50.475050,2024-03-11 12:00:53.956957,0:00:03.481907,Task 'Start' status: 'success',
+Close,run,1710169273.0143404,2024-03-11 12:01:13.014340,,,Task 'Close' status: 'run',
+Close,success,1710169273.015341,2024-03-11 12:01:13.014340,2024-03-11 12:01:13.015341,0:00:00.001001,Task 'Close' status: 'success',
+Start,run,1710169344.9170449,2024-03-11 12:02:24.917045,,,Task 'Start' status: 'run',
+Close,run,1710169646.244939,2024-03-11 12:07:26.244939,,,Task 'Close' status: 'run',
+Close,success,1710169646.2459404,2024-03-11 12:07:26.244939,2024-03-11 12:07:26.245940,0:00:00.001001,Task 'Close' status: 'success',
+Start,run,1710169657.4014525,2024-03-11 12:07:37.401453,,,Task 'Start' status: 'run',
+Start,success,1710169660.8489096,2024-03-11 12:07:37.401453,2024-03-11 12:07:40.848910,0:00:03.447457,Task 'Start' status: 'success',
+Masking,fail,1710169890.3979251,2024-03-11 12:07:41.107255,2024-03-11 12:11:30.396914,0:03:49.289659,Task 'Masking' status: 'fail',"Traceback (most recent call last):
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 103, in mask_generate
+    DIS_process_images(execution_queue_folder,output_result_mask,model_DIS)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\maskGenerate.py"", line 146, in SAM_process_images
+    Write_masks_to_folder(masks, output_mask_dir, img_path)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\app\maskGenerate.py"", line 130, in Write_masks_to_folder
+    mask.save(r""C:\Users\fabri\Desktop\PyScript\U2NET\input_folder/"" + filename)
+AttributeError: 'numpy.ndarray' object has no attribute 'save'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\core\task.py"", line 463, in _run_as_async
+    output = await self.execute(**params)
+  File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\rocketry\tasks\func.py"", line 231, in execute
+    output = func(**params)
+  File ""C:\Users\fabri\Desktop\PyScript\U2NET\cli.py"", line 108, in mask_generate
+    @app.task(after_success(mask_generate), name='RemBg')
+Exception: Mask Fail"
+Erros,run,1710169890.4104464,2024-03-11 12:11:30.410446,,,Task 'Erros' status: 'run',
+Erros,success,1710169890.4124472,2024-03-11 12:11:30.410446,2024-03-11 12:11:30.412447,0:00:00.002001,Task 'Erros' status: 'success',
+Close,run,1710169917.2726345,2024-03-11 12:11:57.272635,,,Task 'Close' status: 'run',
+Close,success,1710169917.2746477,2024-03-11 12:11:57.272635,2024-03-11 12:11:57.274648,0:00:00.002013,Task 'Close' status: 'success',
+Start,run,1710170295.3775113,2024-03-11 12:18:15.377511,,,Task 'Start' status: 'run',
+Start,success,1710170298.538713,2024-03-11 12:18:15.377511,2024-03-11 12:18:18.538713,0:00:03.161202,Task 'Start' status: 'success',

@@ -5,10 +5,11 @@ from rocketry.conds import (after_any_success, after_success, after_any_fail, af
 from rocketry.log import TaskLogRecord
 from redbird.repos import CSVFileRepo
 from redbird.logging import RepoHandler
-
+import os
 from rocketry.args import Return
 from app.contours import createContoursFolder
 from app.crop import cropBoundingBoxFolder
+
 from app.folder_paths import (input_images_folder, 
                               output_without_bg_folder, 
                               output_contours_folder, 
@@ -21,7 +22,7 @@ from app.folder_paths import (input_images_folder,
                               final_output_crop,
                               output_crop)
 
-from app.maskGenerate import mask
+from app.maskGenerate import mask,SAM_process_images,DIS_process_images
 from app.removeBg import remove
 from app.utils import (inputReady, clear_directorys,SpamFilter, move,move_for_tests,move_controler,move_for_name,check_dirs)
 
@@ -33,7 +34,7 @@ app = Rocketry(config={
     'silence_cond_check': True,
     'silence_task_logging': True,
 })
-
+model_DIS = os.path.join(os.getcwd(), 'app', 'model', 'model_saved','others','gpu_itr_14000_traLoss_0.1983_traTarLoss_0.0033_valLoss_2.753_valTarLoss_0.1347_maxF1_0.9862_mae_0.0185_time_0.028574.pth')
 logger = logging.getLogger("rocketry.task")
 repo = CSVFileRepo(filename= logs_folder + "log.csv", model=TaskLogRecord)
 folder = RepoHandler(repo=repo)
@@ -47,9 +48,9 @@ def Start():
     move(execution_queue_folder, input_images_folder)
     print("start")
     relax = input("Informe o valor de sobra para o Crop: ")
+    model = input("Informe o modelo: [u2net] - [sam] - [DIS]:")
 
-    return relax
-
+    return relax,model
 
 
 @app.task(on_shutdown=True,name='Close')
@@ -91,10 +92,16 @@ def execution_queue():
 
 
 @app.task(after_success('Execution'), name='Masking')
-def mask_generate():
+def mask_generate(model=Return(Start)):
     print("Masking")
     try:
-        mask(execution_queue_folder,output_result_mask)
+        if model[1] == 'u2net':
+            mask(execution_queue_folder,output_result_mask)
+        elif model[1] == 'sam':
+            SAM_process_images(execution_queue_folder,output_result_mask)
+        elif model[1] == 'DIS':
+            DIS_process_images(execution_queue_folder,output_result_mask,model_DIS)
+
     except Exception:
         raise Exception("Mask Fail")
 
@@ -122,7 +129,7 @@ def crop_bounding_box(relax=Return(Start)):
         cropBoundingBoxFolder(execution_queue_folder,
                               output_without_bg_folder,
                               output_crop,
-                              relax)
+                              relax[0])
     except Exception:
         raise Exception("crop_bounding_box Fail")
 
@@ -143,7 +150,7 @@ def move_to_slab():
         raise Exception("Move Finish Fail")
 
 
-@app.task(after_any_fail(mask_generate, remove_background, create_contours), name='Erros')
+@app.task(after_any_fail(mask_generate, remove_background, create_contours,execution_queue), name='Erros')
 def clear_for_erro(packet=Return(execution_queue)):
     print("Clear")
     move_for_name(packet,execution_queue_folder,output_erros)

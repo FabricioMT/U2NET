@@ -8,15 +8,36 @@ from skimage import io
 from torch.autograd import Variable
 from torch.utils.data import DataLoader
 from torchvision import transforms
-
+import cv2
 from app.data_loader import RescaleT
 from app.data_loader import SalObjDataset
 from app.data_loader import ToTensorLab
 from app.folder_paths import model_in_work
-from app.model import U2NET
+from app.model import *
+from typing import Any, Dict, List
+import pathlib as pl
+import torch.nn.functional as F
+from torchvision.transforms.functional import normalize
 
 warnings.simplefilter("ignore", UserWarning)
+from segment_anything import sam_model_registry, SamAutomaticMaskGenerator
+# --------- 3. model define ---------
+sam_checkpoint = os.path.join(os.getcwd(), 'app', 'model', 'model_saved','others','sam_vit_h_4b8939.pth')
 
+model_type = "vit_h"
+device = "cpu"
+sam = sam_model_registry[model_type](checkpoint=sam_checkpoint)
+sam.to(device=device)
+mask_generator = SamAutomaticMaskGenerator(
+    model=sam,
+    points_per_side=1,
+    pred_iou_thresh=0.98,
+    stability_score_thresh=0.98,
+    crop_n_layers=1,
+    crop_n_points_downscale_factor=1,
+    min_mask_region_area=10000,  # Requires open-cv to run post-processing
+    output_mode= "binary_mask"
+)
 # --------- 3. model define ---------
 
 net = U2NET(3, 1)
@@ -53,9 +74,6 @@ def save_output(image_name, pred, d_dir):
     
     imo.save(r"C:\Users\fabri\Desktop\PyScript\U2NET\input_folder/" + imidx + '.JPG')
     imo.save(d_dir + imidx + '.JPG')
-
-
-
 
 def mask(input,output):
     # --------- 1. get image path and name ---------
@@ -98,3 +116,68 @@ def mask(input,output):
             save_output(img_name_list[i_test], pred, prediction_dir)
 
             del d1, d2, d3, d4, d5, d6, d7
+
+def Write_masks_to_folder(masks: List[Dict[str, Any]], path: str, input_path: str) -> None:
+    files = os.path.join(input_path + os.sep)
+    print(files)
+    name = pl.PurePath(files).name.split('.')
+    print(name)
+    maior_area = sorted(masks, key=(lambda mask_data: mask_data['area']), reverse=True)
+    if maior_area[0]:
+        mask = maior_area[0]["segmentation"]
+        filename = name[0]+'.JPG'
+        cv2.imwrite(os.path.join(path, filename), mask * 255)
+        cv2.imwrite(os.path.join(r"C:\Users\fabri\Desktop\PyScript\U2NET\input_folder/", filename), mask * 255)
+
+def SAM_process_images(input_dir, output_mask_dir):
+
+    img_name_list = glob.glob(input_dir + os.sep + '*')
+    #print(img_name_list)
+
+    if img_name_list[0].lower().endswith(('.jpg', '.jpeg', '.png')):
+        img_path = os.path.join(input_dir, img_name_list[0])
+        print("In SAM",img_path)
+        # Load image
+        image = cv2.imread(img_path)
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        # Generate masks
+        masks = mask_generator.generate(image)
+        # Save the largest mask
+        Write_masks_to_folder(masks, output_mask_dir, img_path)
+
+def DIS_process_images(input_dir,result_path,model_DIS):
+    input_size=[1024,1024]
+    net=ISNetDIS()
+    if torch.cuda.is_available():
+        net.load_state_dict(torch.load(model_DIS))
+        net=net.cuda()
+    else:
+        net.load_state_dict(torch.load(model_DIS,map_location="cpu"))
+        
+    print("!! DIS")
+    net.eval()
+    with torch.no_grad():
+        img_name_list = glob.glob(input_dir + os.sep + '*')
+        #print(img_name_list)
+
+        if img_name_list[0].lower().endswith(('.jpg', '.jpeg', '.png','.JPG')):
+            img_path = os.path.join(input_dir, img_name_list[0])
+            print("im_path: ", img_path)
+            im = io.imread(img_path)
+            if len(im.shape) < 3:
+                im = im[:, :, np.newaxis]
+            im_shp=im.shape[0:2]
+            im_tensor = torch.tensor(im, dtype=torch.float32).permute(2,0,1)
+            im_tensor = F.upsample(torch.unsqueeze(im_tensor,0), input_size, mode="bilinear").type(torch.uint8)
+            image = torch.divide(im_tensor,255.0)
+            image = normalize(image,[0.5,0.5,0.5],[1.0,1.0,1.0])
+
+            if torch.cuda.is_available():
+                image=image.cuda()
+            result=net(image)
+            result=torch.squeeze(F.upsample(result[0][0],im_shp,mode='bilinear'),0)
+            ma = torch.max(result)
+            mi = torch.min(result)
+            result = (result-mi)/(ma-mi)
+            im_name= img_path.split('/')[-1].split('.')[0]
+            save_output(img_path,result,result_path)

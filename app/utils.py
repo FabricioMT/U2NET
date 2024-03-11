@@ -6,7 +6,7 @@ import time
 import gdown
 import torch
 import pathlib as pl
-from app.folder_paths import (input_images_folder,execution_queue_folder)
+#from app.folder_paths import (input_images_folder,execution_queue_folder)
 
 class SpamFilter(Filter):
     def filter(self, record: MinimalRecord) -> bool:
@@ -151,8 +151,7 @@ def move_for_tests():
 
 if __name__ == "__main__":
     # remove()
-    #cuda_test()
+    cuda_test()
     # check_model()
     # clear('results-mask/')
-    pass
 
