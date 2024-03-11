@@ -113,7 +113,7 @@ def mask(input,output):
 
         save_output(img_name_list[i_test], pred, prediction_dir)
 
-            del d1, d2, d3, d4, d5, d6, d7
+        del d1, d2, d3, d4, d5, d6, d7
 
 def Write_masks_to_folder(masks: List[Dict[str, Any]], path: str, input_path: str) -> None:
     files = os.path.join(input_path + os.sep)

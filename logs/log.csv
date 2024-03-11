@@ -1,5 +1,4 @@
 task_name,action,created,start,end,runtime,message,exc_text
-<<<<<<< HEAD
 Start,run,1701538944.093326,2023-12-02 14:42:24.093141,,,Task 'Start' status: 'run',
 Start,success,1701538944.0953379,2023-12-02 14:42:24.093326,2023-12-02 14:42:24.094331,0:00:00.001005,Task 'Start' status: 'success',
 Close,run,1701538957.7413213,2023-12-02 14:42:37.741321,,,Task 'Close' status: 'run',
@@ -64,7 +63,7 @@ Start,success,1710011357.2090828,2024-03-09 16:09:09.349480,2024-03-09 16:09:17.
 Execution,fail,1710016052.5602758,2024-03-09 17:27:32.540274,2024-03-09 17:27:32.547277,0:00:00.007003,Task 'Execution' status: 'fail',"Traceback (most recent call last):
   File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 825, in move
     os.rename(src, real_dst)
-OSError: [WinError 17] O sistema não pode mover o arquivo para uma unidade de disco diferente: 'D:\\Data_set_Inits\\CS3\\cs3_originals\\Original_CS3_4k_forzip\\00053732012.jpg' -> 'C:\\Users\\fabri\\Desktop\\PyScript\\U2NET\\input_folder\\exec-queue\\00053732012.jpg'
+OSError: [WinError 17] O sistema nï¿½o pode mover o arquivo para uma unidade de disco diferente: 'D:\\Data_set_Inits\\CS3\\cs3_originals\\Original_CS3_4k_forzip\\00053732012.jpg' -> 'C:\\Users\\fabri\\Desktop\\PyScript\\U2NET\\input_folder\\exec-queue\\00053732012.jpg'
 
 During handling of the above exception, another exception occurred:
 
@@ -188,44 +187,6 @@ Traceback (most recent call last):
   File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\site-packages\PIL\PngImagePlugin.py"", line 1072, in putchunk
     fp.write(data)
 OSError: [Errno 28] No space left on device
-=======
-Start,run,1702334464.2516508,2023-12-11 19:41:04.251651,,,Task 'Start' status: 'run',
-Start,success,1702334466.6517932,2023-12-11 19:41:04.251651,2023-12-11 19:41:06.650288,0:00:02.398637,Task 'Start' status: 'success',
-Close,run,1702334502.1136754,2023-12-11 19:41:42.113675,,,Task 'Close' status: 'run',
-Close,success,1702334502.1157258,2023-12-11 19:41:42.113675,2023-12-11 19:41:42.115726,0:00:00.002051,Task 'Close' status: 'success',
-Start,run,1702334871.87197,2023-12-11 19:47:51.871970,,,Task 'Start' status: 'run',
-Start,success,1702334874.0853772,2023-12-11 19:47:51.871970,2023-12-11 19:47:54.085377,0:00:02.213407,Task 'Start' status: 'success',
-Close,run,1702334905.3199646,2023-12-11 19:48:25.319965,,,Task 'Close' status: 'run',
-Close,success,1702334905.3224683,2023-12-11 19:48:25.319965,2023-12-11 19:48:25.322468,0:00:00.002503,Task 'Close' status: 'success',
-Start,run,1702334933.1693754,2023-12-11 19:48:53.169375,,,Task 'Start' status: 'run',
-Start,success,1702334936.3400557,2023-12-11 19:48:53.169375,2023-12-11 19:48:56.340056,0:00:03.170681,Task 'Start' status: 'success',
-Close,run,1702334969.3619118,2023-12-11 19:49:29.361912,,,Task 'Close' status: 'run',
-Close,success,1702334969.3644233,2023-12-11 19:49:29.361912,2023-12-11 19:49:29.363417,0:00:00.001505,Task 'Close' status: 'success',
-Start,run,1702335138.6878335,2023-12-11 19:52:18.687834,,,Task 'Start' status: 'run',
-Start,success,1702335140.401546,2023-12-11 19:52:18.687834,2023-12-11 19:52:20.401546,0:00:01.713712,Task 'Start' status: 'success',
-Close,run,1702335169.8863854,2023-12-11 19:52:49.886385,,,Task 'Close' status: 'run',
-Close,success,1702335169.8883874,2023-12-11 19:52:49.886385,2023-12-11 19:52:49.888387,0:00:00.002002,Task 'Close' status: 'success',
-Start,run,1702335269.3582983,2023-12-11 19:54:29.358298,,,Task 'Start' status: 'run',
-Start,success,1702335272.0801547,2023-12-11 19:54:29.358298,2023-12-11 19:54:32.080155,0:00:02.721857,Task 'Start' status: 'success',
-Close,run,1702335297.3872283,2023-12-11 19:54:57.387228,,,Task 'Close' status: 'run',
-Close,success,1702335297.389231,2023-12-11 19:54:57.387228,2023-12-11 19:54:57.389231,0:00:00.002003,Task 'Close' status: 'success',
-Start,run,1702335375.070699,2023-12-11 19:56:15.070699,,,Task 'Start' status: 'run',
-Start,success,1702335377.8069544,2023-12-11 19:56:15.070699,2023-12-11 19:56:17.806954,0:00:02.736255,Task 'Start' status: 'success',
-Close,run,1702335415.8109195,2023-12-11 19:56:55.810920,,,Task 'Close' status: 'run',
-Close,success,1702335415.8124242,2023-12-11 19:56:55.810920,2023-12-11 19:56:55.811920,0:00:00.001000,Task 'Close' status: 'success',
-Start,run,1702343240.9809294,2023-12-11 22:07:20.980929,,,Task 'Start' status: 'run',
-Start,success,1702343244.066973,2023-12-11 22:07:20.980929,2023-12-11 22:07:24.066973,0:00:03.086044,Task 'Start' status: 'success',
-Close,run,1702343257.967312,2023-12-11 22:07:37.967312,,,Task 'Close' status: 'run',
-Close,success,1702343257.9683216,2023-12-11 22:07:37.967312,2023-12-11 22:07:37.968322,0:00:00.001010,Task 'Close' status: 'success',
-Start,run,1702345685.6774979,2023-12-11 22:48:05.677498,,,Task 'Start' status: 'run',
-Start,success,1702345687.5216908,2023-12-11 22:48:05.677498,2023-12-11 22:48:07.521691,0:00:01.844193,Task 'Start' status: 'success',
-RemBg,fail,1702345694.6110246,2023-12-11 22:48:14.583986,2023-12-11 22:48:14.611025,0:00:00.027039,Task 'RemBg' status: 'fail',"Traceback (most recent call last):
-  File ""C:\Users\fabri\Desktop\Network-att\run.py"", line 105, in remove_background
-    remove(execution_queue_folder, output_without_bg_folder)
-  File ""C:\Users\fabri\Desktop\Network-att\app\removeBg.py"", line 29, in remove
-    out_img = Img.toarray(image_gray)
-AttributeError: module 'PIL.Image' has no attribute 'toarray'
->>>>>>> 554b5a6b842b5c49ea852e09d0f18ed0b40cb8f0
 
 During handling of the above exception, another exception occurred:
 
@@ -311,7 +272,7 @@ Erros,success,1710021361.2126021,2024-03-09 18:56:01.202660,2024-03-09 18:56:01.
 Execution,fail,1710021362.0739691,2024-03-09 18:56:01.956708,2024-03-09 18:56:02.067457,0:00:00.110749,Task 'Execution' status: 'fail',"Traceback (most recent call last):
   File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 825, in move
     os.rename(src, real_dst)
-OSError: [WinError 17] O sistema não pode mover o arquivo para uma unidade de disco diferente: 'D:\\Data_set_Inits\\CS3\\cs3_originals\\Original_CS3_4k_forzip\\00055415016.jpg' -> 'C:\\Users\\fabri\\Desktop\\PyScript\\U2NET\\input_folder\\exec-queue\\00055415016.jpg'
+OSError: [WinError 17] O sistema nï¿½o pode mover o arquivo para uma unidade de disco diferente: 'D:\\Data_set_Inits\\CS3\\cs3_originals\\Original_CS3_4k_forzip\\00055415016.jpg' -> 'C:\\Users\\fabri\\Desktop\\PyScript\\U2NET\\input_folder\\exec-queue\\00055415016.jpg'
 
 During handling of the above exception, another exception occurred:
 
@@ -740,7 +701,7 @@ Erros,success,1710085777.6451278,2024-03-10 12:49:37.623098,2024-03-10 12:49:37.
 Execution,fail,1710085779.486739,2024-03-10 12:49:39.288756,2024-03-10 12:49:39.464581,0:00:00.175825,Task 'Execution' status: 'fail',"Traceback (most recent call last):
   File ""C:\Users\fabri\AppData\Local\Programs\Python\Python39\lib\shutil.py"", line 825, in move
     os.rename(src, real_dst)
-OSError: [WinError 17] O sistema não pode mover o arquivo para uma unidade de disco diferente: 'D:\\Data_set_Inits\\CS3\\cs3_originals\\Original_CS3_4k_forzip\\00055869033.jpg' -> 'C:\\Users\\fabri\\Desktop\\PyScript\\U2NET\\input_folder\\exec-queue\\00055869033.jpg'
+OSError: [WinError 17] O sistema nï¿½o pode mover o arquivo para uma unidade de disco diferente: 'D:\\Data_set_Inits\\CS3\\cs3_originals\\Original_CS3_4k_forzip\\00055869033.jpg' -> 'C:\\Users\\fabri\\Desktop\\PyScript\\U2NET\\input_folder\\exec-queue\\00055869033.jpg'
 
 During handling of the above exception, another exception occurred:
 
