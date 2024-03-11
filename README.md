@@ -14,3 +14,18 @@
     - For close hide_exec Open kill_hide_exec.bat
 
 4. Open terminal_exec.bat to Execution in Terminal
+
+
+### References
+U2Net: [https://github.com/xuebinqin/U-2-Net](https://github.com/xuebinqin/U-2-Net)
+
+
+### BibTeX
+    @InProceedings{Qin_2020_PR,
+        title = {U2-Net: Going Deeper with Nested U-Structure for Salient Object Detection},
+        author = {Qin, Xuebin and Zhang, Zichen and Huang, Chenyang and Dehghan, Masood and Zaiane, Osmar and Jagersand, Martin},
+        journal = {Pattern Recognition},
+        volume = {106},
+        pages = {107404},
+        year = {2020}
+}
